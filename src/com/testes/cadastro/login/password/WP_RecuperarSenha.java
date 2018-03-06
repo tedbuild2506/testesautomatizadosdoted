@@ -95,72 +95,24 @@ public class WP_RecuperarSenha extends BaseTest {
 		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("Smart2001");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='commit']\", 0, 6000, 2, true)");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='commit']")).click();
-		  try{Thread.sleep(5000);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");		  
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+		  client.setShowReport(false);
 		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
+		  client.setShowReport(true);
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
+		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2001");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-//		  new WebDriverWait(driver, 40).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='btHome']")));
-//		  driver.pressKeyCode(AndroidKeyCode.HOME);
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  client.applicationClearData("com.consul.android.smartbeer.staging");
-//		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-//		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acesse sua conta']")));
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedusp06@mailinator.com");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.swipe(821, 868, 768, 478, 448);
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acessar sua conta']")));
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Acessar sua conta']")).click();
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.pressKeyCode(AndroidKeyCode.HOME);
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("mailinator.com/v2/inbox.jsp?zone=public&query=tedusp06");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.getKeyboard().sendKeys("{ENTER}");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Reset password instructions']")).click();
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("Smart2000");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.swipe(56, 1028, 53, 962, 255);
-//		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("Smart2000");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@id='commit']")).click();
-//		  try{Thread.sleep(5000);} catch(Exception ignore){}
-//		  driver.pressKeyCode(AndroidKeyCode.HOME);
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");		  
-//		  try{Thread.sleep(4000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-//		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
-//		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-//		  try{Thread.sleep(3000);} catch(Exception ignore){}
-//		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
+		  client.setShowReport(false);
+		  new WebDriverWait(driver, 40).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='btHome']")));
+		  client.setShowReport(true);
+		  driver.pressKeyCode(AndroidKeyCode.HOME);
+		  
 		 }
 
 	

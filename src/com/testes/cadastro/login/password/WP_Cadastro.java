@@ -133,6 +133,7 @@ public class WP_Cadastro extends BaseTest {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			client.releaseDevice("ce061716ba5f3cdd0d7e", true, false, true);
 			driver.quit();
 		}
 	}

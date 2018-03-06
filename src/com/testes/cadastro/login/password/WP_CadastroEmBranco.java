@@ -39,7 +39,7 @@ public class WP_CadastroEmBranco extends BaseTest {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("testName", "WP_CadastroEmBrancoGalaxys8Android7.0");
-		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
+		dc.setCapability("deviceQuery", "@serialnumber='ce061716ba5f3cdd0d7e'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -62,29 +62,17 @@ public class WP_CadastroEmBranco extends BaseTest {
 	  client.setShowReport(true);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(165, 759, 175, 534, 1234);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(309, 856, 390, 406, 888);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(168, 946, 334, 615, 2240);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(84, 887, 259, 493, 1461);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(450, 812, 500, 640, 1292);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	 }
@@ -101,6 +89,7 @@ public class WP_CadastroEmBranco extends BaseTest {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			client.releaseDevice("ce061716ba5f3cdd0d7e", true, false, true);
 			driver.quit();
 		}
 	}

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="326985" started-at="2018-03-06T11:54:10Z" finished-at="2018-03-06T11:59:37Z">
+  <suite name="Default suite" duration-ms="227184" started-at="2018-03-06T13:45:23Z" finished-at="2018-03-06T13:49:10Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="326985" started-at="2018-03-06T11:54:10Z" finished-at="2018-03-06T11:59:37Z">
+    <test name="Default test" duration-ms="227184" started-at="2018-03-06T13:45:23Z" finished-at="2018-03-06T13:49:10Z">
       <class name="com.testes.cadastro.login.password.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="setUp" is-config="true" duration-ms="162102" started-at="2018-03-06T08:54:10Z" finished-at="2018-03-06T08:56:52Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="setUp" is-config="true" duration-ms="34273" started-at="2018-03-06T10:45:23Z" finished-at="2018-03-06T10:45:57Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="testTeste_recuperar_senha_e_logar" duration-ms="157311" started-at="2018-03-06T08:56:52Z" finished-at="2018-03-06T08:59:29Z">
+        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="testTeste_recuperar_senha_e_logar" duration-ms="160463" started-at="2018-03-06T10:45:57Z" finished-at="2018-03-06T10:48:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="tearDown" is-config="true" duration-ms="7546" started-at="2018-03-06T08:59:29Z" finished-at="2018-03-06T08:59:37Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="tearDown" is-config="true" duration-ms="32414" started-at="2018-03-06T10:48:38Z" finished-at="2018-03-06T10:49:10Z">
           <params>
             <param index="0">
               <value>
