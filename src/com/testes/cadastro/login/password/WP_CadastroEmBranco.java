@@ -38,7 +38,7 @@ public class WP_CadastroEmBranco extends BaseTest {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-		dc.setCapability("testName", "WP_CadastroEmBrancoGalaxys8");
+		dc.setCapability("testName", "WP_CadastroEmBrancoGalaxys8Android7.0");
 		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
