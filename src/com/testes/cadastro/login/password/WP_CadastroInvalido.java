@@ -61,39 +61,39 @@ public class WP_CadastroInvalido extends BaseTest {
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
 	  client.setShowReport(true);
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("ashutosh@ashutosh.com.br");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(165, 759, 175, 534, 1234);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("lucasmoreira");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("lucazmoreira");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(309, 856, 390, 406, 888);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("teste");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("12345678901");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(168, 946, 334, 615, 2240);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='dobView']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='2018']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='2020']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='OK']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(84, 887, 259, 493, 1461);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("99999999999");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.swipe(450, 812, 500, 640, 1292);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(3000);} catch(Exception ignore){}
 	 }
 	
 	@AfterMethod
