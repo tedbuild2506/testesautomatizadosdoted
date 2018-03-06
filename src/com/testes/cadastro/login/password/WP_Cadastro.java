@@ -116,11 +116,11 @@ public class WP_Cadastro extends BaseTest {
 	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
 	      client.setShowReport(true);
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp07@mailinator.com");
-		  try{Thread.sleep(4000);} catch(Exception ignore){}
+		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-		  try{Thread.sleep(4000);} catch(Exception ignore){}
+		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-		  try{Thread.sleep(5000);} catch(Exception ignore){}
+		  try{Thread.sleep(3000);} catch(Exception ignore){}
         
 	}
 	@AfterMethod
