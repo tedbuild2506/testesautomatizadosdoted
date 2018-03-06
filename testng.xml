@@ -7,10 +7,10 @@
       <class name="com.experitest.auto.IOSDemoTest"/>
     </classes>
   </test> <!-- Test -->
-  <test name="TestAndroid">
+  <test name="testTeste_recuperar_senha_e_logar">
   	<parameter name="deviceQuery" value="@os='android'"/>
     <classes>
-      <class name="com.testes.cadastro.login.password.WP_RecuperarSenha"/>
+      <class name="com.testes.cadastro.login.password.WP_RecuperarSenha"></class>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
