@@ -1,4 +1,4 @@
-package com.experitest.auto;
+package com.testes.cadastro.login.password;
 
 import java.net.URL;
 import java.time.Duration;
@@ -23,7 +23,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class WP_CadastroInvalido extends BaseTest {
+public class WP_CadastroEmBranco extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	
@@ -38,7 +38,7 @@ public class WP_CadastroInvalido extends BaseTest {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-		dc.setCapability("testName", "AndroidDemoTest");
+		dc.setCapability("testName", "WP_CadastroEmBrancoGalaxys8");
 		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -54,40 +54,34 @@ public class WP_CadastroInvalido extends BaseTest {
 //	}
 		
 	@Test
-	 public void testTeste_cadastro_campos_invalidos() {
-	  client.applicationClearData("com.consul.android.smartbeer.staging");
+	 public void testTeste_de_cadastro_campos_em_branco() {
+      client.applicationClearData("com.consul.android.smartbeer.staging");
 	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  client.setShowReport(false);
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
+	  client.setShowReport(true);
+	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("ashutosh@ashutosh.com.br");
+	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.swipe(165, 759, 175, 534, 1234);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("lucasmoreira");
+	  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("lucazmoreira");
+	  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.swipe(309, 856, 390, 406, 888);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("teste");
+	  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("12345678901");
+	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.swipe(168, 946, 334, 615, 2240);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='dobView']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@text='2018']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@text='2020']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@text='OK']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.swipe(84, 887, 259, 493, 1461);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
-	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("99999999999");
+	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("");
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
 	  driver.swipe(450, 812, 500, 640, 1292);
 	  try{Thread.sleep(5000);} catch(Exception ignore){}
@@ -96,20 +90,18 @@ public class WP_CadastroInvalido extends BaseTest {
 	 }
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws InterruptedException{
+	public void tearDown(ITestResult tr){
 		if (driver!=null)
 		{
 			if (tr.isSuccess()) 
 			{
-				driver.executeScript("client:client.setTestData(true,'passed')");
+				client.report("Test has passed", true);
 			}
 			else {
-				driver.executeScript("client:client.setTestData(false,'failed')");
+				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			driver.wait();
+			driver.quit();
 		}
-			
 	}
-	
 }

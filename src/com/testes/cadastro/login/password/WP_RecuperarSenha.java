@@ -1,4 +1,4 @@
-package com.experitest.auto;
+package com.testes.cadastro.login.password;
 
 import java.net.URL;
 import java.time.Duration;
@@ -38,8 +38,8 @@ public class WP_RecuperarSenha extends BaseTest {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-		dc.setCapability("testName", "AndroidDemoTest");
-		dc.setCapability("deviceQuery", "@serialnumber='RQ3001DQKL'");
+		dc.setCapability("testName", "WP_RecuperarSenhaGalaxys8");
+		dc.setCapability("deviceQuery", "@serialnumber='ce061716ba5f3cdd0d7e'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -57,7 +57,9 @@ public class WP_RecuperarSenha extends BaseTest {
 	public void testTeste_recuperar_senha_e_logar() {
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+		  client.setShowReport(false);
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acesse sua conta']")));
+		  client.setShowReport(true);
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
@@ -164,19 +166,18 @@ public class WP_RecuperarSenha extends BaseTest {
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
-//		if (driver!=null)
-//		{
-//			if (tr.isSuccess()) 
-//			{
-//				driver.executeScript("client:client.setTestData(true,'passed')");
-//			}
-//			else {
-//				driver.executeScript("client:client.setTestData(false,'failed')");
-//			}
-//			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-//			driver.quit();
-//		}
-		driver.quit();	
+		if (driver!=null)
+		{
+			if (tr.isSuccess()) 
+			{
+				client.report("Test has passed", true);
+			}
+			else {
+				client.report("Test has failed", false);
+			}
+			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			driver.quit();
+		}
 	}
 	
 }

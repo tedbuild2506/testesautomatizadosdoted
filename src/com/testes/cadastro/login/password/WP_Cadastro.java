@@ -1,4 +1,4 @@
-package com.experitest.auto;
+package com.testes.cadastro.login.password;
 
 import java.net.URL;
 import java.time.Duration;
@@ -38,7 +38,7 @@ public class WP_Cadastro extends BaseTest {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank/.LoginActivity");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
-		dc.setCapability("testName", "AndroidDemoTest");
+		dc.setCapability("testName", "WP_CadastroValidoGalaxys8");
 		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -57,7 +57,9 @@ public class WP_Cadastro extends BaseTest {
 	public void testing() {
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+		  client.setShowReport(false);
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
+		  client.setShowReport(true);
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
@@ -119,24 +121,21 @@ public class WP_Cadastro extends BaseTest {
 		  try{Thread.sleep(5000);} catch(Exception ignore){}
         
 	}
-	
-//	@AfterMethod
-//	public void tearDown(ITestResult tr) throws Exception{
-////		if (driver!=null)
-////		{
-////			if (tr.isSuccess()) 
-////			{
-////				driver.executeScript("client:client.setTestData(true,'passed')");
-////			}
-////			else {
-////				driver.executeScript("client:client.setTestData(false,'failed')");
-////			}
-////			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-////			driver.quit();
-////		}
-//			driver.wait(8000);
-//	}
-//
+	@AfterMethod
+	public void tearDown(ITestResult tr){
+		if (driver!=null)
+		{
+			if (tr.isSuccess()) 
+			{
+				client.report("Test has passed", true);
+			}
+			else {
+				client.report("Test has failed", false);
+			}
+			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			driver.quit();
+		}
+	}
 	
 }
 

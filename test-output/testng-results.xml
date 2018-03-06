@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="1" failed="0" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4108" started-at="2018-03-02T17:57:30Z" finished-at="2018-03-02T17:57:34Z">
+  <suite name="Default suite" duration-ms="326985" started-at="2018-03-06T11:54:10Z" finished-at="2018-03-06T11:59:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4108" started-at="2018-03-02T17:57:30Z" finished-at="2018-03-02T17:57:34Z">
-      <class name="com.experitest.auto.WP_RecuperarSenha">
-        <test-method status="FAIL" signature="setUp(java.lang.String)[pri:0, instance:com.experitest.auto.WP_RecuperarSenha@a67c67e]" name="setUp" is-config="true" duration-ms="0" started-at="2018-03-02T14:57:30Z" finished-at="2018-03-02T14:57:30Z">
+    <test name="Default test" duration-ms="326985" started-at="2018-03-06T11:54:10Z" finished-at="2018-03-06T11:59:37Z">
+      <class name="com.testes.cadastro.login.password.WP_RecuperarSenha">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="setUp" is-config="true" duration-ms="162102" started-at="2018-03-06T08:54:10Z" finished-at="2018-03-06T08:56:52Z">
           <params>
             <param index="0">
               <value>
@@ -15,79 +15,25 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
-            <message>
-              <![CDATA[Not enough tokens, session not created. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.65 seconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Not enough tokens, session not created. (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.65 seconds
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:249)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:144)
-	at io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:36)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:114)
-	at io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:132)
-	at io.appium.java_client.android.AndroidDriver.<init>(AndroidDriver.java:92)
-	at com.experitest.auto.WP_RecuperarSenha.setUp(WP_RecuperarSenha.java:43)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:585)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.experitest.auto.WP_RecuperarSenha@a67c67e]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-03-02T14:57:34Z" finished-at="2018-03-02T14:57:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="SKIP" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:com.experitest.auto.WP_RecuperarSenha@a67c67e]" name="testTeste_recuperar_senha_e_logar" duration-ms="0" started-at="2018-03-02T14:57:34Z" finished-at="2018-03-02T14:57:34Z">
+        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="testTeste_recuperar_senha_e_logar" duration-ms="157311" started-at="2018-03-06T08:56:52Z" finished-at="2018-03-06T08:59:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-      </class> <!-- com.experitest.auto.WP_RecuperarSenha -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e]" name="tearDown" is-config="true" duration-ms="7546" started-at="2018-03-06T08:59:29Z" finished-at="2018-03-06T08:59:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:com.testes.cadastro.login.password.WP_RecuperarSenha@a67c67e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.testes.cadastro.login.password.WP_RecuperarSenha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,4 +1,4 @@
-package com.experitest.auto;
+package com.testes.cadastro.login.password;
 
 import java.io.File;
 import java.io.FileNotFoundException;
