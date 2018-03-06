@@ -55,7 +55,7 @@ public class WP_RecuperarSenha extends BaseTest {
 		
 	@Test 
 	public void testTeste_recuperar_senha_e_logar() {
-		  client.applicationClearData("com.consul.android.smartbeer.staginga");
+		  client.applicationClearData("com.consul.android.smartbeer.stagingaa");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  client.setShowReport(false);
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acesse sua conta']")));
