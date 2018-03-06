@@ -23,7 +23,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class Teste_recuperar_senha extends BaseTest {
+public class WP_RecuperarSenha extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	
@@ -39,7 +39,7 @@ public class Teste_recuperar_senha extends BaseTest {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("testName", "AndroidDemoTest");
-		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
+		dc.setCapability("deviceQuery", "@serialnumber='RQ3001DQKL'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -164,19 +164,19 @@ public class Teste_recuperar_senha extends BaseTest {
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
-		if (driver!=null)
-		{
-			if (tr.isSuccess()) 
-			{
-				driver.executeScript("client:client.setTestData(true,'passed')");
-			}
-			else {
-				driver.executeScript("client:client.setTestData(false,'failed')");
-			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			driver.quit();
-		}
-			
+//		if (driver!=null)
+//		{
+//			if (tr.isSuccess()) 
+//			{
+//				driver.executeScript("client:client.setTestData(true,'passed')");
+//			}
+//			else {
+//				driver.executeScript("client:client.setTestData(false,'failed')");
+//			}
+//			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+//			driver.quit();
+//		}
+		driver.quit();	
 	}
 	
 }

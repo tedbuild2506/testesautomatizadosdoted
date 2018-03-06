@@ -23,7 +23,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class AndroidDemoTest extends BaseTest {
+public class WP_Cadastro extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	
@@ -62,7 +62,7 @@ public class AndroidDemoTest extends BaseTest {
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedusp06@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedusp07@mailinator.com");
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.swipe(165, 759, 175, 534, 1234);
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
@@ -95,7 +95,7 @@ public class AndroidDemoTest extends BaseTest {
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=tedusp06");
+		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=tedusp07");
 		  try{Thread.sleep(5000);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation Mail Subject']\", 0, 6000, 7, true)");
@@ -111,30 +111,32 @@ public class AndroidDemoTest extends BaseTest {
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
-		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp07@mailinator.com");
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 		  try{Thread.sleep(5000);} catch(Exception ignore){}
-
+        
 	}
 	
-	@AfterMethod
-	public void tearDown(ITestResult tr){
-		if (driver!=null)
-		{
-			if (tr.isSuccess()) 
-			{
-				driver.executeScript("client:client.setTestData(true,'passed')");
-			}
-			else {
-				driver.executeScript("client:client.setTestData(false,'failed')");
-			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			driver.quit();
-		}
-			
-	}
+//	@AfterMethod
+//	public void tearDown(ITestResult tr) throws Exception{
+////		if (driver!=null)
+////		{
+////			if (tr.isSuccess()) 
+////			{
+////				driver.executeScript("client:client.setTestData(true,'passed')");
+////			}
+////			else {
+////				driver.executeScript("client:client.setTestData(false,'failed')");
+////			}
+////			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+////			driver.quit();
+////		}
+//			driver.wait(8000);
+//	}
+//
 	
 }
+

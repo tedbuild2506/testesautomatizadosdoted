@@ -23,7 +23,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class cadastro_campos_inválidos extends BaseTest {
+public class WP_CadastroInvalido extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	

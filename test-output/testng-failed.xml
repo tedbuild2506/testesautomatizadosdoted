@@ -3,13 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.experitest.auto.Teste_recuperar_senha">
+      <class name="com.experitest.auto.WP_RecuperarSenha">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="testTeste_recuperar_senha_e_logar"/>
         </methods>
-      </class> <!-- com.experitest.auto.Teste_recuperar_senha -->
+      </class> <!-- com.experitest.auto.WP_RecuperarSenha -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
