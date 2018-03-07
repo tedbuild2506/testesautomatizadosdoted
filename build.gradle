@@ -11,6 +11,7 @@ repositories {
     maven {
         url "http://repo.experitest.com:8010/Maven2/"
         url "https://cloud.experitest.com/repo"
+        
     }
 }
 
