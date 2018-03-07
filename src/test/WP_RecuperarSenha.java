@@ -1,4 +1,4 @@
-package com.testes.cadastro.login.password;
+package test;
 
 import java.net.URL;
 import java.time.Duration;

@@ -1,4 +1,4 @@
-package com.testes.cadastro.login.password;
+package test;
 
 import java.io.File;
 import java.io.FileNotFoundException;
