@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="88633" started-at="2018-03-07T18:22:59Z" finished-at="2018-03-07T18:24:28Z">
+  <suite name="Default suite" duration-ms="91734" started-at="2018-03-07T19:12:05Z" finished-at="2018-03-07T19:13:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="88633" started-at="2018-03-07T18:22:59Z" finished-at="2018-03-07T18:24:28Z">
+    <test name="Default test" duration-ms="91734" started-at="2018-03-07T19:12:05Z" finished-at="2018-03-07T19:13:37Z">
       <class name="test.WP_CadastroEmBranco">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="setUp" is-config="true" duration-ms="35416" started-at="2018-03-07T15:22:59Z" finished-at="2018-03-07T15:23:34Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="setUp" is-config="true" duration-ms="36365" started-at="2018-03-07T16:12:05Z" finished-at="2018-03-07T16:12:42Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testTeste_de_cadastro_campos_em_branco()[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="testTeste_de_cadastro_campos_em_branco" duration-ms="50520" started-at="2018-03-07T15:23:34Z" finished-at="2018-03-07T15:24:25Z">
+        <test-method status="PASS" signature="testTeste_de_cadastro_campos_em_branco()[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="testTeste_de_cadastro_campos_em_branco" duration-ms="53540" started-at="2018-03-07T16:12:42Z" finished-at="2018-03-07T16:13:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTeste_de_cadastro_campos_em_branco -->
-        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-03-07T15:24:25Z" finished-at="2018-03-07T15:24:25Z">
+        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:test.WP_CadastroEmBranco@a67c67e]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-03-07T16:13:35Z" finished-at="2018-03-07T16:13:35Z">
           <params>
             <param index="0">
               <value>
@@ -32,26 +32,26 @@
           </params>
           <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Could not forward request http://62.90.196.19:7780/wd/hub/session/CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5/execute for session CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5 (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.47 seconds
+              <![CDATA[Could not forward request http://62.90.196.19:7781/wd/hub/session/CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167/execute for session CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 946 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.consul.android.smartbeer.staging, device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, appPackage=com.consul.android.smartbeer.staging, appActivity=com.whirlpool.ted.View.SplashActivity, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0}, device.serialNumber=ce061716ba5f3cdd0d7e, locationServicesAuthorized=false, device.version=7.1.1, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, autoWebview=false, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0, device.screenSize=1080x2220, useKeystore=false, app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, cloudViewLink=http://null/agent-132784/#/bZ2QsDHAycchZw9i?1
-Picked up Grid Node (seetest_7780)
-Reserved Device : Samsung Galaxy S8 (2), device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/28, keystorePath=~/.android/debug.keystore, appActivity=com.whirlpool.ted.View.SplashActivity, waitForDeviceTimeout=120000, device.model=SM-N950F, device.name=Samsung Galaxy S8 (2), projectName=, gridNodePort=7780, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5]]>
+Capabilities [{appPackage=com.consul.android.smartbeer.staging, device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, appPackage=com.consul.android.smartbeer.staging, appActivity=com.whirlpool.ted.View.SplashActivity, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0}, device.serialNumber=ce061716ba5f3cdd0d7e, locationServicesAuthorized=false, device.version=7.1.1, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, autoWebview=false, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0, device.screenSize=1080x2220, useKeystore=false, app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, cloudViewLink=http://null/agent-132784/#/KEY6gyUgEKDdmkyM?1
+Picked up Grid Node (seetest_7781)
+Reserved Device : Samsung Galaxy S8 (2), device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/29, keystorePath=~/.android/debug.keystore, appActivity=com.whirlpool.ted.View.SplashActivity, waitForDeviceTimeout=120000, device.model=SM-N950F, device.name=Samsung Galaxy S8 (2), projectName=, gridNodePort=7781, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: Could not forward request http://62.90.196.19:7780/wd/hub/session/CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5/execute for session CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5 (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 1.47 seconds
+              <![CDATA[org.openqa.selenium.WebDriverException: Could not forward request http://62.90.196.19:7781/wd/hub/session/CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167/execute for session CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 946 milliseconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{appPackage=com.consul.android.smartbeer.staging, device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, appPackage=com.consul.android.smartbeer.staging, appActivity=com.whirlpool.ted.View.SplashActivity, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0}, device.serialNumber=ce061716ba5f3cdd0d7e, locationServicesAuthorized=false, device.version=7.1.1, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, autoWebview=false, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0, device.screenSize=1080x2220, useKeystore=false, app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, cloudViewLink=http://null/agent-132784/#/bZ2QsDHAycchZw9i?1
-Picked up Grid Node (seetest_7780)
-Reserved Device : Samsung Galaxy S8 (2), device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/28, keystorePath=~/.android/debug.keystore, appActivity=com.whirlpool.ted.View.SplashActivity, waitForDeviceTimeout=120000, device.model=SM-N950F, device.name=Samsung Galaxy S8 (2), projectName=, gridNodePort=7780, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-03-07_20-23-08-06a63b72-f9cc-4818-aa64-c238b0c54ce5
+Capabilities [{appPackage=com.consul.android.smartbeer.staging, device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, appPackage=com.consul.android.smartbeer.staging, appActivity=com.whirlpool.ted.View.SplashActivity, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0}, device.serialNumber=ce061716ba5f3cdd0d7e, locationServicesAuthorized=false, device.version=7.1.1, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e', reportDirectory=reports, autoWebview=false, platformName=Android, testName=WP_CadastroEmBrancoGalaxys8Android7.0, device.screenSize=1080x2220, useKeystore=false, app=cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity, cloudViewLink=http://null/agent-132784/#/KEY6gyUgEKDdmkyM?1
+Picked up Grid Node (seetest_7781)
+Reserved Device : Samsung Galaxy S8 (2), device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/29, keystorePath=~/.android/debug.keystore, appActivity=com.whirlpool.ted.View.SplashActivity, waitForDeviceTimeout=120000, device.model=SM-N950F, device.name=Samsung Galaxy S8 (2), projectName=, gridNodePort=7781, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-03-07_21-12-14-b027291c-817b-48b5-8522-0b3659fec167
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
