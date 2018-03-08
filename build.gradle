@@ -8,12 +8,12 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://cloud.experitest.com/repo"
-        url "http://repo.experitest.com:8010/Maven2/"
-        mavenCentral()
-    }
+    maven { url "https://cloud.experitest.com/repo" }
+    maven { url "http://repo.experitest.com:8010/Maven2/"}
+
+    mavenCentral()
 }
+
 
 dependencies {
     compile(group: 'com.experitest', name: 'seetest-appium', version: '10.8')
@@ -25,8 +25,5 @@ dependencies {
 }
 
 test {
-    useTestNG() {
-        suites './testng.xml'
-    }
-  
+    useTestNG()
 }

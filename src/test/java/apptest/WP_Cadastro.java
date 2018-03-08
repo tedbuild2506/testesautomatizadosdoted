@@ -40,7 +40,7 @@ public class WP_Cadastro extends BaseTest {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("testName", "WP_CadastroValidoGalaxys8");
-		dc.setCapability("deviceQuery", "@serialnumber='ad06160309316a7a49'");
+		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -53,9 +53,13 @@ public class WP_Cadastro extends BaseTest {
 //		client.install("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, false);
 ////		client.applicationClearData("com.consul.android.smartbeer.staging");
 //	}
-		
+	
 	@Test 
 	public void testing() {
+		int num = 0;
+		for(int count=1 ; count <= 100 ; count++){
+			num+=1;
+		}
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  client.setShowReport(false);
@@ -65,7 +69,7 @@ public class WP_Cadastro extends BaseTest {
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  try{Thread.sleep(4000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedusp07@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedcadusp0"+num+"@mailinator.com");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.swipe(165, 759, 175, 534, 1234);
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
@@ -88,7 +92,9 @@ public class WP_Cadastro extends BaseTest {
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
+		  client.setShowReport(false);
 		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
+		  client.setShowReport(true);
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
@@ -98,7 +104,7 @@ public class WP_Cadastro extends BaseTest {
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=tedusp07");
+		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=tedcadusp0"+num+"");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation Mail Subject']\", 0, 6000, 7, true)");
@@ -116,7 +122,7 @@ public class WP_Cadastro extends BaseTest {
 		  client.setShowReport(false);
 	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
 	      client.setShowReport(true);
-		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp07@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedcadusp0"+num+"@mailinator.com");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
 		  try{Thread.sleep(3000);} catch(Exception ignore){}
