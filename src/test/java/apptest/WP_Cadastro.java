@@ -74,7 +74,7 @@ public class WP_Cadastro extends BaseTest {
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
-		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  try{Thread.sleep(1400);} catch(Exception ignore){}
 		  driver.swipe(309, 856, 390, 406, 888);
 		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
