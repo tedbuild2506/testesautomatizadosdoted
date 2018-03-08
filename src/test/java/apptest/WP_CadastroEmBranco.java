@@ -55,7 +55,7 @@ public class WP_CadastroEmBranco extends BaseTest {
 //	}
 		
 	@Test
-	 public void testecadastrobranco() {
+	 public void testedecadastrobranco() {
       client.applicationClearData("com.consul.android.smartbeer.staging");
 	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 	  client.setShowReport(false);
