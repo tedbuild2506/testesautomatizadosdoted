@@ -40,7 +40,7 @@ public class WP_RecuperarSenha extends BaseTest {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.experitest.ExperiBank");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, ".LoginActivity");
 		dc.setCapability("testName", "WP_RecuperarSenhaGalaxys8");
-		dc.setCapability("deviceQuery", "@serialnumber='ce061716ba5f3cdd0d7e'");
+		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
