@@ -58,75 +58,83 @@ public class WP_Cadastro extends BaseTest {
 	
 	@Test 
 	public void testing() {
-			  client.applicationClearData("com.consul.android.smartbeer.staging");
-			  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-			  client.setShowReport(false);
-			  try{Thread.sleep(4000);} catch(Exception ignore){}
-			  client.setShowReport(true);
-			  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
-			  try{Thread.sleep(4000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-			  try{Thread.sleep(4000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("cadastrotedusp01@mailinator.com");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.swipe(165, 759, 175, 534, 1234);
-			  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.swipe(309, 856, 390, 406, 888);
-			  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.swipe(168, 946, 334, 615, 2240);
-		      driver.findElement(By.xpath("//*[@id='dobView']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='OK']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.swipe(84, 887, 259, 493, 1461);
-			  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.swipe(450, 812, 500, 640, 1292);
-			  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  client.setShowReport(false);
-			  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
-			  client.setShowReport(true);
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.pressKeyCode(AndroidKeyCode.HOME);
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=cadastrotedusp01");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.getKeyboard().sendKeys("{ENTER}");
-			  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation Mail Subject']\", 0, 6000, 7, true)");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmar conta']\", 0, 6000, 7, true)");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.pressKeyCode(AndroidKeyCode.HOME);
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  client.applicationClearData("com.consul.android.smartbeer.staging");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  client.setShowReport(false);
-		      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
-		      client.setShowReport(true);
-			  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("cadastrotedusp01@mailinator.com");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-			  try{Thread.sleep(3000);} catch(Exception ignore){}
+		int num = 0;
+		  client.applicationClearData("com.consul.android.smartbeer.staging");
+		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+		  client.setShowReport(false);
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  client.setShowReport(true);
+		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("signin@mailinator.com");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.swipe(165, 759, 175, 534, 1234);
+		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.swipe(309, 856, 390, 406, 888);
+		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.swipe(168, 946, 334, 615, 2240);
+	      driver.findElement(By.xpath("//*[@id='dobView']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='OK']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.swipe(84, 887, 259, 493, 1461);
+		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.swipe(450, 812, 500, 640, 1292);
+		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  client.setShowReport(false);
+		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
+		  client.setShowReport(true);
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.pressKeyCode(AndroidKeyCode.HOME);
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=cadastrotedusp01");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.getKeyboard().sendKeys("{ENTER}");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation Mail Subject']\", 0, 6000, 7, true)");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmar conta']\", 0, 6000, 7, true)");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.pressKeyCode(AndroidKeyCode.HOME);
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  client.applicationClearData("com.consul.android.smartbeer.staging");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  client.setShowReport(false);
+	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
+	      client.setShowReport(true);
+		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("cadastrotedusp01@mailinator.com");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
+		  try{Thread.sleep(1500);} catch(Exception ignore){}
+		for (int i = 0; i<100;i++) {
+			num=num+1;
+		}
+			  
+				
 	}
+				
+	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
 		if (driver!=null)

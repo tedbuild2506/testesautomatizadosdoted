@@ -61,21 +61,21 @@ public class WP_CadastroEmBranco extends BaseTest {
 	  client.setShowReport(false);
 	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
 	  client.setShowReport(true);
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.swipe(165, 759, 175, 534, 1234);
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.swipe(309, 856, 390, 406, 888);
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.swipe(168, 946, 334, 615, 2240);
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.swipe(84, 887, 259, 493, 1461);
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.swipe(450, 812, 500, 640, 1292);
-	  try{Thread.sleep(3000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-	  try{Thread.sleep(5000);} catch(Exception ignore){}
+	  try{Thread.sleep(1500);} catch(Exception ignore){}
 	 }
 	
 	@AfterMethod
