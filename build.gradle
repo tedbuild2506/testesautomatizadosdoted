@@ -9,9 +9,9 @@ sourceCompatibility = 1.8
 repositories {
     mavenCentral()
     maven {
-        url "http://repo.experitest.com:8010/Maven2/"
         url "https://cloud.experitest.com/repo"
-        
+        url "http://repo.experitest.com:8010/Maven2/"
+        mavenCentral()
     }
 }
 
