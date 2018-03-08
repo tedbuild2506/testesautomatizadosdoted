@@ -170,3 +170,10 @@ if [ "$(uname)" = "Darwin" ] && [ "$HOME" = "$PWD" ]; then
 fi
 
 exec "$JAVACMD" "$@"
+test {
+    doFirst {
+        filter.includePatterns.each {
+            include "${it.replaceAll('\\.', "\\${File.separator}")}.class"
+        }
+    }
+}
