@@ -24,7 +24,8 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
 import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
-
+import java.util.Date;
+import java.text.DateFormat;
 
 public class WP_Cadastro extends BaseTest {
 	protected AndroidDriver<AndroidElement> driver = null;
@@ -56,9 +57,18 @@ public class WP_Cadastro extends BaseTest {
 ////		client.applicationClearData("com.consul.android.smartbeer.staging");
 //	}
 	
+	private String getDateTime() {
+	    DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+	    Date date = new Date();
+	    return dateFormat.format(date);
+	}	
+	
 	@Test 
 	public void testing() {
 		int num = 0;
+		
+		 String strEmail = getDateTime();
+		 
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  client.setShowReport(false);
@@ -68,7 +78,7 @@ public class WP_Cadastro extends BaseTest {
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("signin@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys(strEmail + "@mailinator.com");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.swipe(165, 759, 175, 534, 1234);
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
@@ -103,7 +113,7 @@ public class WP_Cadastro extends BaseTest {
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=cadastrotedusp01");
+		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=" + strEmail);
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation Mail Subject']\", 0, 6000, 7, true)");
@@ -121,7 +131,7 @@ public class WP_Cadastro extends BaseTest {
 		  client.setShowReport(false);
 	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
 	      client.setShowReport(true);
-		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("cadastrotedusp01@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys(strEmail + "@mailinator.com");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
 		  try{Thread.sleep(1500);} catch(Exception ignore){}

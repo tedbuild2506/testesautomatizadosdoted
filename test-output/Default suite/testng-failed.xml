@@ -3,13 +3,31 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.testes.cadastro.login.password.WP_RecuperarSenha">
+      <class name="apptest.WP_Cadastro">
         <methods>
-          <include name="testTeste_recuperar_senha_e_logar"/>
+          <include name="testing"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.testes.cadastro.login.password.WP_RecuperarSenha -->
+      </class> <!-- apptest.WP_Cadastro -->
+      <class name="apptest.WP_CadastroInvalido">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- apptest.WP_CadastroInvalido -->
+      <class name="apptest.WP_RecuperarSenha">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- apptest.WP_RecuperarSenha -->
+      <class name="apptest.WP_CadastroEmBranco">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- apptest.WP_CadastroEmBranco -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
