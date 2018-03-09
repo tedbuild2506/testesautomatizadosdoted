@@ -116,7 +116,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		{
 			if (tr.isSuccess()) 
 			{
-				client.report("Test has passed", true);
+				client.report("Test has Failed", false);
 			}
 			else {
 				client.report("Test has failed", false);
