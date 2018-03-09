@@ -51,7 +51,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acesse sua conta']")));
 		  client.setShowReport(true);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@text='Adesse sua conta']")).click();
+		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -116,7 +116,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		{
 			if (tr.isSuccess()) 
 			{
-				client.report("Test has Failed", false);
+				client.report("Test has passed", true);
 			}
 			else {
 				client.report("Test has failed", false);
