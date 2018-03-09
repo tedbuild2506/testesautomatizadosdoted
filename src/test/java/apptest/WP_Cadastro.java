@@ -59,10 +59,10 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		 
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  client.setShowReport(false);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(true);
+		  client.setShowReport(false);
 		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
+		  client.setShowReport(true);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
