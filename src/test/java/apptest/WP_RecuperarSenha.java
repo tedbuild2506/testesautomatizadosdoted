@@ -116,10 +116,10 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		{
 			if (tr.isSuccess()) 
 			{
-				client.report("Test has TESTE", false);
+				client.report("Test has passed", true);
 			}
 			else {
-				client.report("Test has TESTE", false);
+				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
