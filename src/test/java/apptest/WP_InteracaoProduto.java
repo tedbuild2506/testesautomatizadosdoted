@@ -55,9 +55,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
       	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
       	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
           driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-          client.setShowReport(false);
-      	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Controles']")));
-      	  client.setShowReport(true);
+          try{Thread.sleep(esperandogif);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
       	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
@@ -73,17 +71,11 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
       	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
       	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
-      	  client.setShowReport(false);
-      	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Destravar painel']")));
-      	  client.setShowReport(true);
+      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
-      	  client.setShowReport(false);
-      	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='imgTemp']")));
-      	  client.setShowReport(true);
+      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  client.setShowReport(false);
-      	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='imgTemp']")));
-      	  client.setShowReport(true);
+      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
       	 }
 

@@ -47,9 +47,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 	public void testTeste_recuperar_senha_e_logar() {
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acesse sua conta']")));
-		  client.setShowReport(true);
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -61,9 +59,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Acessar sua conta']")));
-		  client.setShowReport(true);
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  client.setShowReport(false);
 		  driver.findElement(By.xpath("//*[@text='Acessar sua conta']")).click();
@@ -94,17 +90,13 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");		  
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
-		  client.setShowReport(true);
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2001");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 40).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='btHome']")));
-		  client.setShowReport(true);
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  
 		 }

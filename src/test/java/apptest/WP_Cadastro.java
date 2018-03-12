@@ -60,9 +60,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
-		  client.setShowReport(true);
+		  try {Thread.sleep(esperandogif);}catch (Exception ignore){}
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -89,9 +87,14 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(false);
-		  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
-		  client.setShowReport(true);
+		  try{Thread.sleep(4000);} catch(Exception ignore){}
+		  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Verificar validação']")).size()<0;
+		  if (isPresent.TRUE) {
+			  client.report("Teste funcionou como o esperado", true);
+		  }
+		  else {
+			  client.report("O cadastro não foi realizado. O teste falhou", false);
+		  }
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -116,9 +119,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(false);
-	      new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
-	      client.setShowReport(true);
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys(strEmail + "@mailinator.com");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
@@ -145,6 +146,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 			driver.quit();
 		}
 	}
-	
+//	client.setShowReport(false);
+//	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
+//	  client.setShowReport(true);
 }
 
