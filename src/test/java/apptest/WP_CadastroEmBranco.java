@@ -65,6 +65,13 @@ public class WP_CadastroEmBranco extends BaseTest implements GlobalConstants {
 	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+	  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Digite e-mail']")).size()<0;
+	  if (isPresent.TRUE) {
+		  client.report("Teste funcionou como o esperado", true);
+	  }
+	  else {
+		  client.report("O aplicativo não bloqueiou o cadastro invalido. Teste falhou", false);
+	  }
 	 }
 	
 	@AfterMethod

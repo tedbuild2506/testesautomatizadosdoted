@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="137249" started-at="2018-03-09T17:52:47Z" finished-at="2018-03-09T17:55:04Z">
+  <suite name="Default suite" duration-ms="81581" started-at="2018-03-12T11:25:16Z" finished-at="2018-03-12T11:26:38Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="137249" started-at="2018-03-09T17:52:47Z" finished-at="2018-03-09T17:55:04Z">
-      <class name="apptest.WP_InteracaoProduto">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_InteracaoProduto@3327bd23]" name="setUp" is-config="true" duration-ms="33087" started-at="2018-03-09T14:52:47Z" finished-at="2018-03-09T14:53:20Z">
+    <test name="Default test" duration-ms="81581" started-at="2018-03-12T11:25:16Z" finished-at="2018-03-12T11:26:38Z">
+      <class name="apptest.WP_CadastroEmBranco">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_CadastroEmBranco@3327bd23]" name="setUp" is-config="true" duration-ms="33352" started-at="2018-03-12T08:25:16Z" finished-at="2018-03-12T08:25:50Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeinteracaoproduto()[pri:0, instance:apptest.WP_InteracaoProduto@3327bd23]" name="testeinteracaoproduto" duration-ms="95441" started-at="2018-03-09T14:53:20Z" finished-at="2018-03-09T14:54:55Z">
+        <test-method status="PASS" signature="testedecadastrobranco()[pri:0, instance:apptest.WP_CadastroEmBranco@3327bd23]" name="testedecadastrobranco" duration-ms="38454" started-at="2018-03-12T08:25:50Z" finished-at="2018-03-12T08:26:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeinteracaoproduto -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_InteracaoProduto@3327bd23]" name="tearDown" is-config="true" duration-ms="8688" started-at="2018-03-09T14:54:55Z" finished-at="2018-03-09T14:55:04Z">
+        </test-method> <!-- testedecadastrobranco -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_CadastroEmBranco@3327bd23]" name="tearDown" is-config="true" duration-ms="9753" started-at="2018-03-12T08:26:28Z" finished-at="2018-03-12T08:26:38Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeinteracaoproduto status=SUCCESS method=WP_InteracaoProduto.testeinteracaoproduto()[pri:0, instance:apptest.WP_InteracaoProduto@3327bd23] output={null}]]]>
+                <![CDATA[[TestResult name=testedecadastrobranco status=SUCCESS method=WP_CadastroEmBranco.testedecadastrobranco()[pri:0, instance:apptest.WP_CadastroEmBranco@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_InteracaoProduto -->
+      </class> <!-- apptest.WP_CadastroEmBranco -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
