@@ -36,7 +36,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_GalaxyS6Plus");
+		dc.setCapability("testName", "wp_TED_GalaxyS6PlusRecuperarSenha");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -48,25 +48,14 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedusp06@mailinator.com");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(821, 868, 768, 478, 448);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.setShowReport(false);
 		  driver.findElement(By.xpath("//*[@text='Acessar sua conta']")).click();
-		  client.setShowReport(true);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
@@ -84,17 +73,14 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.swipe(56, 1028, 53, 962, 255);
 		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("Smart2001");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='commit']\", 0, 6000, 2, true)");
-		  try{Thread.sleep(4000);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");		  
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2001");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);

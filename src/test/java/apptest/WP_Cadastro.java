@@ -39,7 +39,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_GalaxyS6Plus");
+		dc.setCapability("testName", "wp_TED_GalaxyS6PlusCadastroValido");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -59,45 +59,31 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		 
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  try {Thread.sleep(esperandogif);}catch (Exception ignore){}
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys(strEmail + "@mailinator.com");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(165, 759, 175, 534, 1234);
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
-		  try{Thread.sleep(1400);} catch(Exception ignore){}
 		  driver.swipe(309, 856, 390, 406, 888);
 		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(168, 946, 334, 615, 2240);
 	      driver.findElement(By.xpath("//*[@id='dobView']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  try{Thread.sleep(4000);} catch(Exception ignore){}
-		  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Verificar validação']")).size()<0;
-		  if (isPresent.TRUE) {
-			  client.report("Teste funcionou como o esperado", true);
-		  }
-		  else {
-			  client.report("O cadastro não foi realizado. O teste falhou", false);
-		  }
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+//		  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Verificar validação']")).size()<0;
+//		  if (isPresent.TRUE) {
+//			  client.report("Teste funcionou como o esperado", true);
+//		  }
+//		  else {
+//			  client.report("O cadastro não foi realizado. O teste falhou", false);
+//		  }
 		  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
@@ -114,18 +100,12 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  client.applicationClearData("com.consul.android.smartbeer.staging");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys(strEmail + "@mailinator.com");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}		  
+		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();	  
 				
 	}
 				

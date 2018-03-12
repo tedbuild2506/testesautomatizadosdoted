@@ -36,7 +36,7 @@ public class WP_CadastroEmBranco extends BaseTest implements GlobalConstants {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_GalaxyS6Plus");
+		dc.setCapability("testName", "wp_TED_GalaxyS6PlusCadastroEmBranco");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -47,24 +47,14 @@ public class WP_CadastroEmBranco extends BaseTest implements GlobalConstants {
 	 public void testedecadastrobranco() {
       client.applicationClearData("com.consul.android.smartbeer.staging");
 	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-	  client.setShowReport(false);
-	  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")));
-	  client.setShowReport(true);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.swipe(165, 759, 175, 534, 1234);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.swipe(309, 856, 390, 406, 888);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.swipe(168, 946, 334, 615, 2240);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.swipe(84, 887, 259, 493, 1461);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.swipe(450, 812, 500, 640, 1292);
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Digite e-mail']")).size()<0;
 	  if (isPresent.TRUE) {
 		  client.report("Teste funcionou como o esperado", true);
