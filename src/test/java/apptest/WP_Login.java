@@ -44,7 +44,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	}
 		
 	@Test
-	 public void testeinteracaoproduto() {
+	 public void testeLogin() {
       client.applicationClearData("com.consul.android.smartbeer.staging");
       	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
