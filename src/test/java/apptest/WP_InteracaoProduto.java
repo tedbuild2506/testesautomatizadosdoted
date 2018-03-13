@@ -52,7 +52,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
       	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys(user);
       	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys(senha);
           driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-          try{Thread.sleep(7000);} catch(Exception ignore){}
+          try{Thread.sleep(esperandogif+4000);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
       	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
@@ -68,11 +68,11 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
       	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
       	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
-      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
-      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
       	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
       	 }
 
