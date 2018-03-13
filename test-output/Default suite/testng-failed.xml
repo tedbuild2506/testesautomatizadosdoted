@@ -6,7 +6,6 @@
       <class name="apptest.WP_InteracaoProduto">
         <methods>
           <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="testeinteracaoproduto"/>
         </methods>
       </class> <!-- apptest.WP_InteracaoProduto -->

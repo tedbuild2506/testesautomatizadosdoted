@@ -36,7 +36,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_GalaxyS6PlusRecuperarSenha");
+		dc.setCapability("testName", "wp_TED_GalaxyS6EdgePlusRecuperarSenha");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -67,7 +67,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='Reset password instructions']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("Smart2001");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(56, 1028, 53, 962, 255);
