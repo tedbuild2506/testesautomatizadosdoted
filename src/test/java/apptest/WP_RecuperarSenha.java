@@ -2,7 +2,10 @@ package apptest;
 
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -42,10 +45,17 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		client = new SeeTestClient(driver);
 		
 	}
+	
+	private String getDateTime() {
+	    DateFormat dateFormat = new SimpleDateFormat("yyyyMMddHHmmss");
+	    Date date = new Date();
+	    return dateFormat.format(date);
+	}
 		
 	@Test 
 	public void testTeste_recuperar_senha_e_logar() {
-		  client.applicationClearData("com.consul.android.smartbeer.staging");
+		String strSenha = getDateTime();
+		 client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
@@ -68,10 +78,10 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("Smart2001");
+		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("S"+strSenha+"s");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(56, 1028, 53, 962, 255);
-		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("Smart2001");
+		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("S"+strSenha+"s");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='commit']\", 0, 6000, 2, true)");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
@@ -80,11 +90,10 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
-		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2001");
+		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("S"+strSenha+"s");
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
-		  
 		 }
 
 	

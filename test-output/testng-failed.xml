@@ -3,12 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="apptest.WP_InteracaoProduto">
+      <class name="apptest.WP_RecuperarSenha">
         <methods>
+          <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testeinteracaoproduto"/>
+          <include name="testTeste_recuperar_senha_e_logar"/>
         </methods>
-      </class> <!-- apptest.WP_InteracaoProduto -->
+      </class> <!-- apptest.WP_RecuperarSenha -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

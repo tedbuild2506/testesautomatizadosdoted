@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="138894" started-at="2018-03-13T18:53:00Z" finished-at="2018-03-13T18:55:19Z">
+  <suite name="Default suite" duration-ms="166735" started-at="2018-03-15T13:30:48Z" finished-at="2018-03-15T13:33:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="138894" started-at="2018-03-13T18:53:00Z" finished-at="2018-03-13T18:55:19Z">
-      <class name="apptest.WP_InteracaoProduto">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_InteracaoProduto@3c0f93f1]" name="setUp" is-config="true" duration-ms="35878" started-at="2018-03-13T15:53:00Z" finished-at="2018-03-13T15:53:36Z">
+    <test name="Default test" duration-ms="166735" started-at="2018-03-15T13:30:48Z" finished-at="2018-03-15T13:33:35Z">
+      <class name="apptest.WP_RecuperarSenha">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3327bd23]" name="setUp" is-config="true" duration-ms="37194" started-at="2018-03-15T10:30:48Z" finished-at="2018-03-15T10:31:25Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeinteracaoproduto()[pri:0, instance:apptest.WP_InteracaoProduto@3c0f93f1]" name="testeinteracaoproduto" duration-ms="92673" started-at="2018-03-13T15:53:36Z" finished-at="2018-03-13T15:55:09Z">
+        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3327bd23]" name="testTeste_recuperar_senha_e_logar" duration-ms="120565" started-at="2018-03-15T10:31:25Z" finished-at="2018-03-15T10:33:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeinteracaoproduto -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_InteracaoProduto@3c0f93f1]" name="tearDown" is-config="true" duration-ms="10300" started-at="2018-03-13T15:55:09Z" finished-at="2018-03-13T15:55:19Z">
+        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3327bd23]" name="tearDown" is-config="true" duration-ms="8953" started-at="2018-03-15T10:33:26Z" finished-at="2018-03-15T10:33:35Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeinteracaoproduto status=SUCCESS method=WP_InteracaoProduto.testeinteracaoproduto()[pri:0, instance:apptest.WP_InteracaoProduto@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_InteracaoProduto -->
+      </class> <!-- apptest.WP_RecuperarSenha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -45,35 +45,35 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 		
 	@Test
 	 public void testeinteracaoproduto() {
-      client.applicationClearData("com.consul.android.smartbeer.staging");
-      	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+		  client.applicationClearData("com.consul.android.smartbeer.staging");
+    	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-      	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
-      	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-          driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-          try{Thread.sleep(esperandogif+4000);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
-      	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-      	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-      	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+    	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
+    	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
+    	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
+    	  try{Thread.sleep(esperandogif+4000);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
+    	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
+    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
       	 }
 
 	@AfterMethod
