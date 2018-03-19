@@ -6,6 +6,7 @@ import java.lang.Thread;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
@@ -110,8 +111,20 @@ public class WP_Marketplace extends BaseTest implements GlobalConstants {
 
 	
 	@AfterMethod
-	public void tearDown(){
-		driver.quit();
+	public void tearDown(ITestResult tr){
+		if (driver!=null)
+		{
+			if (tr.isSuccess()) 
+			{
+				client.report("Test has passed", true);
+			}
+			else {
+				client.report("Test has failed", false);
+			}
+			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			client.releaseDevice("ce061716ba5f3cdd0d7e", true, false, true);
+			driver.quit();
+		}
 	}
 	
 }

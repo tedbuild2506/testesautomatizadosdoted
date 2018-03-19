@@ -2,38 +2,27 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="173689" started-at="2018-03-15T15:05:31Z" finished-at="2018-03-15T15:08:24Z">
+  <suite name="Default suite" duration-ms="171890" started-at="2018-03-19T18:22:43Z" finished-at="2018-03-19T18:25:35Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="173689" started-at="2018-03-15T15:05:31Z" finished-at="2018-03-15T15:08:24Z">
-      <class name="apptest.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="37820" started-at="2018-03-15T12:05:31Z" finished-at="2018-03-15T12:06:08Z">
+    <test name="Default test" duration-ms="171890" started-at="2018-03-19T18:22:43Z" finished-at="2018-03-19T18:25:35Z">
+      <class name="apptest.IOSTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.IOSTest@10bdf5e5]" name="setUp" is-config="true" duration-ms="128678" started-at="2018-03-19T15:22:43Z" finished-at="2018-03-19T15:24:52Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[@os='android']]>
+                <![CDATA[@os='ios']]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="126290" started-at="2018-03-15T12:06:08Z" finished-at="2018-03-15T12:08:15Z">
+        <test-method status="PASS" signature="test()[pri:0, instance:apptest.IOSTest@10bdf5e5]" name="test" duration-ms="43201" started-at="2018-03-19T15:24:52Z" finished-at="2018-03-19T15:25:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="9551" started-at="2018-03-15T12:08:15Z" finished-at="2018-03-15T12:08:24Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_RecuperarSenha -->
+        </test-method> <!-- test -->
+      </class> <!-- apptest.IOSTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
