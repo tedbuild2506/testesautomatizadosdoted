@@ -2,27 +2,38 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="171890" started-at="2018-03-19T18:22:43Z" finished-at="2018-03-19T18:25:35Z">
+  <suite name="Default suite" duration-ms="174546" started-at="2018-03-21T11:48:23Z" finished-at="2018-03-21T11:51:17Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="171890" started-at="2018-03-19T18:22:43Z" finished-at="2018-03-19T18:25:35Z">
-      <class name="apptest.IOSTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.IOSTest@10bdf5e5]" name="setUp" is-config="true" duration-ms="128678" started-at="2018-03-19T15:22:43Z" finished-at="2018-03-19T15:24:52Z">
+    <test name="Default test" duration-ms="174546" started-at="2018-03-21T11:48:23Z" finished-at="2018-03-21T11:51:17Z">
+      <class name="apptest.WP_Cadastro">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="setUp" is-config="true" duration-ms="36098" started-at="2018-03-21T08:48:23Z" finished-at="2018-03-21T08:48:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[@os='ios']]>
+                <![CDATA[@os='android']]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:apptest.IOSTest@10bdf5e5]" name="test" duration-ms="43201" started-at="2018-03-19T15:24:52Z" finished-at="2018-03-19T15:25:35Z">
+        <test-method status="PASS" signature="testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="testing" duration-ms="128379" started-at="2018-03-21T08:48:59Z" finished-at="2018-03-21T08:51:07Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- apptest.IOSTest -->
+        </test-method> <!-- testing -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="tearDown" is-config="true" duration-ms="10034" started-at="2018-03-21T08:51:07Z" finished-at="2018-03-21T08:51:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testing status=SUCCESS method=WP_Cadastro.testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- apptest.WP_Cadastro -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
