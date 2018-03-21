@@ -75,6 +75,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+		  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 //		  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Verificar validação']")).size()<0;
 //		  if (isPresent.TRUE) {
