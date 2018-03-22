@@ -1,5 +1,7 @@
 package apptest;
 
+import org.openqa.selenium.By;
+
 public interface GlobalConstants {
 
 	  int threadSleep = 2200;
@@ -7,5 +9,5 @@ public interface GlobalConstants {
 	  String senha = "Smart2000";
 	  int esperandogif = 7500;
 	  int esperarminigifs = 1000;
-	 
+
 }

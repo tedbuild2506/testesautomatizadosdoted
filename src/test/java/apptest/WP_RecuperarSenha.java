@@ -76,7 +76,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Reset password instructions']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Repor instruções de senha']\", 0, 8000, 2, true)");
 		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("S"+strSenha+"s");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
