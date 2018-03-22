@@ -94,7 +94,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=" + strEmail);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmation instructions']\", 0, 6000, 7, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Instruções de confirmação']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmar conta']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
