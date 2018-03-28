@@ -30,8 +30,8 @@ public class WP_CadastroInvalidoIOS extends BaseTest implements GlobalConstants 
 		init(deviceQuery);
 		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.smartbeer-staging");
 		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.consul.smartbeer-staging");
-		dc.setCapability("testName", "wp_TED_Iphone6CadastroBranco");
-		dc.setCapability("deviceQuery", "@serialnumber='5f354f456c655f1cfa05be9a63139072f9e67fe2'");
+		dc.setCapability("testName", "wp_TED_Iphone8CadastroBranco");
+		dc.setCapability("deviceQuery", "@serialnumber='2ef16f1e7b475b9e6aa09392efb67735b1b57b08'");		
 		driver = new IOSDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 	}
@@ -39,33 +39,65 @@ public class WP_CadastroInvalidoIOS extends BaseTest implements GlobalConstants 
 	@Test
 	public void testecadastroinvalidoIOS(){
 
-		 Boolean Allow = driver.findElements(By.xpath("//*[@text='Allow']")).size()<0;
-		 Boolean Cancel = driver.findElements(By.xpath("//*[@text='Cancel']")).size()<0;
-//		  if (Allow.TRUE) {
-//			  new WebDriverWait(driver, 30, esperandogif).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Allow']"))).click();
-//			  if (Allow.FALSE)  {
+		 Boolean Allow = driver.findElements(By.xpath("//*[@value='Allow']")).size()>0;
+		  if (Allow) {
+			  driver.findElement(By.xpath("//*[@value='Allow']")).click();
+			  //client.launch("com.apple.mobilesafari\"", false, false);
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("ashutosh@ashutosh.com.br");
+			  driver.swipe(165, 759, 175, 534, 1234);
+			  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("lucasmoreira");
+			  driver.findElement(By.xpath("//*[@placeholder='Confirmer Senha']")).sendKeys("lucazmoreira");
+			  driver.swipe(309, 856, 390, 406, 888);
+			  driver.findElement(By.xpath("//*[@placeholder='Nome e Sobrenome']")).sendKeys("teste");
+			  driver.findElement(By.xpath("//*[@placeholder='CPF']")).sendKeys("12345678901");
+			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+			  driver.swipe(168, 946, 334, 615, 2240);
+			  driver.findElement(By.xpath("//*[@placeholder='Data de Nascimento (dd/mm/aaaa)']")).sendKeys("20/03/2019");
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+			  driver.swipe(84, 887, 259, 493, 1461);
+			  driver.findElement(By.xpath("//*[@placeholder='Telefone']")).sendKeys("99999999999");
+			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+			  driver.swipe(450, 812, 500, 640, 1292);
+			  driver.findElement(By.xpath("//*[@id='Cadastrar']")).click();
+			  }
+		  else  {
 				  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 				  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("ashutosh@ashutosh.com.br");
 				  driver.swipe(165, 759, 175, 534, 1234);
-				  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("lucasmoreira");
-				  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("lucazmoreira");
+				  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("lucasmoreira");
+				  driver.findElement(By.xpath("//*[@placeholder='Confirmer Senha']")).sendKeys("lucazmoreira");
 				  driver.swipe(309, 856, 390, 406, 888);
-				  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("teste");
-				  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("12345678901");
+				  driver.findElement(By.xpath("//*[@placeholder='Nome e Sobrenome']")).sendKeys("teste");
+				  driver.findElement(By.xpath("//*[@placeholder='CPF']")).sendKeys("12345678901");
+				  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
 				  driver.swipe(168, 946, 334, 615, 2240);
-				  driver.findElement(By.xpath("//*[@id='dobView']")).click();
-				  driver.findElement(By.xpath("//*[@text='2018']")).click();
-				  driver.findElement(By.xpath("//*[@text='2020']")).click();
-				  driver.findElement(By.xpath("//*[@text='OK']")).click();
+				  driver.findElement(By.xpath("//*[@placeholder='Data de Nascimento (dd/mm/aaaa)']")).click();
+				  driver.swipe(488, 826, 448, 836, 2240);
+				  driver.findElement(By.xpath("//*[@value='Feito']")).click();
 				  driver.swipe(84, 887, 259, 493, 1461);
-				  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("99999999999");
+				  driver.findElement(By.xpath("//*[@placeholder='Telefone']")).sendKeys("99999999999");
+				  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+				  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 				  driver.swipe(450, 812, 500, 640, 1292);
-				  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-				  System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-				  driver.quit();
-		  }
-	  
+				  driver.findElement(By.xpath("//*[@id='Cadastrar']")).click();}
+				}
+	@AfterMethod
+	public void tearDown(ITestResult tr){
+		if (driver!=null)
+		{
+			if (tr.isSuccess()) 
+			{
+				client.report("Test has passed", true);
+			}
+			else {
+				client.report("Test has failed", false);
+			}
+			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			driver.quit();
+		}
+	}
 }
-	
-
-
