@@ -47,7 +47,7 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	 public void testTeste_cadastro_campos_invalidos() {
 	  client.applicationClearData("com.consul.android.smartbeer.staging");
 	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-	  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("ashutosh@ashutosh.com.br");
 	  driver.swipe(165, 759, 175, 534, 1234);

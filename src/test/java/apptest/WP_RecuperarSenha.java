@@ -57,13 +57,13 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		String strSenha = getDateTime();
 		 client.applicationClearData("com.consul.android.smartbeer.staging");
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
 		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedusp06@mailinator.com");
 		  driver.swipe(821, 868, 768, 478, 448);
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acessar sua conta']")).click();
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
@@ -77,22 +77,22 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='Repor instruções de senha']")).click();
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("S"+strSenha+"s");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(56, 1028, 53, 962, 255);
 		  driver.findElement(By.xpath("//*[@id='password_confirmation']")).sendKeys("S"+strSenha+"s");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Trocar Senha']\", 0, 6000, 2, true)");
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedusp06@mailinator.com");
 		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("S"+strSenha+"s");
 		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-		  try{Thread.sleep(esperandogif);} catch(Exception ignore){}
+		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		 }
 
