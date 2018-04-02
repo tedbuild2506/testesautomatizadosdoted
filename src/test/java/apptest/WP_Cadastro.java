@@ -73,6 +73,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
+		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
+		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 		  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();
@@ -96,7 +98,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Instruções de confirmação']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Confirmar conta']\", 0, 6000, 7, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ativar']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
