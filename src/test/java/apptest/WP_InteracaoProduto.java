@@ -33,9 +33,9 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
-		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
+		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
+		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_GalaxyS6PlusInteracaoProduto");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
@@ -54,25 +54,25 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
     	  try{Thread.sleep(esperandogifintermediario+4000);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgHappyHour']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
     	  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
-    	  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
       	 }
 
