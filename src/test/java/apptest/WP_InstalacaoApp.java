@@ -48,7 +48,7 @@ public class WP_InstalacaoApp extends BaseTest implements GlobalConstants {
 	}
 	
 	@Test 
-	public void testing() {
+	public void instalar() {
 		driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity"); 
 
 	}
