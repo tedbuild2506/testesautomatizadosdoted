@@ -40,7 +40,7 @@ public class WP_InstalacaoApp extends BaseTest implements GlobalConstants {
 		/*dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
-		dc.setCapability("testName", "wp_TED_GalaxyS6PlusCadastroValido");
+		dc.setCapability("testName", "wp_TED_GalaxyS6PlusInstalacaoApp");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
