@@ -88,7 +88,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			client.releaseDevice("ce061716ba5f3cdd0d7e", true, false, true);
+			client.releaseDevice("1115fbd4746c2f05", true, false, true);
 			driver.quit();
 		}
 	}
