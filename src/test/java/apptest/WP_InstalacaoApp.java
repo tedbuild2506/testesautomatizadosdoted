@@ -50,7 +50,6 @@ public class WP_InstalacaoApp extends BaseTest implements GlobalConstants {
 	@Test 
 	public void instalar() {
 		driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity"); 
-
 	}
 	
 	@AfterMethod
@@ -65,12 +64,9 @@ public class WP_InstalacaoApp extends BaseTest implements GlobalConstants {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			client.releaseDevice("1115fbd4746c2f05", true, false, true);
 			driver.quit();
 		}
 	}
-//	client.setShowReport(false);
-//	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
-//	  client.setShowReport(true);
+
 }
 
