@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="39494" started-at="2018-04-04T14:55:22Z" finished-at="2018-04-04T14:56:01Z">
+  <suite name="Default suite" duration-ms="28217" started-at="2018-04-04T19:40:34Z" finished-at="2018-04-04T19:41:02Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="39494" started-at="2018-04-04T14:55:22Z" finished-at="2018-04-04T14:56:01Z">
+    <test name="Default test" duration-ms="28217" started-at="2018-04-04T19:40:34Z" finished-at="2018-04-04T19:41:02Z">
       <class name="apptest.WP_DesinstalacaoApp">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="setUp" is-config="true" duration-ms="22695" started-at="2018-04-04T11:55:22Z" finished-at="2018-04-04T11:55:45Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="setUp" is-config="true" duration-ms="22054" started-at="2018-04-04T16:40:34Z" finished-at="2018-04-04T16:40:56Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="desinstalar()[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="desinstalar" duration-ms="2823" started-at="2018-04-04T11:55:45Z" finished-at="2018-04-04T11:55:47Z">
+        <test-method status="PASS" signature="desinstalar()[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="desinstalar" duration-ms="2546" started-at="2018-04-04T16:40:56Z" finished-at="2018-04-04T16:40:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- desinstalar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="tearDown" is-config="true" duration-ms="13950" started-at="2018-04-04T11:55:47Z" finished-at="2018-04-04T11:56:01Z">
+        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_DesinstalacaoApp@3c0f93f1]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-04-04T16:40:58Z" finished-at="2018-04-04T16:40:58Z">
           <params>
             <param index="0">
               <value>
@@ -30,6 +30,72 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Could not forward request http://62.90.196.21:7825/wd/hub/session/CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5/execute for session CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.24 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'USPL5VDR0L2', ip: '10.12.231.188', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='1115fbd4746c2f05', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_GalaxyS6PlusDesinstalacaoApp}, device.serialNumber=1115fbd4746c2f05, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='1115fbd4746c2f05', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_GalaxyS6PlusDesinstalacaoApp, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-159035/#/9AhFHbJ89LR0iY0S?1
+Picked up Grid Node (seetest_7825)
+Reserved Device : Samsung Galaxy S6 Edge Plus, device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/832, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G928C, device.name=Samsung Galaxy S6 Edge Plus, projectName=, gridNodePort=7825, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Could not forward request http://62.90.196.21:7825/wd/hub/session/CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5/execute for session CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5 (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 1.24 seconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'USPL5VDR0L2', ip: '10.12.231.188', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='1115fbd4746c2f05', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_GalaxyS6PlusDesinstalacaoApp}, device.serialNumber=1115fbd4746c2f05, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='1115fbd4746c2f05', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_GalaxyS6PlusDesinstalacaoApp, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-159035/#/9AhFHbJ89LR0iY0S?1
+Picked up Grid Node (seetest_7825)
+Reserved Device : Samsung Galaxy S6 Edge Plus, device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/832, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G928C, device.name=Samsung Galaxy S6 Edge Plus, projectName=, gridNodePort=7825, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-04-04_22-40-40-66a142b6-969d-48e9-97e4-c6295c093ba5
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:577)
+	at com.experitest.appium.SeeTestClient.execute(SeeTestClient.java:31)
+	at com.experitest.appium.SeeTestClient.execute(SeeTestClient.java:27)
+	at com.experitest.appium.SeeTestClient.releaseDevice(SeeTestClient.java:472)
+	at apptest.WP_DesinstalacaoApp.tearDown(WP_DesinstalacaoApp.java:68)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

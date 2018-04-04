@@ -65,7 +65,6 @@ public class WP_DesinstalacaoApp extends BaseTest implements GlobalConstants {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			client.releaseDevice("1115fbd4746c2f05", true, false, true);
 			driver.quit();
 		}
 	}
