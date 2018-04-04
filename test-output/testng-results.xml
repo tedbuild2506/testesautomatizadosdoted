@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="189372" started-at="2018-04-02T11:31:10Z" finished-at="2018-04-02T11:34:19Z">
+  <suite name="Default suite" duration-ms="53814" started-at="2018-04-04T13:48:12Z" finished-at="2018-04-04T13:49:06Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="189372" started-at="2018-04-02T11:31:10Z" finished-at="2018-04-02T11:34:19Z">
-      <class name="apptest.WP_Cadastro">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="setUp" is-config="true" duration-ms="24760" started-at="2018-04-02T08:31:10Z" finished-at="2018-04-02T08:31:35Z">
+    <test name="Default test" duration-ms="53814" started-at="2018-04-04T13:48:12Z" finished-at="2018-04-04T13:49:06Z">
+      <class name="apptest.WP_CadastroEmBranco">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_CadastroEmBranco@3c0f93f1]" name="setUp" is-config="true" duration-ms="8232" started-at="2018-04-04T10:48:12Z" finished-at="2018-04-04T10:48:20Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="testing" duration-ms="151310" started-at="2018-04-02T08:31:35Z" finished-at="2018-04-02T08:34:06Z">
+        <test-method status="PASS" signature="testedecadastrobranco()[pri:0, instance:apptest.WP_CadastroEmBranco@3c0f93f1]" name="testedecadastrobranco" duration-ms="37728" started-at="2018-04-04T10:48:20Z" finished-at="2018-04-04T10:48:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="tearDown" is-config="true" duration-ms="13295" started-at="2018-04-02T08:34:06Z" finished-at="2018-04-02T08:34:19Z">
+        </test-method> <!-- testedecadastrobranco -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_CadastroEmBranco@3c0f93f1]" name="tearDown" is-config="true" duration-ms="7823" started-at="2018-04-04T10:48:58Z" finished-at="2018-04-04T10:49:06Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testing status=SUCCESS method=WP_Cadastro.testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=testedecadastrobranco status=SUCCESS method=WP_CadastroEmBranco.testedecadastrobranco()[pri:0, instance:apptest.WP_CadastroEmBranco@3c0f93f1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_Cadastro -->
+      </class> <!-- apptest.WP_CadastroEmBranco -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

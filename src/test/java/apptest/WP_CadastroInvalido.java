@@ -33,9 +33,9 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
-		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+		/*dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
+		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_GalaxyS6PlusCadastroInvalido");
 		dc.setCapability("deviceQuery", "@serialnumber='1115fbd4746c2f05'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
@@ -46,7 +46,7 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	@Test
 	 public void testTeste_cadastro_campos_invalidos() {
 	  client.applicationClearData("com.consul.android.smartbeer.staging");
-	  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
+	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("ashutosh@ashutosh.com.br");

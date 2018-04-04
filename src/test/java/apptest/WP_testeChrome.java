@@ -37,16 +37,19 @@ public class WP_testeChrome implements GlobalConstants  {
 
     @Test
     public void testExperitest() {
-        driver.get("http://loja.consul.com.br/");
+    	JavascriptExecutor jse = (JavascriptExecutor)driver;
+        driver.get("https://pecas.hybris-qa.whirlpool.com/pecas/pt/login");
         new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='text-search']")));
-        WebElement urlBar = driver.findElement(By.xpath("//*[@class='text-search']"));
-        urlBar.click();
-        urlBar.sendKeys("Geladeira");
-        urlBar.sendKeys(Keys.ENTER);
-		try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
-        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        WebElement usuario = driver.findElement(By.xpath("//*[@id='j_username']"));
+        usuario.click();
+        usuario.sendKeys("Geladeira");
         jse.executeScript("scroll(0, 250);");
-        WebElement geladeira = driver.findElement(By.xpath("//*[@id=\"ResultItems_10608450\"]/ul/li[2]/article/div[1]/a[2]/h3"));
+		try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+		WebElement senha = driver.findElement(By.xpath("//*[@id='j_password']"));
+		senha.click();
+		senha.sendKeys("");
+        jse.executeScript("scroll(0, 250);");
+        WebElement geladeira = driver.findElement(By.xpath("//*[@id=\"loginForm\"]/div[4]/div[1]/button"));
 		geladeira.click();
 	    jse.executeScript("scroll(0, 250);");
 	    driver.findElement(By.xpath("//label[contains(@class,'110v')]")).click();
