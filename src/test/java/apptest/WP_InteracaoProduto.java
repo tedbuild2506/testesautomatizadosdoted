@@ -78,6 +78,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 
 	@AfterMethod
 	public void tearDown(ITestResult tr){
+		driver.removeApp("com.consul.android.smartbeer.staging");
 		if (driver!=null)
 		{
 			if (tr.isSuccess()) 
