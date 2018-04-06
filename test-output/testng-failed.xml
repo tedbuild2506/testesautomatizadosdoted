@@ -7,7 +7,6 @@
         <methods>
           <include name="setUp"/>
           <include name="testedecadastrobranco"/>
-          <include name="tearDown"/>
         </methods>
       </class> <!-- apptest.WP_CadastroEmBranco -->
     </classes>
