@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="193567" started-at="2018-04-06T11:49:44Z" finished-at="2018-04-06T11:52:58Z">
+  <suite name="Default suite" duration-ms="190740" started-at="2018-04-06T16:58:29Z" finished-at="2018-04-06T17:01:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="193567" started-at="2018-04-06T11:49:44Z" finished-at="2018-04-06T11:52:58Z">
-      <class name="apptest.WP_Cadastro">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="setUp" is-config="true" duration-ms="37745" started-at="2018-04-06T08:49:44Z" finished-at="2018-04-06T08:50:22Z">
+    <test name="Default test" duration-ms="190740" started-at="2018-04-06T16:58:29Z" finished-at="2018-04-06T17:01:40Z">
+      <class name="apptest.WP_RecuperarSenha">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="39441" started-at="2018-04-06T13:58:29Z" finished-at="2018-04-06T13:59:08Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="testing" duration-ms="142990" started-at="2018-04-06T08:50:22Z" finished-at="2018-04-06T08:52:45Z">
+        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="137338" started-at="2018-04-06T13:59:08Z" finished-at="2018-04-06T14:01:26Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testing -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="tearDown" is-config="true" duration-ms="12797" started-at="2018-04-06T08:52:45Z" finished-at="2018-04-06T08:52:58Z">
+        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="13934" started-at="2018-04-06T14:01:26Z" finished-at="2018-04-06T14:01:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testing status=SUCCESS method=WP_Cadastro.testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_Cadastro -->
+      </class> <!-- apptest.WP_RecuperarSenha -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
