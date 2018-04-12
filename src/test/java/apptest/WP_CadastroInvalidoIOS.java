@@ -46,44 +46,56 @@ public class WP_CadastroInvalidoIOS extends BaseTest implements GlobalConstants 
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
 			  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("ashutosh@ashutosh.com.br");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  driver.swipe(165, 759, 175, 534, 1234);
 			  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("lucasmoreira");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  driver.findElement(By.xpath("//*[@placeholder='Confirmer Senha']")).sendKeys("lucazmoreira");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  driver.swipe(309, 856, 390, 406, 888);
 			  driver.findElement(By.xpath("//*[@placeholder='Nome e Sobrenome']")).sendKeys("teste");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  driver.findElement(By.xpath("//*[@placeholder='CPF']")).sendKeys("12345678901");
-			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  driver.swipe(168, 946, 334, 615, 2240);
-			  driver.findElement(By.xpath("//*[@placeholder='Data de Nascimento (dd/mm/aaaa)']")).sendKeys("20/03/2019");
-			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
+			  driver.findElement(By.xpath("//*[@text='Data de Nascimento (dd/mm/aaaa)']")).click();
+			  driver.swipe(150, 1110, 145, 1043, 408);
+			  driver.findElement(By.xpath("//*[@text='Feito']")).click();
 			  driver.swipe(84, 887, 259, 493, 1461);
 			  driver.findElement(By.xpath("//*[@placeholder='Telefone']")).sendKeys("99999999999");
-			  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
-			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Gênero']")).click();
+			  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
+			  driver.findElement(By.xpath("//*[@id='Feito']")).click();
 			  driver.swipe(450, 812, 500, 640, 1292);
 			  driver.findElement(By.xpath("//*[@id='Cadastrar']")).click();
 			  }
 		  else  {
-				  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-				  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("ashutosh@ashutosh.com.br");
-				  driver.swipe(165, 759, 175, 534, 1234);
-				  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("lucasmoreira");
-				  driver.findElement(By.xpath("//*[@placeholder='Confirmer Senha']")).sendKeys("lucazmoreira");
-				  driver.swipe(309, 856, 390, 406, 888);
-				  driver.findElement(By.xpath("//*[@placeholder='Nome e Sobrenome']")).sendKeys("teste");
-				  driver.findElement(By.xpath("//*[@placeholder='CPF']")).sendKeys("12345678901");
-				  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
-				  driver.swipe(168, 946, 334, 615, 2240);
-				  driver.findElement(By.xpath("//*[@placeholder='Data de Nascimento (dd/mm/aaaa)']")).click();
-				  driver.swipe(488, 826, 448, 836, 2240);
-				  driver.findElement(By.xpath("//*[@value='Feito']")).click();
-				  driver.swipe(84, 887, 259, 493, 1461);
-				  driver.findElement(By.xpath("//*[@placeholder='Telefone']")).sendKeys("99999999999");
-				  driver.findElement(By.xpath("//*[@knownSuperClass='_UIButtonBarButton']")).click();
-				  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-				  driver.swipe(450, 812, 500, 640, 1292);
-				  driver.findElement(By.xpath("//*[@id='Cadastrar']")).click();}
+			  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("ashutosh@ashutosh.com.br");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.swipe(165, 759, 175, 534, 1234);
+			  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("lucasmoreira");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Confirmer Senha']")).sendKeys("lucazmoreira");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.swipe(309, 856, 390, 406, 888);
+			  driver.findElement(By.xpath("//*[@placeholder='Nome e Sobrenome']")).sendKeys("teste");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='CPF']")).sendKeys("12345678901");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.swipe(168, 946, 334, 615, 2240);
+			  driver.findElement(By.xpath("//*[@placeholder='Data de nascimento (dd/mm/aaaa)']")).click();
+			  driver.swipe(150, 1110, 145, 1043, 408);
+			  driver.findElement(By.xpath("//*[@text='Feito']")).click();
+			  driver.swipe(84, 887, 259, 493, 1461);
+			  driver.findElement(By.xpath("//*[@placeholder='Telefone']")).sendKeys("99999999999");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Gênero']")).click();
+			  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
+			  driver.findElement(By.xpath("//*[@id='Feito']")).click();
+			  driver.swipe(450, 812, 500, 640, 1292);
+			  driver.findElement(By.xpath("//*[@id='Cadastrar']")).click();}
 				}
 	@AfterMethod
 	public void tearDown(ITestResult tr){

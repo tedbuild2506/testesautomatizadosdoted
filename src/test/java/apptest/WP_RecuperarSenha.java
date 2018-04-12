@@ -40,7 +40,6 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_XperiaXARecuperarSenha");
-		dc.setCapability("deviceQuery", "@serialnumber='03157df3ca7b8a28'");
 		dc.setCapability("deviceQuery", "@serialnumber='RQ3001DQKL'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -75,7 +74,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@text='Repor instruções de senha']")).click();
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Repor instruções de senha']\", 0, 3000, 2, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(684, 962, 659, 700, 335);
 		  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
