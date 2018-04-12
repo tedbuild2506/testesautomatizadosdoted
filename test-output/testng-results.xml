@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="144132" started-at="2018-04-12T12:49:27Z" finished-at="2018-04-12T12:51:51Z">
+  <suite name="Default suite" duration-ms="222445" started-at="2018-04-12T15:51:45Z" finished-at="2018-04-12T15:55:27Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="144132" started-at="2018-04-12T12:49:27Z" finished-at="2018-04-12T12:51:51Z">
-      <class name="apptest.WP_LoginIOS">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="setUp" is-config="true" duration-ms="102735" started-at="2018-04-12T09:49:27Z" finished-at="2018-04-12T09:51:10Z">
+    <test name="Default test" duration-ms="222445" started-at="2018-04-12T15:51:45Z" finished-at="2018-04-12T15:55:27Z">
+      <class name="apptest.WP_Cadastro">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="setUp" is-config="true" duration-ms="45824" started-at="2018-04-12T12:51:45Z" finished-at="2018-04-12T12:52:31Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[@os='ios']]>
+                <![CDATA[@os='android']]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeloginios()[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="testeloginios" duration-ms="26885" started-at="2018-04-12T09:51:10Z" finished-at="2018-04-12T09:51:36Z">
+        <test-method status="PASS" signature="testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="testing" duration-ms="159851" started-at="2018-04-12T12:52:31Z" finished-at="2018-04-12T12:55:10Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeloginios -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="tearDown" is-config="true" duration-ms="14488" started-at="2018-04-12T09:51:36Z" finished-at="2018-04-12T09:51:51Z">
+        </test-method> <!-- testing -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Cadastro@3c0f93f1]" name="tearDown" is-config="true" duration-ms="16754" started-at="2018-04-12T12:55:10Z" finished-at="2018-04-12T12:55:27Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeloginios status=SUCCESS method=WP_LoginIOS.testeloginios()[pri:0, instance:apptest.WP_LoginIOS@31dc339b] output={null}]]]>
+                <![CDATA[[TestResult name=testing status=SUCCESS method=WP_Cadastro.testing()[pri:0, instance:apptest.WP_Cadastro@3c0f93f1] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_LoginIOS -->
+      </class> <!-- apptest.WP_Cadastro -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

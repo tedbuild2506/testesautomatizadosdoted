@@ -10,5 +10,7 @@ public interface GlobalConstants {
 	  int esperandogifinicial = 12000;
 	  int esperandogifintermediario = 7500;
 	  int esperarminigifs = 1000;
+	  String tipo = "deviceManufacturer";
+	  String fabricante ="samsung";
 
 }
