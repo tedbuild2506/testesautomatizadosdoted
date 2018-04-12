@@ -114,6 +114,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
+		driver.removeApp("com.consul.android.smartbeer.staging");
 		if (driver!=null)
 		{
 			if (tr.isSuccess()) 
@@ -126,6 +127,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
 		}
+	
 	}
 //	client.setShowReport(false);
 //	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
