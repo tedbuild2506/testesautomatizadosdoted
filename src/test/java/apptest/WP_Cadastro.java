@@ -66,15 +66,15 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
 		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
 		  driver.swipe(309, 856, 390, 406, 888);
-		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP");
+		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP Brazil");
 		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
 		  driver.swipe(168, 946, 334, 615, 2240);
 	      driver.findElement(By.xpath("//*[@id='dobView']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
-		  //driver.findElement(By.xpath("//*[@text='Masculino']")).click();
-		  //driver.findElement(By.xpath("//*[@text='Feminino']")).click();
+		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
+		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 		  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();

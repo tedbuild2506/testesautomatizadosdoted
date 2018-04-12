@@ -37,8 +37,7 @@ public class WP_LoginIOS extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_LoginIOS");
-		dc.setCapability("deviceQuery", "@serialnumber='2ef16f1e7b475b9e6aa09392efb67735b1b57b08'");		
-		//dc.setCapability("deviceQuery", "@serialnumber='5d844d70f42c4cf78cff3b394a53e0763c2766dd'");
+		dc.setCapability("deviceQuery", "@serialnumber='a5f7b2da06f20f32d0cecc1867550144f785d738'");
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
