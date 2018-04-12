@@ -1,8 +1,6 @@
 package apptest;
 
-
 import java.net.URL;
-import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -17,32 +15,28 @@ import org.testng.annotations.Test;
 import com.experitest.appium.SeeTestClient;
 
 import io.appium.java_client.TouchAction;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
+import io.appium.java_client.ios.IOSDriver;
+import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-
 public class WP_LoginIOS extends BaseTest implements GlobalConstants {
-	protected AndroidDriver<AndroidElement> driver = null;
+	protected IOSDriver<IOSElement> driver = null;
 	protected SeeTestClient client;
-	
+
+
 	@BeforeMethod
 	@Parameters("deviceQuery")
-	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
+	public void setUp(@Optional("@os='ios'") String deviceQuery) throws Exception{
 		init(deviceQuery);
-		// Init application / device capabilities
-		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_LoginIOS");
-		dc.setCapability("deviceQuery", "@serialnumber='a5f7b2da06f20f32d0cecc1867550144f785d738'");
-		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
+		dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.smartbeer-staging");
+		dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.consul.smartbeer-staging");
+		dc.setCapability("testName", "wp_TED_Iphone8CadastroBranco");
+		dc.setCapability("deviceQuery", "@serialnumber='2ef16f1e7b475b9e6aa09392efb67735b1b57b08'");		
+		driver = new IOSDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
-		
 	}
-		
+	
 	@Test
 	 public void testeloginios() {
 		Boolean Allow = driver.findElements(By.xpath("//*[@value='Allow']")).size()>0;
@@ -51,11 +45,7 @@ public class WP_LoginIOS extends BaseTest implements GlobalConstants {
 			  driver.findElement(By.xpath("//*[@value='Allow']")).click();
 			  //client.launch("com.apple.mobilesafari\"", false, false);
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
-			  new TouchAction(driver)
-			    .press(394, 1214)
-			    .waitAction(500)
-			    .release()
-			    .perform();
+			  driver.findElement(By.xpath("(//*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView']]]]/*[@class='UIAButton'])[4]")).click();
 			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("tedmonitoramento@gmail.com");
 			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
 			  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@placeholder='Senha']")));
@@ -66,11 +56,7 @@ public class WP_LoginIOS extends BaseTest implements GlobalConstants {
 			  }
 		  else  {
 			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-			  new TouchAction(driver)
-			    .press(394, 1214)
-			    .waitAction(500)
-			    .release()
-			    .perform();
+			  driver.findElement(By.xpath("(//*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView']]]]/*[@class='UIAButton'])[4]")).click();
 			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys("tedmonitoramento@gmail.com");
 			  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@placeholder='Senha']")));
 			  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("Smart2000");
@@ -94,5 +80,4 @@ public class WP_LoginIOS extends BaseTest implements GlobalConstants {
 			driver.quit();
 		}
 	}
-	
 }

@@ -2,38 +2,38 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="193070" started-at="2018-04-12T11:34:25Z" finished-at="2018-04-12T11:37:38Z">
+  <suite name="Default suite" duration-ms="144132" started-at="2018-04-12T12:49:27Z" finished-at="2018-04-12T12:51:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="193070" started-at="2018-04-12T11:34:25Z" finished-at="2018-04-12T11:37:38Z">
-      <class name="apptest.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="43100" started-at="2018-04-12T08:34:25Z" finished-at="2018-04-12T08:35:08Z">
+    <test name="Default test" duration-ms="144132" started-at="2018-04-12T12:49:27Z" finished-at="2018-04-12T12:51:51Z">
+      <class name="apptest.WP_LoginIOS">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="setUp" is-config="true" duration-ms="102735" started-at="2018-04-12T09:49:27Z" finished-at="2018-04-12T09:51:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[@os='android']]>
+                <![CDATA[@os='ios']]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="134587" started-at="2018-04-12T08:35:08Z" finished-at="2018-04-12T08:37:23Z">
+        <test-method status="PASS" signature="testeloginios()[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="testeloginios" duration-ms="26885" started-at="2018-04-12T09:51:10Z" finished-at="2018-04-12T09:51:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="15353" started-at="2018-04-12T08:37:23Z" finished-at="2018-04-12T08:37:38Z">
+        </test-method> <!-- testeloginios -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_LoginIOS@31dc339b]" name="tearDown" is-config="true" duration-ms="14488" started-at="2018-04-12T09:51:36Z" finished-at="2018-04-12T09:51:51Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=testeloginios status=SUCCESS method=WP_LoginIOS.testeloginios()[pri:0, instance:apptest.WP_LoginIOS@31dc339b] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_RecuperarSenha -->
+      </class> <!-- apptest.WP_LoginIOS -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
