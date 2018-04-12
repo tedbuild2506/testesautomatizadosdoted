@@ -73,8 +73,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
-		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
-		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
+		  //driver.findElement(By.xpath("//*[@text='Masculino']")).click();
+		  //driver.findElement(By.xpath("//*[@text='Feminino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 		  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();
