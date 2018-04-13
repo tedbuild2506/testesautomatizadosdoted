@@ -79,7 +79,7 @@ public class WP_CadastroIOS extends BaseTest implements GlobalConstants {
 			  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();
 			  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
 			  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
-			  client.launch("com.apple.mobilesafari\"", false, false);
+			  client.launch("com.apple.mobilesafari", false, false);
 			  }
 		  else  {
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}

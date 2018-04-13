@@ -12,5 +12,10 @@ public interface GlobalConstants {
 	  int esperarminigifs = 1000;
 	  String tipo = "deviceManufacturer";
 	  String fabricante ="samsung";
-
+	  String S7 ="@serialnumber='ad06160309316a7a49'";
+	  String LGE5X ="@serialnumber='011ef446b34c250f'";
+	  String S6Edge ="@serialnumber='1115fbd4746c2f05'";
+	  String S9Plus="@serialnumber='19ec8ce614047ece'";
+	  String A8Plus="@serialnumber='520088cc498fa423'";
+	  String S7Edge="@serialnumber='9886674e5258475a46'";
 }
