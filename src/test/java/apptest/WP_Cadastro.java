@@ -40,7 +40,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_SamsungCadastroValido");
-		dc.setCapability("deviceQuery",S9Plus+ "or"+ S7+"or"+LGE5X+"or"+S7Edge+"or"+S8);
+		dc.setCapability("deviceQuery",S7+"or"+LGE5X+"or"+S7Edge+"or"+S8);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -68,7 +68,19 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP Brazil");
 		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
 		  driver.swipe(168, 946, 334, 615, 2240);
-	      driver.findElement(By.xpath("//*[@id='dobView']")).click();
+		  driver.findElement(By.xpath("//*[@id='dobView']")).click();
+		  driver.findElement(By.xpath("//*[@text='2018']")).click();
+		  driver.swipe(537, 984, 528, 1237, 200);
+		  driver.swipe(543, 903, 546, 1106, 233);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+	      driver.findElement(By.xpath("//*[@text='1992']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
