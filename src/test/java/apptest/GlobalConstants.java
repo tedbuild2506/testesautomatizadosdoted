@@ -17,5 +17,5 @@ public interface GlobalConstants {
 	  String S9Plus="@serialnumber='19ec8ce614047ece'";
 	  String A8Plus="@serialnumber='520088cc498fa423'";
 	  String S7Edge="@serialnumber='9886674e5258475a46'";
-	  String S8="@serialnumber='ce061716ba5f3cdd0d7e''";
+	  String S8="@serialnumber='ce061716ba5f3cdd0d7e'";
 }
