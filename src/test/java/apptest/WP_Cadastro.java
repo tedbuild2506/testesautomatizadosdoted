@@ -40,7 +40,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_SamsungCadastroValido");
-		dc.setCapability("deviceQuery",S9Plus+ "or"+ S7+ "or" +A8Plus+"or"+S6Edge+"or"+LGE5X+"or"+S7Edge);
+		dc.setCapability("deviceQuery",S9Plus+ "or"+ S7+ "or" +A8Plus+"or"+LGE5X+"or"+S7Edge+"or"+S8);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
