@@ -15,7 +15,7 @@ public interface GlobalConstants {
 	  String S7 ="@serialnumber='ad06160309316a7a49'";
 	  String LGE5X ="@serialnumber='011ef446b34c250f'";
 	  String S9Plus="@serialnumber='19ec8ce614047ece'";
-	  String A8Plus="@serialnumber='520088cc498fa423'";
+	  String A8Plus="@serialnumber='RQ3001DQKL'";
 	  String S7Edge="@serialnumber='9886674e5258475a46'";
 	  String S8="@serialnumber='ce061716ba5f3cdd0d7e'";
 }
