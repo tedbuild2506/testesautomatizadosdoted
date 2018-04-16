@@ -52,7 +52,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-    	  try{Thread.sleep(esperandogifintermediario+4000);} catch(Exception ignore){}
+    	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Controles']")).click();
     	  try{Thread.sleep(threadSleep+0200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
