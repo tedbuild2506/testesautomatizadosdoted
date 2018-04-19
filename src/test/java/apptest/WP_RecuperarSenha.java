@@ -74,7 +74,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Repor instruções de senha']\", 0, 3000, 2, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Recupere sua senha - Smartbeer_']\", 0, 3000, 2, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(684, 962, 659, 700, 335);
 		  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}

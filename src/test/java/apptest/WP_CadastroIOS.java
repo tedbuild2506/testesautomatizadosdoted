@@ -80,6 +80,27 @@ public class WP_CadastroIOS extends BaseTest implements GlobalConstants {
 			  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
 			  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
 			  client.launch("com.apple.mobilesafari", false, false);
+			  driver.context("WEBVIEW_1");
+			  driver.findElement(By.xpath("//*[@id='URL']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=" + strEmail);
+			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+			  driver.getKeyboard().sendKeys("{ENTER}");
+			  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Instruções de confirmação']\", 0, 3000, 2, true)");
+			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+			  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ativar']\", 0, 6000, 7, true)");
+			  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+			  driver.executeScript("client:client.deviceAction(\"Home\")");
+			  driver.context("NATIVE_APP");
+			  client.applicationClearData("com.consul.android.smartbeer.staging");
+			  client.launch("com.consul.smartbeer-staging\"", false, false);
+			  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
+			  driver.findElement(By.xpath("(//*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView' and ./parent::*[@class='UIAView']]]]/*[@class='UIAButton'])[4]")).click();
+			  driver.findElement(By.xpath("//*[@placeholder='Email']")).sendKeys(strEmail + "@mailinator.com");
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@placeholder='Senha']")));
+			  driver.findElement(By.xpath("//*[@placeholder='Senha']")).sendKeys("Smart2000");
+			  new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='UIAKeyboard']")));
+			  driver.findElement(By.xpath("//*[@id='Toolbar Done Button']")).click();
+			  driver.findElement(By.xpath("//*[@text='Entrar']")).click(); 
 			  }
 		  else  {
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
