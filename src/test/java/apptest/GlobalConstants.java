@@ -18,4 +18,7 @@ public interface GlobalConstants {
 	  String A8Plus="@serialnumber='RQ3001DQKL'";
 	  String S7Edge="@serialnumber='9886674e5258475a46'";
 	  String S8="@serialnumber='ce061716ba5f3cdd0d7e'";
+	  String LGG5="@serialnumber='LGH85056416a94'";
+	  String SM="@serialnumber='98866742375a394e33'";
+	  String SA="@serialnumber='52107cca64d6c311'";
 }

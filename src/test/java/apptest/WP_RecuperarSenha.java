@@ -40,7 +40,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungRecuperarSenha");
-		dc.setCapability("deviceQuery",S9Plus+ "or"+ S7+"or"+LGE5X+"or"+S7Edge+"or"+S8);
+		dc.setCapability("deviceQuery",S9Plus+ "or"+ S7+"or"+LGE5X+"or"+S7Edge+"or"+S8+ "or"+ LGG5+ "or"+ SM+ "or"+ SA);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
