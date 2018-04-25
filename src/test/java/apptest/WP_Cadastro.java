@@ -80,7 +80,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
-	      driver.findElement(By.xpath("//*[@text='1992']")).click();
+	      driver.findElement(By.xpath("//*[@text='1994']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
@@ -107,9 +107,9 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=" + strEmail);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.getKeyboard().sendKeys("{ENTER}");
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ative sua conta - Smartbeer_']\", 0, 6000, 7, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ative sua conta - Smartbeer_']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ativar']\", 0, 6000, 7, true)");
+		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ativar']\", 0, 6000, 7, true)");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.pressKeyCode(AndroidKeyCode.HOME);
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}

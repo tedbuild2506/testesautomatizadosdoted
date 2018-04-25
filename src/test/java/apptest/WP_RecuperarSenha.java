@@ -56,7 +56,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 	public void testTeste_recuperar_senha_e_logar() {
 		String strSenha = getDateTime();
 		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		 client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
