@@ -82,7 +82,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.swipe(859, 865, 431, 971, 294);
 		  driver.swipe(859, 865, 431, 971, 294);
 		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Mudar minha senha']\", 0, 8000, 2, true)");
-		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='new_password']")).sendKeys("S"+strSenha+"s");
 		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		  driver.swipe(56, 1028, 53, 962, 255);

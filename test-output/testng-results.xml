@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="187113" started-at="2018-05-03T11:20:51Z" finished-at="2018-05-03T11:23:58Z">
+  <suite name="Default suite" duration-ms="135029" started-at="2018-05-10T14:58:46Z" finished-at="2018-05-10T15:01:01Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="187113" started-at="2018-05-03T11:20:51Z" finished-at="2018-05-03T11:23:58Z">
+    <test name="Default test" duration-ms="135029" started-at="2018-05-10T14:58:46Z" finished-at="2018-05-10T15:01:01Z">
       <class name="apptest.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="33597" started-at="2018-05-03T08:20:51Z" finished-at="2018-05-03T08:21:24Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="33546" started-at="2018-05-10T11:58:46Z" finished-at="2018-05-10T11:59:19Z">
           <params>
             <param index="0">
               <value>
@@ -18,33 +18,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="130295" started-at="2018-05-03T08:21:24Z" finished-at="2018-05-03T08:23:35Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="101063" started-at="2018-05-10T11:59:19Z" finished-at="2018-05-10T12:01:00Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='new_password']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.39 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[Could not forward request http://62.90.196.29:7843/wd/hub/session/CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b/execute for session CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.62 seconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=19ec8ce614047ece, locationServicesAuthorized=false, device.version=8.0.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2960, useKeystore=false, cloudViewLink=http://null/agent-282084/#/JcM48Zj7Ty5JKBdd?1
-Picked up Grid Node (seetest_7801)
-Reserved Device : Samsung Galaxy S9 Plus, device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1781, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G965F, device.name=Samsung Galaxy S9 Plus, autoGrantPermissions=false, projectName=, gridNodePort=7801, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-05-03_14-21-09-6bd9364e-1857-47d3-a8b1-f85c75300a8f
-*** Element info: {Using=xpath, value=//*[@id='new_password']}]]>
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=LGH85056416a94, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-296574/#/hOMlbZg9O5PjVMYk?1
+Picked up Grid Node (seetest_7843)
+Reserved Device : LG G5 (2), device.manufacture=LGE, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1986, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=LG-H850, device.name=LG G5 (2), autoGrantPermissions=false, projectName=, gridNodePort=7843, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='new_password']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.39 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+              <![CDATA[org.openqa.selenium.WebDriverException: Could not forward request http://62.90.196.29:7843/wd/hub/session/CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b/execute for session CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.62 seconds
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=19ec8ce614047ece, locationServicesAuthorized=false, device.version=8.0.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2960, useKeystore=false, cloudViewLink=http://null/agent-282084/#/JcM48Zj7Ty5JKBdd?1
-Picked up Grid Node (seetest_7801)
-Reserved Device : Samsung Galaxy S9 Plus, device.manufacture=samsung, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1781, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G965F, device.name=Samsung Galaxy S9 Plus, autoGrantPermissions=false, projectName=, gridNodePort=7801, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-05-03_14-21-09-6bd9364e-1857-47d3-a8b1-f85c75300a8f
-*** Element info: {Using=xpath, value=//*[@id='new_password']}
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=LGH85056416a94, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-296574/#/hOMlbZg9O5PjVMYk?1
+Picked up Grid Node (seetest_7843)
+Reserved Device : LG G5 (2), device.manufacture=LGE, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1986, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=LG-H850, device.name=LG G5 (2), autoGrantPermissions=false, projectName=, gridNodePort=7843, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -55,20 +51,8 @@ Session ID: CLOUD-SID:2018-05-03_14-21-09-6bd9364e-1857-47d3-a8b1-f85c75300a8f
 	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
 	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logar(WP_RecuperarSenha.java:86)
+	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:577)
+	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logar(WP_RecuperarSenha.java:84)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -95,11 +79,11 @@ Session ID: CLOUD-SID:2018-05-03_14-21-09-6bd9364e-1857-47d3-a8b1-f85c75300a8f
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="23176" started-at="2018-05-03T08:23:35Z" finished-at="2018-05-03T08:23:58Z">
+        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-10T12:01:00Z" finished-at="2018-05-10T12:01:00Z">
           <params>
             <param index="0">
               <value>
@@ -107,6 +91,69 @@ Session ID: CLOUD-SID:2018-05-03_14-21-09-6bd9364e-1857-47d3-a8b1-f85c75300a8f
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Could not forward request http://62.90.196.29:7843/wd/hub/session/CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b/appium/device/remove_app for session CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 356 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=LGH85056416a94, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-296574/#/hOMlbZg9O5PjVMYk?1
+Picked up Grid Node (seetest_7843)
+Reserved Device : LG G5 (2), device.manufacture=LGE, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1986, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=LG-H850, device.name=LG G5 (2), autoGrantPermissions=false, projectName=, gridNodePort=7843, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Could not forward request http://62.90.196.29:7843/wd/hub/session/CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b/appium/device/remove_app for session CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 356 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=LGH85056416a94, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='19ec8ce614047ece'or@serialnumber='ad06160309316a7a49'or@serialnumber='011ef446b34c250f'or@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='LGH85056416a94'or@serialnumber='98866742375a394e33', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-296574/#/hOMlbZg9O5PjVMYk?1
+Picked up Grid Node (seetest_7843)
+Reserved Device : LG G5 (2), device.manufacture=LGE, instrumentApp=false, device.category=PHONE, autoDismissAlerts=false, reportUrl=http://reporter.seetest.io/#/test/1986, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=LG-H850, device.name=LG G5 (2), autoGrantPermissions=false, projectName=, gridNodePort=7843, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-05-10_17-58-52-04ef7850-e733-4637-acdb-dca488e2521b
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at io.appium.java_client.AppiumDriver.removeApp(AppiumDriver.java:269)
+	at apptest.WP_RecuperarSenha.tearDown(WP_RecuperarSenha.java:107)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
