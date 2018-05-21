@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="102552" started-at="2018-05-10T16:35:58Z" finished-at="2018-05-10T16:37:40Z">
+  <suite name="Default suite" duration-ms="101787" started-at="2018-05-14T17:40:27Z" finished-at="2018-05-14T17:42:09Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="102552" started-at="2018-05-10T16:35:58Z" finished-at="2018-05-10T16:37:40Z">
+    <test name="Default test" duration-ms="101787" started-at="2018-05-14T17:40:27Z" finished-at="2018-05-14T17:42:09Z">
       <class name="apptest.WP_Login">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="setUp" is-config="true" duration-ms="33746" started-at="2018-05-10T13:35:58Z" finished-at="2018-05-10T13:36:32Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="setUp" is-config="true" duration-ms="32795" started-at="2018-05-14T14:40:27Z" finished-at="2018-05-14T14:41:00Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="testeLogin" duration-ms="46920" started-at="2018-05-10T13:36:32Z" finished-at="2018-05-10T13:37:19Z">
+        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="testeLogin" duration-ms="45502" started-at="2018-05-14T14:41:00Z" finished-at="2018-05-14T14:41:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testeLogin -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="tearDown" is-config="true" duration-ms="21844" started-at="2018-05-10T13:37:19Z" finished-at="2018-05-10T13:37:40Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="tearDown" is-config="true" duration-ms="23467" started-at="2018-05-14T14:41:45Z" finished-at="2018-05-14T14:42:09Z">
           <params>
             <param index="0">
               <value>
