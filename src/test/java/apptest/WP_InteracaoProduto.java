@@ -37,7 +37,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungInteracaoProduto");
-		dc.setCapability("deviceQuery",S8);
+		dc.setCapability("deviceQuery",Huawei+"or"+A8Plus+"or"+S7Edge+"or"+S8);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -49,7 +49,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-    	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedbuild1506@gmail.com");
+    	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
     	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
