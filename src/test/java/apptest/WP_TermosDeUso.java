@@ -37,7 +37,7 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungTermosDeUsoPoliticaPrivacidade");
-		dc.setCapability("deviceQuery","@serialnumber='1c7a29c334037ece'");
+		dc.setCapability("deviceQuery",A8);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		

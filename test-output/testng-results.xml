@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52354" started-at="2018-06-21T18:03:43Z" finished-at="2018-06-21T18:04:35Z">
+  <suite name="Default suite" duration-ms="229185" started-at="2018-07-23T17:59:01Z" finished-at="2018-07-23T18:02:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="52354" started-at="2018-06-21T18:03:43Z" finished-at="2018-06-21T18:04:35Z">
-      <class name="apptest.WP_Login">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="setUp" is-config="true" duration-ms="7957" started-at="2018-06-21T15:03:43Z" finished-at="2018-06-21T15:03:51Z">
+    <test name="Default test" duration-ms="229185" started-at="2018-07-23T17:59:01Z" finished-at="2018-07-23T18:02:50Z">
+      <class name="apptest.WP_ValorMinimo">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_ValorMinimo@3327bd23]" name="setUp" is-config="true" duration-ms="28325" started-at="2018-07-23T14:59:01Z" finished-at="2018-07-23T14:59:29Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="testeLogin" duration-ms="36310" started-at="2018-06-21T15:03:51Z" finished-at="2018-06-21T15:04:27Z">
+        <test-method status="PASS" signature="test_SemDistribuidor()[pri:0, instance:apptest.WP_ValorMinimo@3327bd23]" name="test_SemDistribuidor" duration-ms="192739" started-at="2018-07-23T14:59:29Z" finished-at="2018-07-23T15:02:42Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeLogin -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@3c0f93f1]" name="tearDown" is-config="true" duration-ms="8040" started-at="2018-06-21T15:04:27Z" finished-at="2018-06-21T15:04:35Z">
+        </test-method> <!-- test_SemDistribuidor -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_ValorMinimo@3327bd23]" name="tearDown" is-config="true" duration-ms="8078" started-at="2018-07-23T15:02:42Z" finished-at="2018-07-23T15:02:50Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeLogin status=SUCCESS method=WP_Login.testeLogin()[pri:0, instance:apptest.WP_Login@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=test_SemDistribuidor status=SUCCESS method=WP_ValorMinimo.test_SemDistribuidor()[pri:0, instance:apptest.WP_ValorMinimo@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_Login -->
+      </class> <!-- apptest.WP_ValorMinimo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
