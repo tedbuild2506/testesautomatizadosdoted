@@ -63,13 +63,13 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		Boolean Permitir = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
 		if (Permitir) {
 		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
-		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='UTILIZAR']")).click();
-		try{Thread.sleep(esperandogifintermediario+0500);} catch(Exception ignore){}
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.findElement(By.xpath("//*[@id='use_button']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]")).click();
 	    driver.findElement(By.xpath("//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]")).click();
 		driver.findElement(By.xpath("//*[@text='Pagar R$ 40,56']")).click();
-		try{Thread.sleep(esperandogifintermediario+0500);} catch(Exception ignore){}
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(628, 1550, 578, 940, 233);
 		driver.swipe(606, 1578, 653, 1040, 257);
@@ -86,7 +86,7 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
-		//driver.removeApp("com.consul.android.smartbeer.staging");
+		driver.removeApp("com.consul.android.smartbeer.staging");
 		if (driver!=null)
 		{
 			if (tr.isSuccess()) 
