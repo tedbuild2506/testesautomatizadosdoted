@@ -27,7 +27,7 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
+public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	
@@ -47,7 +47,7 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 	}
 	
 	@Test 
-	public void test_SemDistribuidor() {
+	public void testeemporiodacerveja() {
 		driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}

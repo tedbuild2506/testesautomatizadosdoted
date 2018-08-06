@@ -34,7 +34,7 @@ public class WP_Configuracoes extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungTermosDeUsoPoliticaPrivacidade");
-		dc.setCapability("deviceQuery","@serialnumber='011ef446b34c250f'");
+		dc.setCapability("deviceQuery",Huawei+"or"+A8Plus+"or"+S7Edge+"or"+S8+"or"+S7+"or"+LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
