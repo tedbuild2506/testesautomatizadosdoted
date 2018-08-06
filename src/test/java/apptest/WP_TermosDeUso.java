@@ -44,7 +44,7 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
 	}
 		
 	@Test
-	 public void testeinteracaoproduto() {
+	 public void testetermosdeuso() {
 		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
