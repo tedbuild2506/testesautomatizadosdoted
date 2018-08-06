@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="112838" started-at="2018-08-03T17:41:43Z" finished-at="2018-08-03T17:43:36Z">
+  <suite name="Default suite" duration-ms="131174" started-at="2018-08-06T16:40:25Z" finished-at="2018-08-06T16:42:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="112838" started-at="2018-08-03T17:41:43Z" finished-at="2018-08-03T17:43:36Z">
+    <test name="Default test" duration-ms="131174" started-at="2018-08-06T16:40:25Z" finished-at="2018-08-06T16:42:36Z">
       <class name="apptest.WP_TermosDeUso">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="setUp" is-config="true" duration-ms="8156" started-at="2018-08-03T14:41:43Z" finished-at="2018-08-03T14:41:51Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="setUp" is-config="true" duration-ms="31064" started-at="2018-08-06T13:40:25Z" finished-at="2018-08-06T13:40:56Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeinteracaoproduto()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="testeinteracaoproduto" duration-ms="96982" started-at="2018-08-03T14:41:51Z" finished-at="2018-08-03T14:43:28Z">
+        <test-method status="PASS" signature="testetermosdeuso()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="testetermosdeuso" duration-ms="92360" started-at="2018-08-06T13:40:56Z" finished-at="2018-08-06T13:42:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeinteracaoproduto -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="tearDown" is-config="true" duration-ms="7674" started-at="2018-08-03T14:43:28Z" finished-at="2018-08-03T14:43:36Z">
+        </test-method> <!-- testetermosdeuso -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="tearDown" is-config="true" duration-ms="7716" started-at="2018-08-06T13:42:28Z" finished-at="2018-08-06T13:42:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeinteracaoproduto status=SUCCESS method=WP_TermosDeUso.testeinteracaoproduto()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23] output={null}]]]>
+                <![CDATA[[TestResult name=testetermosdeuso status=SUCCESS method=WP_TermosDeUso.testetermosdeuso()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
