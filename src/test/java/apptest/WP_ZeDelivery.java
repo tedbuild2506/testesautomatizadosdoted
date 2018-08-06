@@ -58,17 +58,19 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 		try{Thread.sleep(esperandogifinicial+3500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='imgCart']")).click();
-		driver.findElement(By.xpath("//*[@text='Entrar na loja']")).click();
+		driver.findElement(By.xpath("//*[@id='cerveja_store_button']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		Boolean Permitir = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
-		if (Permitir) {
-		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+		driver.findElement(By.xpath("//*[@text='Cerveja Tokai Pilsen 300ml']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@id='use_button']")).click();
-		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]")).click();
-	    driver.findElement(By.xpath("//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]")).click();
-		driver.findElement(By.xpath("//*[@text='Pagar R$ 40,56']")).click();
+	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
+	    driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
+	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+	    driver.swipe(675, 1243, 665, 743, 253);
+	    driver.swipe(675, 1243, 665, 743, 253);
+	    driver.swipe(675, 1243, 665, 743, 253);
+	    driver.swipe(675, 1243, 665, 743, 253);
+		driver.findElement(By.xpath("//*[@id='regiserCardButton']")).click();
+		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(628, 1550, 578, 940, 233);
@@ -82,7 +84,7 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();	
 
 		}
-	}
+	
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){

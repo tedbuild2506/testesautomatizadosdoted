@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="1" passed="0">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="154703" started-at="2018-07-24T13:13:02Z" finished-at="2018-07-24T13:15:37Z">
+  <suite name="Default suite" duration-ms="112838" started-at="2018-08-03T17:41:43Z" finished-at="2018-08-03T17:43:36Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="154703" started-at="2018-07-24T13:13:02Z" finished-at="2018-07-24T13:15:37Z">
-      <class name="apptest.WP_ZeDelivery">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_ZeDelivery@3327bd23]" name="setUp" is-config="true" duration-ms="23565" started-at="2018-07-24T10:13:02Z" finished-at="2018-07-24T10:13:26Z">
+    <test name="Default test" duration-ms="112838" started-at="2018-08-03T17:41:43Z" finished-at="2018-08-03T17:43:36Z">
+      <class name="apptest.WP_TermosDeUso">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="setUp" is-config="true" duration-ms="8156" started-at="2018-08-03T14:41:43Z" finished-at="2018-08-03T14:41:51Z">
           <params>
             <param index="0">
               <value>
@@ -18,99 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="test_SemDistribuidor()[pri:0, instance:apptest.WP_ZeDelivery@3327bd23]" name="test_SemDistribuidor" duration-ms="112911" started-at="2018-07-24T10:13:26Z" finished-at="2018-07-24T10:15:19Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.00 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='ENU7N16126004845', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_ValorMinimo}, device.serialNumber=ENU7N16126004845, locationServicesAuthorized=false, device.version=8.0.0, deviceQuery=@serialnumber='ENU7N16126004845', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_ValorMinimo, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-828784/#/O72MbzUvqwzXsJik?1
-Picked up Grid Node (seetest_7823)
-Reserved Device : Huawei Nexus 6P A0104, device.manufacture=Huawei, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/785/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=Nexus 6P, device.name=Huawei Nexus 6P A0104, autoGrantPermissions=false, projectName=, gridNodePort=7823, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-07-24_16-13-08-77307728-d49c-4cf9-9bd9-b466be4d468b
-*** Element info: {Using=xpath, value=//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.00 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='ENU7N16126004845', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_ValorMinimo}, device.serialNumber=ENU7N16126004845, locationServicesAuthorized=false, device.version=8.0.0, deviceQuery=@serialnumber='ENU7N16126004845', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_ValorMinimo, device.screenSize=1440x2560, useKeystore=false, cloudViewLink=http://null/agent-828784/#/O72MbzUvqwzXsJik?1
-Picked up Grid Node (seetest_7823)
-Reserved Device : Huawei Nexus 6P A0104, device.manufacture=Huawei, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/785/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=Nexus 6P, device.name=Huawei Nexus 6P A0104, autoGrantPermissions=false, projectName=, gridNodePort=7823, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-07-24_16-13-08-77307728-d49c-4cf9-9bd9-b466be4d468b
-*** Element info: {Using=xpath, value=//*[@id='addQuantityView' and @height>0 and ./parent::*[./parent::*[./preceding-sibling::*[@text='Skol 300ml | Apenas o Líquido.']]]]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at apptest.WP_ZeDelivery.test_SemDistribuidor(WP_ZeDelivery.java:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.run(TestNG.java:1048)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method status="PASS" signature="testeinteracaoproduto()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="testeinteracaoproduto" duration-ms="96982" started-at="2018-08-03T14:41:51Z" finished-at="2018-08-03T14:43:28Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_SemDistribuidor -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_ZeDelivery@3327bd23]" name="tearDown" is-config="true" duration-ms="18187" started-at="2018-07-24T10:15:19Z" finished-at="2018-07-24T10:15:37Z">
+        </test-method> <!-- testeinteracaoproduto -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_TermosDeUso@3327bd23]" name="tearDown" is-config="true" duration-ms="7674" started-at="2018-08-03T14:43:28Z" finished-at="2018-08-03T14:43:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_SemDistribuidor status=FAILURE method=WP_ZeDelivery.test_SemDistribuidor()[pri:0, instance:apptest.WP_ZeDelivery@3327bd23] output={null}]]]>
+                <![CDATA[[TestResult name=testeinteracaoproduto status=SUCCESS method=WP_TermosDeUso.testeinteracaoproduto()[pri:0, instance:apptest.WP_TermosDeUso@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_ZeDelivery -->
+      </class> <!-- apptest.WP_TermosDeUso -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

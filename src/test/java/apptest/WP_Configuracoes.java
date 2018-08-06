@@ -16,15 +16,12 @@ import org.testng.annotations.Test;
 
 import com.experitest.appium.SeeTestClient;
 
-import io.appium.java_client.TouchAction;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class WP_TermosDeUso extends BaseTest implements GlobalConstants { 
+public class WP_Configuracoes extends BaseTest implements GlobalConstants { 
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	
@@ -54,23 +51,22 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
     	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgUser']")).click();
-          driver.findElement(By.xpath("//*[@text='Termos de uso']")).click();
-    	  new WebDriverWait(driver, 30, esperandogifintermediario).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ALLOW']"))).click();
-    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
-    	  Boolean Drive = driver.findElements(By.xpath("//*[@text='Drive PDF Viewer']")).size()>0;
+          driver.findElement(By.xpath("//*[@text='Configurações da smartbeer_']")).click();
+    	  Boolean Drive = driver.findElements(By.xpath("//*[@text='Conectado']")).size()>0;
 		  if (Drive) {
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
-			  driver.findElement(By.xpath("//*[@text='Drive PDF Viewer']")).click();
+			  client.report("A cervejeira está conectada", true);
 		  }
-		  Boolean Allow = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
+		  Boolean Allow = driver.findElements(By.xpath("//*[@text='03/08/2018']")).size()>0;
+		  String data = "03/08/2018";
 		  if (Allow) {
 			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
-			  new WebDriverWait(driver, 30, esperandogifintermediario).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ALLOW']"))).click();
+			  client.report("A cervejeira foi calibrada em" +data, true);
 		  }
-          driver.pressKeyCode(AndroidKeyCode.BACK);
-          try{Thread.sleep(2000);} catch(Exception ignore){}
-          driver.findElement(By.xpath("//*[@text='Política de privacidade']")).click();
-          }
+		  driver.findElement(By.xpath("//*[@text='Descadastrar smartbeer_']")).click();
+		  driver.findElement(By.xpath("//*[@text='CANCELAR']")).click();
+		  driver.findElement(By.xpath("//*[@id='left_icon']")).click();
+      	 }
 
 	@AfterMethod
 	public void tearDown(ITestResult tr){
