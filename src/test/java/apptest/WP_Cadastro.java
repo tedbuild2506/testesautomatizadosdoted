@@ -39,7 +39,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability("testName", "wp_TED_SamsungCadastroValido");
+		dc.setCapability("testName", "wp_TED_CadastroValido");
 		dc.setCapability("deviceQuery",Huawei+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -60,7 +60,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
-		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys(strEmail + "@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedmonitoramento@gmail.com");
 		  driver.swipe(165, 759, 175, 534, 1234);
 		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
 		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
@@ -88,38 +88,81 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-		  driver.findElement(By.xpath("//*[@text='Aceito os termos de uso']")).click();
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
+		  driver.findElement(By.xpath("//*[@id='privacyCheckbox']")).click();
+		  driver.findElement(By.xpath("//*[@id='btAccept']")).click();
 		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-//		  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Verificar validação']")).size()<0;
-//		  if (isPresent.TRUE) {
-//			  client.report("Teste funcionou como o esperado", true);
-//		  }
-//		  else {
-//			  client.report("O cadastro não foi realizado. O teste falhou", false);
-//		  }
-		  driver.findElement(By.xpath("//*[@text='Verificar validação']")).click();
-		  driver.pressKeyCode(AndroidKeyCode.HOME);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.startActivity("com.android.chrome", "com.google.android.apps.chrome.Main");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Right\", 0, 2000, \"NATIVE\", \"xpath=//*[@id='url_bar']\", 0, 6000, 2, true)");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='url_bar']")).sendKeys("www.mailinator.com/v2/inbox.jsp?zone=public&query=" + strEmail);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.getKeyboard().sendKeys("{ENTER}");
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ative sua conta - Smartbeer_']\", 0, 6000, 7, true)");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.executeScript("client:client.swipeWhileNotFound(\"Up\", 0, 2000, \"NATIVE\", \"xpath=//*[@text='Ativar']\", 0, 6000, 7, true)");
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  driver.pressKeyCode(AndroidKeyCode.HOME);
-		  try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		  client.applicationClearData("com.consul.android.smartbeer.staging");
-		  driver.startActivity("com.consul.android.smartbeer.staging", "com.whirlpool.ted.View.SplashActivity");
-		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-		  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys(strEmail + "@mailinator.com");
-		  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
-		  driver.findElement(By.xpath("//*[@text='Entrar']")).click();		
+		  driver.findElement(By.xpath("//*[@id='ok']")).click();		
 	}
 				
 	

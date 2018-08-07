@@ -40,7 +40,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_ValorMinimo");
-		dc.setCapability("deviceQuery",Huawei);
+		dc.setCapability("deviceQuery",LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -61,26 +61,44 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='cerveja_store_button']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@text='Cerveja Tokai Pilsen 300ml']")).click();
-		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
+	    try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
 	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 	    driver.swipe(675, 1243, 665, 743, 253);
 	    driver.swipe(675, 1243, 665, 743, 253);
 	    driver.swipe(675, 1243, 665, 743, 253);
-	    driver.swipe(675, 1243, 665, 743, 253);
-		driver.findElement(By.xpath("//*[@id='regiserCardButton']")).click();
+		driver.findElement(By.xpath("//*[@id='registerCardButton']")).click();
+		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
+		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+		driver.findElement(By.xpath("//*[@id='creditCardNoView']")).sendKeys("4551-8310-2111-3207");
+		driver.findElement(By.xpath("//*[@id='creditCardName']")).sendKeys("LUCAS M DOS SANTOS");
+		driver.findElement(By.xpath("//*[@id='month']")).sendKeys("10");
+		driver.findElement(By.xpath("//*[@id='year']")).sendKeys("19");
+		driver.findElement(By.xpath("//*[@id='cvv']")).sendKeys("114");
+		driver.findElement(By.xpath("//*[@id='saveCardCheckBox']")).click();
+		driver.findElement(By.xpath("//*[@id='saveButton']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(628, 1550, 578, 940, 233);
-		driver.swipe(606, 1578, 653, 1040, 257);
-		driver.swipe(584, 1568, 565, 1096, 197);
 		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(628, 1550, 578, 940, 233);
-		driver.swipe(606, 1578, 653, 1040, 257);
-		driver.swipe(584, 1568, 565, 1096, 197);
-		driver.findElement(By.xpath("//*[@text='Pagar R$ 40,56']")).click();
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		Boolean valoresperado = driver.findElements(By.xpath("//*[@text='Pagar R$ 7,90']")).size()>0;
+		String valoratual = driver.findElements(By.xpath("//*[@id='totalPriceView']")).toString();
+		  if (valoresperado) {
+			  client.report("O valor usado foi de R$7,90", true);
+			  driver.findElement(By.xpath("//*[@text='Pagar R$ 7,90']")).click();
+		  }
+		  else {
+			  client.report("O teste falhou, pois o valor do botão foi: " +valoratual, true);
+		  }
+		
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();	
 
 		}

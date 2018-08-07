@@ -52,7 +52,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
-		driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("giuliateste2@mailinator.com");
+		driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
 		new WebDriverWait(driver, 10).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='edPassword']")));
 		driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
 		driver.findElement(By.xpath("//*[@text='Entrar']")).click();
@@ -64,32 +64,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		if (Permitir) {
 		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
 		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@id='cepView']")).sendKeys("69908-600");
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@id='streetText']")).sendKeys("Rua Pernambuco");
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@id='numberText']")).sendKeys("33");
-		driver.findElement(By.xpath("//*[@id='neighborhoodText']")).sendKeys("Bosque");
-		driver.swipe(768, 431, 768, 359, 128);
-		driver.findElement(By.xpath("//*[@text='Estado']")).click();
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='AC']")).click();
-		try{Thread.sleep(threadSleep+2500);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='Acrelândia']")).click();
-		try{Thread.sleep(threadSleep+2500);} catch(Exception ignore){}
-		driver.swipe(621, 1656, 650, 1131, 254);
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.swipe(568, 1628, 615, 1296, 240);
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.swipe(565, 1731, 562, 1525, 358);
-		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='Rio Branco']")).click();
-		driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
-		driver.findElement(By.xpath("//*[@text='Salvar']")).click();
-		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='UTILIZAR' and ./parent::*[./parent::*[./preceding-sibling::*[@text='Endereço padrão']]]]")).click();
+		driver.findElement(By.xpath("//*[@text='UTILIZAR' and ./parent::*[./parent::*[(./preceding-sibling::* | ./following-sibling::*)[@text='Endereço padrão']]]]")).click();
 		try{Thread.sleep(esperandogifintermediario+0500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@text='O distribuidor mais próximo não está disponível no momento.']")).click();
 		}
@@ -133,7 +108,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			driver.quit();
+			//driver.quit();
 		}
 	}
 	
