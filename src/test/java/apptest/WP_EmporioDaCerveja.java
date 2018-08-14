@@ -61,12 +61,10 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@text='Ordenar por']")).click();
 		driver.findElement(By.xpath("//*[@text='Menor preco']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.findElement(By.xpath("//*[@text='Cerveja Budweiser 600ml']")).click();
+		driver.findElement(By.xpath("//*[@id='userNameView']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
-	    try{Thread.sleep(threadSleep);} catch(Exception ignore){}
+	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
 	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 	    driver.swipe(675, 1243, 665, 743, 253);
@@ -92,18 +90,9 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(675, 1243, 665, 743, 253);
-		Boolean valoresperado = driver.findElements(By.xpath("//*[@text='Pagar R$ 12,74']")).size()>0;
-		String valoratual = driver.findElements(By.xpath("//*[@id='totalPriceView']")).toString();
-		  if (valoresperado) {
-			  client.report("O valor usado foi de R$12,74", true);
-			  driver.findElement(By.xpath("//*[@text='Pagar R$ 12,74']")).click();
-		  }
-		  else {
-			  client.report("O teste falhou, pois o valor do botão foi o diferente do esperado", true);
-		  }
-		
+		driver.findElement(By.xpath("//*[@id='totalPriceView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
-		
+		driver.findElement(By.xpath("//*[@text='OK']")).click();
 		}
 	
 	
