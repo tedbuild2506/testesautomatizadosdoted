@@ -62,6 +62,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@text='Menor preco']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
 		driver.findElement(By.xpath("//*[@text='Cerveja Budweiser 600ml']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
