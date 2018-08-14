@@ -102,7 +102,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		  }
 		
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
-		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
+		
 		}
 	
 	
