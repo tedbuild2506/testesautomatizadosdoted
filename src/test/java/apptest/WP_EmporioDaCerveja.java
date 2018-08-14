@@ -36,11 +36,9 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
-		/*dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_ValorMinimo");
 		dc.setCapability("deviceQuery",Huawei+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+LGE5X);
+		//dc.setCapability("deviceQuery",LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -48,8 +46,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	
 	@Test 
 	public void testeemporiodacerveja() {
-		driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
+		client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 		try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
@@ -60,7 +58,11 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='imgCart']")).click();
 		driver.findElement(By.xpath("//*[@id='cerveja_store_button']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='Cerveja Tokai Pilsen 300ml']")).click();
+		driver.findElement(By.xpath("//*[@text='Ordenar por']")).click();
+		driver.findElement(By.xpath("//*[@text='Menor preco']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.findElement(By.xpath("//*[@text='Cerveja Budweiser 600ml']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
 	    try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -89,18 +91,18 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.swipe(675, 1243, 665, 743, 253);
-		Boolean valoresperado = driver.findElements(By.xpath("//*[@text='Pagar R$ 7,90']")).size()>0;
+		Boolean valoresperado = driver.findElements(By.xpath("//*[@text='Pagar R$ 12,74']")).size()>0;
 		String valoratual = driver.findElements(By.xpath("//*[@id='totalPriceView']")).toString();
 		  if (valoresperado) {
-			  client.report("O valor usado foi de R$7,90", true);
-			  driver.findElement(By.xpath("//*[@text='Pagar R$ 7,90']")).click();
+			  client.report("O valor usado foi de R$12,74", true);
+			  driver.findElement(By.xpath("//*[@text='Pagar R$ 12,74']")).click();
 		  }
 		  else {
-			  client.report("O teste falhou, pois o valor do botão foi: " +valoratual, true);
+			  client.report("O teste falhou, pois o valor do botão foi o diferente do esperado", true);
 		  }
 		
-		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();	
-
+		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
+		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
 		}
 	
 	

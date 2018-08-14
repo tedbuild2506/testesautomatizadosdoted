@@ -45,8 +45,8 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 		
 	@Test
 	 public void testeinteracaoproduto() {
-		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");

@@ -56,8 +56,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	public void cadastro() {
 		
 		 String strEmail = getDateTime();
-		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
 		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedmonitoramento@gmail.com");

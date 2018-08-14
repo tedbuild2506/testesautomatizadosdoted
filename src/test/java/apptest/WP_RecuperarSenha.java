@@ -60,7 +60,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
-		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedusp06@mailinator.com");
+		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("teduspprd@gmail.com");
 		  driver.swipe(821, 868, 768, 478, 448);
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
 		  
