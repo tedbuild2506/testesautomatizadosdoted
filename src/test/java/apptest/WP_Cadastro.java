@@ -40,7 +40,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_CadastroValido");
-		dc.setCapability("deviceQuery",LGE5X);
+		dc.setCapability("deviceQuery",LGE5X+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -158,11 +158,26 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(675, 1243, 665, 743, 253);
 		  driver.swipe(675, 1243, 665, 743, 253);
 		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
 		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='privacyCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='btAccept']")).click();
 		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='ok']")).click();		
+		  driver.findElement(By.xpath("//*[@id='ok']")).click();	
+		  
 	}
 				
 	
