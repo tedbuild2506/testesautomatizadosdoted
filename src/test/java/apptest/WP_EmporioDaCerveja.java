@@ -37,8 +37,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ValorMinimo");
-		dc.setCapability("deviceQuery",Huawei+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+LGE5X);
-		//dc.setCapability("deviceQuery",LGE5X);
+		//dc.setCapability("deviceQuery",Huawei+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+LGE5X);
+		dc.setCapability("deviceQuery",LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -70,7 +70,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	    driver.swipe(675, 1243, 665, 743, 253);
 	    driver.swipe(675, 1243, 665, 743, 253);
 	    driver.swipe(675, 1243, 665, 743, 253);
-		driver.findElement(By.xpath("//*[@id='registerCardButton']")).click();
+		driver.findElement(By.xpath("//*[@id='changeCardButton']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
@@ -92,7 +92,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.swipe(675, 1243, 665, 743, 253);
 		driver.findElement(By.xpath("//*[@id='totalPriceView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
-		driver.findElement(By.xpath("//*[@text='OK']")).click();
+		try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
+		driver.findElement(By.xpath("//*[@id='ok']")).click();
 		}
 	
 	
