@@ -71,6 +71,35 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
           try{Thread.sleep(2000);} catch(Exception ignore){}
           driver.findElement(By.xpath("//*[@text='Política de privacidade']")).click();
           }
+	
+	@Test
+	 public void testetermosdeusoQA() {
+	 driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+   	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+   	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
+   	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
+   	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
+   	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+   	  driver.findElement(By.xpath("//*[@id='imgUser']")).click();
+         driver.findElement(By.xpath("//*[@text='Termos de uso']")).click();
+   	  new WebDriverWait(driver, 30, esperandogifintermediario).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ALLOW']"))).click();
+   	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+   	  Boolean Drive = driver.findElements(By.xpath("//*[@text='Drive PDF Viewer']")).size()>0;
+		  if (Drive) {
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  driver.findElement(By.xpath("//*[@text='Drive PDF Viewer']")).click();
+		  }
+		  Boolean Allow = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
+		  if (Allow) {
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  new WebDriverWait(driver, 30, esperandogifintermediario).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ALLOW']"))).click();
+		  }
+         driver.pressKeyCode(AndroidKeyCode.BACK);
+         try{Thread.sleep(2000);} catch(Exception ignore){}
+         driver.findElement(By.xpath("//*[@text='Política de privacidade']")).click();
+         }
 
 	@AfterMethod
 	public void tearDown(ITestResult tr){

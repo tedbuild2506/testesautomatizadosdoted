@@ -68,6 +68,34 @@ public class WP_Configuracoes extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='left_icon']")).click();
       	 }
 
+	@Test
+	 public void testedeconfiguracoesbasicasQA() {
+		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+   	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+   	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
+   	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
+   	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
+   	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+   	  driver.findElement(By.xpath("//*[@id='imgUser']")).click();
+         driver.findElement(By.xpath("//*[@text='Configurações da smartbeer_']")).click();
+   	  Boolean Drive = driver.findElements(By.xpath("//*[@text='Conectado']")).size()>0;
+		  if (Drive) {
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  client.report("A cervejeira está conectada", true);
+		  }
+		  Boolean Allow = driver.findElements(By.xpath("//*[@text='03/08/2018']")).size()>0;
+		  String data = "03/08/2018";
+		  if (Allow) {
+			  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
+			  client.report("A cervejeira foi calibrada em" +data, true);
+		  }
+		  driver.findElement(By.xpath("//*[@text='Descadastrar smartbeer_']")).click();
+		  driver.findElement(By.xpath("//*[@text='CANCELAR']")).click();
+		  driver.findElement(By.xpath("//*[@id='left_icon']")).click();
+     	 }
+	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
 		driver.removeApp("com.consul.android.smartbeer.staging");

@@ -55,12 +55,26 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 	@Test 
 	public void testTeste_recuperar_senha_e_logar() {
 		String strSenha = getDateTime();
+		  driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
+		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
+		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedmonitoramento@gmail.com");
+		  driver.swipe(821, 868, 768, 478, 448);
+		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
+		  
+		 }
+	
+	@Test 
+	public void testTeste_recuperar_senha_e_logarQA() {
+		String strSenha = getDateTime();
 		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
 		  driver.findElement(By.xpath("//*[@text='Esqueci minha senha']")).click();
-		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("teduspprd@gmail.com");
+		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedmonitoramento@gmail.com");
 		  driver.swipe(821, 868, 768, 478, 448);
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
 		  

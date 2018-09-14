@@ -67,6 +67,30 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 	 }
 	
+	@Test
+	 public void testTeste_cadastro_campos_invalidosQA() {
+	  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
+	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+	  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("ashutosh@ashutosh.com.br");
+	  driver.swipe(165, 759, 175, 534, 1234);
+	  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("lucasmoreira");
+	  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("lucazmoreira");
+	  driver.swipe(309, 856, 390, 406, 888);
+	  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("teste");
+	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("12345678901");
+	  driver.swipe(168, 946, 334, 615, 2240);
+	  driver.findElement(By.xpath("//*[@id='dobView']")).click();
+	  driver.findElement(By.xpath("//*[@text='2018']")).click();
+	  driver.findElement(By.xpath("//*[@text='2020']")).click();
+	  driver.findElement(By.xpath("//*[@text='OK']")).click();
+	  driver.swipe(84, 887, 259, 493, 1461);
+	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("99999999999");
+	  driver.swipe(450, 812, 500, 640, 1292);
+	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+	 }
+	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
 		driver.removeApp("com.consul.android.smartbeer.staging");

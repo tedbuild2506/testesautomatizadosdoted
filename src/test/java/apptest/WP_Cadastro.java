@@ -180,6 +180,131 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  
 	}
 				
+	@Test 
+	public void cadastroQA() {
+		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
+		  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+		  driver.findElement(By.xpath("//*[@id='emailView']")).sendKeys("tedmonitoramento@gmail.com");
+		  driver.swipe(165, 759, 175, 534, 1234);
+		  driver.findElement(By.xpath("//*[@id='password_view']")).sendKeys("Smart2000");
+		  driver.findElement(By.xpath("//*[@id='confirm_password_view']")).sendKeys("Smart2000");
+		  driver.swipe(309, 856, 390, 406, 888);
+		  driver.findElement(By.xpath("//*[@id='name_and_surname_view']")).sendKeys("TED USP Brazil");
+		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
+		  driver.swipe(168, 946, 334, 615, 2240);
+		  driver.findElement(By.xpath("//*[@id='dobView']")).click();
+		  driver.findElement(By.xpath("//*[@text='2018']")).click();
+		  driver.swipe(537, 984, 528, 1237, 200);
+		  driver.swipe(543, 903, 546, 1106, 233);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+		  driver.swipe(540, 771, 525, 1153, 208);
+	      driver.findElement(By.xpath("//*[@text='1994']")).click();
+		  driver.findElement(By.xpath("//*[@text='OK']")).click();
+		  driver.swipe(84, 887, 259, 493, 1461);
+		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
+		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
+		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
+		  driver.swipe(450, 812, 500, 640, 1292);
+		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.swipe(675, 1243, 665, 743, 253);
+		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
+		  driver.findElement(By.xpath("//*[@id='privacyCheckbox']")).click();
+		  driver.findElement(By.xpath("//*[@id='btAccept']")).click();
+		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		  driver.findElement(By.xpath("//*[@id='ok']")).click();	
+		  
+	}
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr){

@@ -64,6 +64,27 @@ public class WP_CadastroEmBranco extends BaseTest implements GlobalConstants {
 	  }
 	 }
 	
+	@Test
+	 public void testedecadastrobrancoQA() {
+	  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
+	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
+	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
+	  driver.findElement(By.xpath("//*[@text='Cadastre-se com seu e-mail pessoal']")).click();
+	  driver.swipe(165, 759, 175, 534, 1234);
+	  driver.swipe(309, 856, 390, 406, 888);
+	  driver.swipe(168, 946, 334, 615, 2240);
+	  driver.swipe(84, 887, 259, 493, 1461);
+	  driver.swipe(450, 812, 500, 640, 1292);
+	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+	  Boolean isPresent = driver.findElements(By.xpath("//*[@text='Digite e-mail']")).size()<0;
+	  if (isPresent.TRUE) {
+		  client.report("Teste funcionou como o esperado", true);
+	  }
+	  else {
+		  client.report("O aplicativo não bloqueiou o cadastro invalido. Teste falhou", false);
+	  }
+	 }
+	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
 		driver.removeApp("com.consul.android.smartbeer.staging");

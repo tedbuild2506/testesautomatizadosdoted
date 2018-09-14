@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="apptest.WP_InteracaoProduto">
+      <class name="apptest.WP_CadastroEmBranco">
         <methods>
+          <include name="testedecadastrobrancoQA"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="testeinteracaoproduto"/>
+          <include name="testedecadastrobranco"/>
         </methods>
-      </class> <!-- apptest.WP_InteracaoProduto -->
+      </class> <!-- apptest.WP_CadastroEmBranco -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
