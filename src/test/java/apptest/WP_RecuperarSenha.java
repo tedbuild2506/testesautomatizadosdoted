@@ -77,6 +77,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='email']")).sendKeys("tedmonitoramento@gmail.com");
 		  driver.swipe(821, 868, 768, 478, 448);
 		  driver.findElement(By.xpath("//*[@text='Recuperar senha']")).click();
+		  driver.findElement(By.xpath("//*[@text='Acessar sua conta']")).click();
 		  
 		 }
 
