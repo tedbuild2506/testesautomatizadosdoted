@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="2" passed="1">
+<testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="153054" started-at="2018-09-20T13:14:22Z" finished-at="2018-09-20T13:16:55Z">
+  <suite name="Default suite" duration-ms="97451" started-at="2018-09-20T13:22:26Z" finished-at="2018-09-20T13:24:04Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="153054" started-at="2018-09-20T13:14:22Z" finished-at="2018-09-20T13:16:55Z">
+    <test name="Default test" duration-ms="97451" started-at="2018-09-20T13:22:26Z" finished-at="2018-09-20T13:24:04Z">
       <class name="apptest.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="20866" started-at="2018-09-20T10:14:22Z" finished-at="2018-09-20T10:14:43Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="setUp" is-config="true" duration-ms="24311" started-at="2018-09-20T10:22:26Z" finished-at="2018-09-20T10:22:51Z">
           <params>
             <param index="0">
               <value>
@@ -18,58 +18,32 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logar" duration-ms="40106" started-at="2018-09-20T10:14:43Z" finished-at="2018-09-20T10:15:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="7959" started-at="2018-09-20T10:15:23Z" finished-at="2018-09-20T10:15:31Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="setUp" is-config="true" duration-ms="24788" started-at="2018-09-20T10:15:31Z" finished-at="2018-09-20T10:15:55Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[@os='android']]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testTeste_recuperar_senha_e_logarQA()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="testTeste_recuperar_senha_e_logarQA" duration-ms="48966" started-at="2018-09-20T10:15:55Z" finished-at="2018-09-20T10:16:44Z">
+        <test-method status="FAIL" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="testTeste_recuperar_senha_e_logar" duration-ms="59009" started-at="2018-09-20T10:22:51Z" finished-at="2018-09-20T10:23:50Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='Acessar sua conta']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.29 seconds
+Command duration or timeout: 2.52 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/WnHNchYRmH9U6pCt?1
-Picked up Grid Node (seetest_7833)
-Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3360/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7833, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-09-20_16-15-35-d193549d-11fb-4fb0-984b-2e499a8f742d
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/26ZNjVAPrwA51BkQ?1
+Picked up Grid Node (seetest_7838)
+Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3366/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7838, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-09-20_16-22-34-b1a7aab3-779d-4101-a8df-1a13a6a2e329
 *** Element info: {Using=xpath, value=//*[@text='Acessar sua conta']}]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='Acessar sua conta']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 3.29 seconds
+Command duration or timeout: 2.52 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/WnHNchYRmH9U6pCt?1
-Picked up Grid Node (seetest_7833)
-Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3360/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7833, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-09-20_16-15-35-d193549d-11fb-4fb0-984b-2e499a8f742d
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/26ZNjVAPrwA51BkQ?1
+Picked up Grid Node (seetest_7838)
+Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3366/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7838, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-09-20_16-22-34-b1a7aab3-779d-4101-a8df-1a13a6a2e329
 *** Element info: {Using=xpath, value=//*[@text='Acessar sua conta']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -94,7 +68,7 @@ Session ID: CLOUD-SID:2018-09-20_16-15-35-d193549d-11fb-4fb0-984b-2e499a8f742d
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logarQA(WP_RecuperarSenha.java:80)
+	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logar(WP_RecuperarSenha.java:67)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -124,12 +98,12 @@ Session ID: CLOUD-SID:2018-09-20_16-15-35-d193549d-11fb-4fb0-984b-2e499a8f742d
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTeste_recuperar_senha_e_logarQA -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1]" name="tearDown" is-config="true" duration-ms="10313" started-at="2018-09-20T10:16:44Z" finished-at="2018-09-20T10:16:55Z">
+        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="tearDown" is-config="true" duration-ms="14067" started-at="2018-09-20T10:23:50Z" finished-at="2018-09-20T10:24:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logarQA status=FAILURE method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logarQA()[pri:0, instance:apptest.WP_RecuperarSenha@3c0f93f1] output={null}]]]>
+                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=FAILURE method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4] output={null}]]]>
               </value>
             </param>
           </params>
