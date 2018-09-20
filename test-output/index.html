@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+              <span class="suite-name border-failed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\santl60\AppData\Local\Temp\testng-eclipse--1267508809\testng-customsuite.xml</span>
+                    <span>C:\Users\santl60\AppData\Local\Temp\testng-eclipse--720446118\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Default_suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="apptest.WP_RecuperarSenha" hash-for-method="testTeste_recuperar_senha_e_logarQA">testTeste_recuperar_senha_e_logarQA</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Default_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,7 +115,7 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="apptest.WP_Cadastro" hash-for-method="cadastro">cadastro</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="apptest.WP_RecuperarSenha" hash-for-method="testTeste_recuperar_senha_e_logar">testTeste_recuperar_senha_e_logar</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -116,17 +130,93 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+          <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">apptest.WP_Cadastro</span>
+              <img src="failed.png"/>
+              <span class="class-name">apptest.WP_RecuperarSenha</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="cadastro">
-                  </a> <!-- cadastro -->
-                  <span class="method-name">cadastro</span>
+                  <a name="testTeste_recuperar_senha_e_logarQA">
+                  </a> <!-- testTeste_recuperar_senha_e_logarQA -->
+                  <span class="method-name">testTeste_recuperar_senha_e_logarQA</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH=&apos;//*[@text=&apos;Acessar sua conta&apos;]&apos;))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 3.29 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+System info: host: &apos;USPL5VDR0L2&apos;, ip: &apos;192.168.56.1&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_162&apos;
+Driver info: io.appium.java_client.android.AndroidDriver
+Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber=&apos;9886674e5258475a46&apos;or@serialnumber=&apos;ce061716ba5f3cdd0d7e&apos;or@serialnumber=&apos;ad06160309316a7a49&apos;or@serialnumber=&apos;RQ3001DQKL&apos;, reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber=&apos;9886674e5258475a46&apos;or@serialnumber=&apos;ce061716ba5f3cdd0d7e&apos;or@serialnumber=&apos;ad06160309316a7a49&apos;or@serialnumber=&apos;RQ3001DQKL&apos;, reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/WnHNchYRmH9U6pCt?1
+Picked up Grid Node (seetest_7833)
+Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3360/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7833, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-09-20_16-15-35-d193549d-11fb-4fb0-984b-2e499a8f742d
+*** Element info: {Using=xpath, value=//*[@text=&apos;Acessar sua conta&apos;]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
+	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
+	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
+	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
+	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
+	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logarQA(WP_RecuperarSenha.java:80)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Default_suite-class-failed -->
+          <div class="suite-Default_suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">apptest.WP_RecuperarSenha</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testTeste_recuperar_senha_e_logar">
+                  </a> <!-- testTeste_recuperar_senha_e_logar -->
+                  <span class="method-name">testTeste_recuperar_senha_e_logar</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,7 +224,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\santl60\AppData\Local\Temp\testng-eclipse--1267508809\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\santl60\AppData\Local\Temp\testng-eclipse--720446118\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -143,11 +233,7 @@
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;apptest.WP_Cadastro&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;cadastro&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- apptest.WP_Cadastro --&gt;
+      &lt;class name=&quot;apptest.WP_RecuperarSenha&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -187,16 +273,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'cadastro')
-data.setCell(0, 2, 'apptest.WP_Cadastro')
-data.setCell(0, 3, 216811);
+data.setCell(0, 1, 'testTeste_recuperar_senha_e_logarQA')
+data.setCell(0, 2, 'apptest.WP_RecuperarSenha')
+data.setCell(0, 3, 48966);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testTeste_recuperar_senha_e_logar')
+data.setCell(1, 2, 'apptest.WP_RecuperarSenha')
+data.setCell(1, 3, 40106);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -211,16 +301,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">apptest.WP_Cadastro</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">cadastroQA</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Default_suite" class="panel">
@@ -229,18 +312,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">apptest.WP_Cadastro</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">apptest.WP_RecuperarSenha</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(@os='android')</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">cadastro</span>
-                <span class="method-start">22574 ms</span>
+                <span class="method-name">testTeste_recuperar_senha_e_logar</span>
+                <span class="method-start">20866 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">tearDown([TestResult name=cadastro status=SUCCESS method=WP_Cadastro.cadastro()[pri:0, instance:apptest.WP_Ca...)</span>
-                <span class="method-start">239389 ms</span>
+                <span class="method-name">tearDown([TestResult name=testTeste_recuperar_senha_e_logar status=SUCCESS method=WP_RecuperarSenha.testTeste...)</span>
+                <span class="method-start">60974 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(@os='android')</span>
+                <span class="method-start">68934 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testTeste_recuperar_senha_e_logarQA</span>
+                <span class="method-start">93722 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=testTeste_recuperar_senha_e_logarQA status=FAILURE method=WP_RecuperarSenha.testTes...)</span>
+                <span class="method-start">142708 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
