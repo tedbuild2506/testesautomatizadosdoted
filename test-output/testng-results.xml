@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="97451" started-at="2018-09-20T13:22:26Z" finished-at="2018-09-20T13:24:04Z">
+  <suite name="Default suite" duration-ms="272372" started-at="2018-10-01T14:06:26Z" finished-at="2018-10-01T14:10:59Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="97451" started-at="2018-09-20T13:22:26Z" finished-at="2018-09-20T13:24:04Z">
-      <class name="apptest.WP_RecuperarSenha">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="setUp" is-config="true" duration-ms="24311" started-at="2018-09-20T10:22:26Z" finished-at="2018-09-20T10:22:51Z">
+    <test name="Default test" duration-ms="272372" started-at="2018-10-01T14:06:26Z" finished-at="2018-10-01T14:10:59Z">
+      <class name="apptest.CopyofWP_EmporioDaCerveja">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.CopyofWP_EmporioDaCerveja@3327bd23]" name="setUp" is-config="true" duration-ms="8976" started-at="2018-10-01T11:06:26Z" finished-at="2018-10-01T11:06:35Z">
           <params>
             <param index="0">
               <value>
@@ -18,57 +18,19 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="testTeste_recuperar_senha_e_logar" duration-ms="59009" started-at="2018-09-20T10:22:51Z" finished-at="2018-09-20T10:23:50Z">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method status="FAIL" signature="testeemporiodacerveja()[pri:0, instance:apptest.CopyofWP_EmporioDaCerveja@3327bd23]" name="testeemporiodacerveja" duration-ms="251180" started-at="2018-10-01T11:06:35Z" finished-at="2018-10-01T11:10:47Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='Acessar sua conta']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/26ZNjVAPrwA51BkQ?1
-Picked up Grid Node (seetest_7838)
-Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3366/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7838, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-09-20_16-22-34-b1a7aab3-779d-4101-a8df-1a13a6a2e329
-*** Element info: {Using=xpath, value=//*[@text='Acessar sua conta']}]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@text='Acessar sua conta']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 2.52 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'USPL5VDR0L2', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
-Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=7.0.x, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, desired={deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_SamsungRecuperarSenha}, device.serialNumber=ad06160309316a7a49, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='9886674e5258475a46'or@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='RQ3001DQKL', reportDirectory=reports, autoWebview=false, platformName=Android, testName=wp_TED_SamsungRecuperarSenha, device.screenSize=1080x1920, useKeystore=false, cloudViewLink=http://null/agent-1278481/#/26ZNjVAPrwA51BkQ?1
-Picked up Grid Node (seetest_7838)
-Reserved Device : Samsung Galaxy S7 A0131, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/3366/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G930F, device.name=Samsung Galaxy S7 A0131, autoGrantPermissions=false, projectName=, gridNodePort=7838, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-09-20_16-22-34-b1a7aab3-779d-4101-a8df-1a13a6a2e329
-*** Element info: {Using=xpath, value=//*[@text='Acessar sua conta']}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:40)
-	at io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.execute(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:56)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElementByXPath(DefaultGenericMobileDriver.java:134)
-	at io.appium.java_client.AppiumDriver.findElementByXPath(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElementByXPath(AndroidDriver.java:1)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
-	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
-	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at apptest.WP_RecuperarSenha.testTeste_recuperar_senha_e_logar(WP_RecuperarSenha.java:67)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:288)
+	at org.testng.Assert.assertEquals(Assert.java:298)
+	at apptest.CopyofWP_EmporioDaCerveja.testeemporiodacerveja(CopyofWP_EmporioDaCerveja.java:104)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -95,22 +57,22 @@ Session ID: CLOUD-SID:2018-09-20_16-22-34-b1a7aab3-779d-4101-a8df-1a13a6a2e329
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testTeste_recuperar_senha_e_logar -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4]" name="tearDown" is-config="true" duration-ms="14067" started-at="2018-09-20T10:23:50Z" finished-at="2018-09-20T10:24:04Z">
+        </test-method> <!-- testeemporiodacerveja -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.CopyofWP_EmporioDaCerveja@3327bd23]" name="tearDown" is-config="true" duration-ms="12179" started-at="2018-10-01T11:10:47Z" finished-at="2018-10-01T11:10:59Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testTeste_recuperar_senha_e_logar status=FAILURE method=WP_RecuperarSenha.testTeste_recuperar_senha_e_logar()[pri:0, instance:apptest.WP_RecuperarSenha@71318ec4] output={null}]]]>
+                <![CDATA[[TestResult name=testeemporiodacerveja status=FAILURE method=CopyofWP_EmporioDaCerveja.testeemporiodacerveja()[pri:0, instance:apptest.CopyofWP_EmporioDaCerveja@3327bd23] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_RecuperarSenha -->
+      </class> <!-- apptest.CopyofWP_EmporioDaCerveja -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

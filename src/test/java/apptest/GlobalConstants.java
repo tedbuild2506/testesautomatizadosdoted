@@ -28,6 +28,7 @@ public interface GlobalConstants {
 	  String Huawei ="@serialnumber='ENU7N16126004845'";
 	  String LGE5X60="@serialnumber='0b2b55230bfd30c6'";
 	  String S6Edge="@serialnumber='04157df474344822'";
+	  String androidnuvem="@serialnumber='LGUS997569cab50'";
 	  
 	  
 	  

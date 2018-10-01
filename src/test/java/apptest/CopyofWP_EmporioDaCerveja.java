@@ -7,10 +7,10 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -28,23 +28,23 @@ import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
+public class CopyofWP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
-	
+
 	@BeforeMethod
 	@Parameters("deviceQuery")
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ValorMinimo");
-		dc.setCapability("deviceQuery",LGE5X60+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
+		dc.setCapability("deviceQuery",androidnuvem);
 		//dc.setCapability("deviceQuery",LGE5X);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
-		
+
 	}
-	
+
 	@Test 
 	public void testeemporiodacerveja() {
 		driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
@@ -64,13 +64,13 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='userNameView']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
-	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
-	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-	    driver.swipe(675, 1243, 665, 743, 253);
-	    driver.swipe(675, 1243, 665, 743, 253);
-	    driver.swipe(675, 1243, 665, 743, 253);
+		driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
 		driver.findElement(By.xpath("//*[@id='changeCardButton']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
@@ -112,8 +112,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 			driver.findElement(By.xpath("//*[@id='ok']")).click();
 			client.report("Mensagem correta, testou passou", true);
 				}
-		
-	
+
 	}
 	@AfterMethod
 	public void tearDown(ITestResult tr){
@@ -131,5 +130,5 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 			driver.quit();
 		}
 	}
-	
+
 }
