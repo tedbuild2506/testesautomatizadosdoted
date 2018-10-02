@@ -47,6 +47,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	
 	@Test 
 	public void testeemporiodacerveja() {
+		
+	
 		driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
 		client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 		try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
@@ -64,13 +66,13 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='userNameView']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
-	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-	    driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
-	    try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-	    driver.swipe(675, 1243, 665, 743, 253);
-	    driver.swipe(675, 1243, 665, 743, 253);
-	    driver.swipe(675, 1243, 665, 743, 253);
+		driver.findElement(By.xpath("//*[@id='addToCartView']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.findElement(By.xpath("//*[@id='cartQuantity']")).click();
+		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
+		driver.swipe(675, 1243, 665, 743, 253);
 		driver.findElement(By.xpath("//*[@id='changeCardButton']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
@@ -83,37 +85,27 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='saveCardCheckBox']")).click();
 		driver.findElement(By.xpath("//*[@id='saveButton']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		/*driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);
-		driver.swipe(675, 1243, 665, 743, 253);*/
 		client.swipeWhileNotFound("DOWN", 200, 1000, "NATIVE", "//*[@id='totalPriceTextView' and @onScreen='true']", 0, 500, 10, false);
 		driver.findElement(By.xpath("//*[@id='totalPriceView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
 		try{Thread.sleep(esperandogifinicial+14500);} catch(Exception ignore){}
 		//new WebDriverWait(driver, 100).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='ok']")));
-		if (driver.findElement(By.xpath("//*[@text='500 Internal Server Error']")).isDisplayed())
-		{
+		String strMessage = driver.findElement(By.xpath("//*[@id='infoText']")).getAttribute("text");
+		System.out.println(strMessage);
+		if(strMessage.contains("Seu pagamento não foi autorizado. Houve algum problema na autorização do pagamento.")){
+			System.out.println("The test came to the correct block");
+			client.report("Teste passou", true);
+			driver.findElement(By.xpath("//*[@id='ok']")).click();
+			Assert.assertEquals(true, true);
+
+		}else if(strMessage.contains("500 Internal Server Error")){
 			System.out.println("The test came to Error 500");
 			client.report("Error 500, testou falhou", false);
-			
+
 			Assert.assertEquals(true, false);
-
-		} 
-
-		else if (driver.findElement(By.xpath("//*[contains(@text,'Seu pagamento não foi autorizado. Houve algum problema na autorização do pagamento.')]")).isDisplayed())
-				{
-
-			System.out.println("The test came to this block");
-			driver.findElement(By.xpath("//*[@id='ok']")).click();
-			client.report("Mensagem correta, testou passou", true);
-				}
+			
+		}
 		
-	
 	}
 	@AfterMethod
 	public void tearDown(ITestResult tr){
@@ -131,5 +123,5 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 			driver.quit();
 		}
 	}
-	
+
 }
