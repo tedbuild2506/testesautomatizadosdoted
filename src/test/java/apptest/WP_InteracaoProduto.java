@@ -37,7 +37,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungInteracaoProduto");
-		dc.setCapability("deviceQuery",LGE5X60+/*"or"+A8Plus+*/"or"+S6Edge+"or"+S8+"or"+S7+"or"+S7Edge);
+		dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
