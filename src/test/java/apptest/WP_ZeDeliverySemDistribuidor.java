@@ -47,7 +47,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 	}
 	
 	@Test 
-	public void test_SemDistribuidor() {
+	public void testesemdistribuidor() {
 		driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
 		client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 		try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
