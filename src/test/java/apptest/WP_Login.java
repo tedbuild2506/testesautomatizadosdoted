@@ -14,12 +14,7 @@ import org.testng.annotations.Test;
 
 import com.experitest.appium.SeeTestClient;
 
-import java.util.*;
-import javax.activation.*;
-import javax.mail.*;
-import javax.mail.internet.*;
-import javax.mail.Authenticator;
-import javax.mail.PasswordAuthentication;
+
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
