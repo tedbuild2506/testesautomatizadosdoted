@@ -32,7 +32,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 		/*dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
-		dc.setCapability("testName", "wp_TED_SamsungLogin");
+		dc.setCapability("testName", "wp_TED_Login");
 		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
 		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
@@ -49,7 +49,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+    	  try{Thread.sleep(esperandogifinicial+2600);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgCart']")).click();
 	}
 	
