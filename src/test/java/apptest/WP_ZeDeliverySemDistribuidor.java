@@ -79,7 +79,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		driver.findElement(By.xpath("//*[@id='addQuantityView']")).click();
 		driver.findElement(By.xpath("//*[@id='totalPriceTextView']")).click();
 		try{Thread.sleep(esperandogifintermediario+0500);} catch(Exception ignore){}
-		client.swipeWhileNotFound("DOWN", 200, 1000, "NATIVE", "//*[@id='totalPriceTextView' and @onScreen='true']", 0, 500, 20, false);
+		client.swipeWhileNotFound("DOWN", 200, 1000, "NATIVE", "//*[@id='totalPriceTextView' and @onScreen='true']", 0, 500, 21, false);
 		driver.findElement(By.xpath("//*[@id='totalPriceTextView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
