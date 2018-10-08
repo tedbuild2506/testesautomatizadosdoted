@@ -66,6 +66,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
 		driver.findElement(By.xpath("//*[@id='cepView']")).sendKeys("69908-600");
+		try{Thread.sleep(threadSleep+0500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='streetText']")).sendKeys("Rua Pernambuco");
 		driver.findElement(By.xpath("//*[@id='numberText']")).sendKeys("33");
 		driver.findElement(By.xpath("//*[@id='neighborhoodText']")).sendKeys("Bosque");
@@ -83,7 +84,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 			}	
 		}
-		@AfterMethod
+	@AfterMethod
 	public void tearDown(ITestResult tr){
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		if (driver!=null)
@@ -97,6 +98,7 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
+			
 		}
 	}
 	
