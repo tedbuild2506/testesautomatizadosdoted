@@ -40,7 +40,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_CadastroValido");
-		dc.setCapability("deviceQuery",androidnuvem);
+		//dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -80,6 +81,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
+		  //client.swipeWhileNotFound("UP", 200, 1000, "NATIVE", "//*[@text='1994' and @onScreen='true']", 0, 500, 100, false);
 	      driver.findElement(By.xpath("//*[@text='1994']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);

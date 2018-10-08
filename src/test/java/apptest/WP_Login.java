@@ -2,11 +2,9 @@ package apptest;
 
 
 import java.net.URL;
-import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -16,12 +14,15 @@ import org.testng.annotations.Test;
 
 import com.experitest.appium.SeeTestClient;
 
-import io.appium.java_client.TouchAction;
+import java.util.*;
+import javax.activation.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
+
 
 
 public class WP_Login extends BaseTest implements GlobalConstants { 
@@ -37,8 +38,8 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_SamsungLogin");
-		//dc.setCapability("deviceQuery",LGE5X60+/*"or"+A8Plus+*/"or"+S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
+		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		

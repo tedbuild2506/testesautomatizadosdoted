@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="234214" started-at="2018-10-05T18:25:03Z" finished-at="2018-10-05T18:28:57Z">
+  <suite name="Default suite" duration-ms="230003" started-at="2018-10-08T13:32:06Z" finished-at="2018-10-08T13:35:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="234214" started-at="2018-10-05T18:25:03Z" finished-at="2018-10-05T18:28:57Z">
+    <test name="Default test" duration-ms="230003" started-at="2018-10-08T13:32:06Z" finished-at="2018-10-08T13:35:56Z">
       <class name="apptest.WP_ZeDeliverySemDistribuidor">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@3327bd23]" name="setUp" is-config="true" duration-ms="23160" started-at="2018-10-05T15:25:03Z" finished-at="2018-10-05T15:25:26Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="setUp" is-config="true" duration-ms="25064" started-at="2018-10-08T10:32:06Z" finished-at="2018-10-08T10:32:31Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test_SemDistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@3327bd23]" name="test_SemDistribuidor" duration-ms="203076" started-at="2018-10-05T15:25:26Z" finished-at="2018-10-05T15:28:49Z">
+        <test-method status="PASS" signature="testesemdistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="testesemdistribuidor" duration-ms="195498" started-at="2018-10-08T10:32:31Z" finished-at="2018-10-08T10:35:46Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test_SemDistribuidor -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@3327bd23]" name="tearDown" is-config="true" duration-ms="7952" started-at="2018-10-05T15:28:49Z" finished-at="2018-10-05T15:28:57Z">
+        </test-method> <!-- testesemdistribuidor -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="tearDown" is-config="true" duration-ms="9378" started-at="2018-10-08T10:35:46Z" finished-at="2018-10-08T10:35:56Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=test_SemDistribuidor status=SUCCESS method=WP_ZeDeliverySemDistribuidor.test_SemDistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@3327bd23] output={null}]]]>
+                <![CDATA[[TestResult name=testesemdistribuidor status=SUCCESS method=WP_ZeDeliverySemDistribuidor.testesemdistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7] output={null}]]]>
               </value>
             </param>
           </params>
