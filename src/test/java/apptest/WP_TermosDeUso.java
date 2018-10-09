@@ -29,7 +29,7 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_TermosDeUsoPoliticaPrivacidade");
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -44,7 +44,7 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+    	  try{Thread.sleep(esperandogifinicial+4500);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgUser']")).click();
           driver.findElement(By.xpath("//*[@text='Termos de uso']")).click();
     	  new WebDriverWait(driver, 30, esperandogifintermediario).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='ALLOW']"))).click();
