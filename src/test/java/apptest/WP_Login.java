@@ -35,8 +35,8 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_Login");
-		//dc.setCapability("deviceQuery",S8+"or"+S7+"or"+S6Edge+"or"+S7Edge);
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S8+"or"+S7+"or"+S6Edge+"or"+S7Edge);
+		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		

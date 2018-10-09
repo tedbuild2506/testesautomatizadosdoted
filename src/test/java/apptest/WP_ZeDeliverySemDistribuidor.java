@@ -26,8 +26,8 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ZéDelivery");
-		//dc.setCapability("deviceQuery",Xiaomi+"or"+S9Plus);
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",Xiaomi);
+		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -51,15 +51,15 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		if (Permitir) {
 		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();}
 		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='UTILIZAR']")).click();
-		/*driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
+		//driver.findElement(By.xpath("//*[@text='UTILIZAR']")).click();
+		driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
 		driver.findElement(By.xpath("//*[@id='cepView']")).sendKeys("69908-600");
 		try{Thread.sleep(threadSleep+0500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='streetText']")).sendKeys("Rua Pernambuco");
 		driver.findElement(By.xpath("//*[@id='numberText']")).sendKeys("33");
 		driver.findElement(By.xpath("//*[@id='neighborhoodText']")).sendKeys("Bosque");
 		driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
-		driver.findElement(By.xpath("//*[@text='Salvar']")).click();*/
+		driver.findElement(By.xpath("//*[@text='Salvar']")).click();
 		try{Thread.sleep(esperandogifinicial+3000);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='addQuantityView']")).click();
 		try {Thread.sleep(threadSleep+0500);}catch (Exception ignore) {}

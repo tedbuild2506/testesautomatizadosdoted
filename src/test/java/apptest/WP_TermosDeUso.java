@@ -26,8 +26,8 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_TermosDeUsoPoliticaPrivacidade");
-		//dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
+		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
