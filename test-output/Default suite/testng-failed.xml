@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="apptest.WP_ZeDeliverySemDistribuidor">
+      <class name="apptest.WP_ZeDelivery">
         <methods>
-          <include name="testesemdistribuidor"/>
+          <include name="testedozedelivery"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- apptest.WP_ZeDeliverySemDistribuidor -->
+      </class> <!-- apptest.WP_ZeDelivery -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
