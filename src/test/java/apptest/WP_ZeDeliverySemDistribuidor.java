@@ -2,11 +2,6 @@ package apptest;
 
 
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,16 +11,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.experitest.appium.SeeTestClient;
-
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
-
 
 public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
@@ -36,12 +25,9 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
-		/*dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_ZéDelivery");
-		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
-		//dc.setCapability("deviceQuery",androidnuvem);
+		//dc.setCapability("deviceQuery",Xiaomi+"or"+S9Plus);
+		dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -63,16 +49,17 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		Boolean Permitir = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
 		if (Permitir) {
-		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();
+		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();}
 		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
+		driver.findElement(By.xpath("//*[@text='UTILIZAR']")).click();
+		/*driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
 		driver.findElement(By.xpath("//*[@id='cepView']")).sendKeys("69908-600");
 		try{Thread.sleep(threadSleep+0500);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='streetText']")).sendKeys("Rua Pernambuco");
 		driver.findElement(By.xpath("//*[@id='numberText']")).sendKeys("33");
 		driver.findElement(By.xpath("//*[@id='neighborhoodText']")).sendKeys("Bosque");
 		driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
-		driver.findElement(By.xpath("//*[@text='Salvar']")).click();
+		driver.findElement(By.xpath("//*[@text='Salvar']")).click();*/
 		try{Thread.sleep(esperandogifinicial+3000);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='addQuantityView']")).click();
 		try {Thread.sleep(threadSleep+0500);}catch (Exception ignore) {}
@@ -83,8 +70,9 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 		driver.findElement(By.xpath("//*[@id='totalPriceTextView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-			}	
+				
 		}
+	
 	@AfterMethod
 	public void tearDown(ITestResult tr){
 		driver.removeApp("com.consul.android.smartbeer.staging");
@@ -93,14 +81,18 @@ public class WP_ZeDeliverySemDistribuidor extends BaseTest implements GlobalCons
 			if (tr.isSuccess()) 
 			{
 				client.report("Test has passed", true);
+				client.report("reportURL" + driver.getCapabilities().getCapability("reportUrl"), true);
+				client.setShowReport(true);
 			}
 			else {
 				client.report("Test has failed", false);
+				client.report("reportURL" + driver.getCapabilities().getCapability("reportUrl"), true);
+				client.setShowReport(true);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
-			
 		}
+		
 	}
 	
 }

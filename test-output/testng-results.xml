@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="150319" started-at="2018-10-09T13:02:44Z" finished-at="2018-10-09T13:05:14Z">
+  <suite name="Default suite" duration-ms="156673" started-at="2018-10-09T14:38:00Z" finished-at="2018-10-09T14:40:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="150319" started-at="2018-10-09T13:02:44Z" finished-at="2018-10-09T13:05:14Z">
-      <class name="apptest.WP_TermosDeUso">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_TermosDeUso@5ec0a365]" name="setUp" is-config="true" duration-ms="35125" started-at="2018-10-09T10:02:44Z" finished-at="2018-10-09T10:03:19Z">
+    <test name="Default test" duration-ms="156673" started-at="2018-10-09T14:38:00Z" finished-at="2018-10-09T14:40:37Z">
+      <class name="apptest.WP_ZeDeliverySemDistribuidor">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="setUp" is-config="true" duration-ms="23982" started-at="2018-10-09T11:38:00Z" finished-at="2018-10-09T11:38:24Z">
           <params>
             <param index="0">
               <value>
@@ -18,33 +18,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testetermosdeuso()[pri:0, instance:apptest.WP_TermosDeUso@5ec0a365]" name="testetermosdeuso" duration-ms="94533" started-at="2018-10-09T10:03:19Z" finished-at="2018-10-09T10:04:53Z">
+        <test-method status="FAIL" signature="testesemdistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="testesemdistribuidor" duration-ms="116388" started-at="2018-10-09T11:38:24Z" finished-at="2018-10-09T11:40:21Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='imgUser']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.07 seconds
+              <![CDATA[no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='addQuantityView']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.22 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '10.12.73.80', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, deviceUDID=0183d9629805, desired={deviceQuery=@serialnumber='0183d9629805', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_TermosDeUsoPoliticaPrivacidade}, device.serialNumber=0183d9629805, locationServicesAuthorized=false, device.version=8.1.0, deviceQuery=@serialnumber='0183d9629805', reportDirectory=reports, autoWebview=false, platformName=Android, udid=0183d9629805, testName=wp_TED_TermosDeUsoPoliticaPrivacidade, device.screenSize=1080x1920, useKeystore=false, test.type=Mobile, cloudViewLink=http://null/agent-1875560/#/J8tdPt8lD2v7jdYz?1
-Picked up Grid Node (seetest_7849)
-Reserved Device : Xiaomi Mi A1, device.manufacture=Xiaomi, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/4165/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=Mi A1, device.name=Xiaomi Mi A1, autoGrantPermissions=false, projectName=, gridNodePort=7849, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-10-09_16-02-49-160a98f9-517b-4dfa-9cab-e85e091973bb
-*** Element info: {Using=xpath, value=//*[@id='imgUser']}]]>
+Capabilities [{device.majorVersion=7, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, deviceUDID=9886674e5258475a46, desired={deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='04157df474344822'or@serialnumber='9886674e5258475a46', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_ZéDelivery}, device.serialNumber=9886674e5258475a46, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='04157df474344822'or@serialnumber='9886674e5258475a46', reportDirectory=reports, autoWebview=false, platformName=Android, udid=9886674e5258475a46, testName=wp_TED_ZéDelivery, device.screenSize=1080x1920, useKeystore=false, test.type=Mobile, cloudViewLink=http://null/agent-1875205/#/v9yyjrO82JMTRNM6?1
+Picked up Grid Node (seetest_7865)
+Reserved Device : Samsung Galaxy S7 Edge A0102, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/null, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G935F, device.name=Samsung Galaxy S7 Edge A0102, autoGrantPermissions=false, projectName=, gridNodePort=7865, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-10-09_17-38-06-8bc8c5e0-5ec6-4b97-9047-38b197a652db
+*** Element info: {Using=xpath, value=//*[@id='addQuantityView']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='imgUser']'))  (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.07 seconds
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element (An element could not be located on the page using the given search parameters (XPATH='//*[@id='addQuantityView']'))  (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.22 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
 System info: host: 'USPL5VDR0L2', ip: '10.12.73.80', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_162'
 Driver info: io.appium.java_client.android.AndroidDriver
-Capabilities [{device.majorVersion=8, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, deviceUDID=0183d9629805, desired={deviceQuery=@serialnumber='0183d9629805', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_TermosDeUsoPoliticaPrivacidade}, device.serialNumber=0183d9629805, locationServicesAuthorized=false, device.version=8.1.0, deviceQuery=@serialnumber='0183d9629805', reportDirectory=reports, autoWebview=false, platformName=Android, udid=0183d9629805, testName=wp_TED_TermosDeUsoPoliticaPrivacidade, device.screenSize=1080x1920, useKeystore=false, test.type=Mobile, cloudViewLink=http://null/agent-1875560/#/J8tdPt8lD2v7jdYz?1
-Picked up Grid Node (seetest_7849)
-Reserved Device : Xiaomi Mi A1, device.manufacture=Xiaomi, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/4165/project/jefferson_s_pecanha@whirlpool.com/, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=Mi A1, device.name=Xiaomi Mi A1, autoGrantPermissions=false, projectName=, gridNodePort=7849, autoAcceptAlerts=false}]
-Session ID: CLOUD-SID:2018-10-09_16-02-49-160a98f9-517b-4dfa-9cab-e85e091973bb
-*** Element info: {Using=xpath, value=//*[@id='imgUser']}
+Capabilities [{device.majorVersion=7, dontGoHomeOnQuit=false, device.os=Android, noReset=false, dontStopAppOnReset=false, reservationDuration=240, reportFormat=xml, fullReset=false, platform=ANY, deviceUDID=9886674e5258475a46, desired={deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='04157df474344822'or@serialnumber='9886674e5258475a46', reportDirectory=reports, reportFormat=xml, platformName=Android, testName=wp_TED_ZéDelivery}, device.serialNumber=9886674e5258475a46, locationServicesAuthorized=false, device.version=7.0, deviceQuery=@serialnumber='ce061716ba5f3cdd0d7e'or@serialnumber='ad06160309316a7a49'or@serialnumber='04157df474344822'or@serialnumber='9886674e5258475a46', reportDirectory=reports, autoWebview=false, platformName=Android, udid=9886674e5258475a46, testName=wp_TED_ZéDelivery, device.screenSize=1080x1920, useKeystore=false, test.type=Mobile, cloudViewLink=http://null/agent-1875205/#/v9yyjrO82JMTRNM6?1
+Picked up Grid Node (seetest_7865)
+Reserved Device : Samsung Galaxy S7 Edge A0102, device.manufacture=samsung, instrumentApp=false, appiumVersion=1.8.0, device.category=PHONE, autoDismissAlerts=false, reportUrl=https://reporter.seetest.io/#/test/null, newSessionWaitTimeout=300, keystorePath=~/.android/debug.keystore, waitForDeviceTimeout=120000, device.model=SM-G935F, device.name=Samsung Galaxy S7 Edge A0102, autoGrantPermissions=false, projectName=, gridNodePort=7865, autoAcceptAlerts=false}]
+Session ID: CLOUD-SID:2018-10-09_17-38-06-8bc8c5e0-5ec6-4b97-9047-38b197a652db
+*** Element info: {Using=xpath, value=//*[@id='addQuantityView']}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -68,7 +68,7 @@ Session ID: CLOUD-SID:2018-10-09_16-02-49-160a98f9-517b-4dfa-9cab-e85e091973bb
 	at io.appium.java_client.DefaultGenericMobileDriver.findElement(DefaultGenericMobileDriver.java:52)
 	at io.appium.java_client.AppiumDriver.findElement(AppiumDriver.java:1)
 	at io.appium.java_client.android.AndroidDriver.findElement(AndroidDriver.java:1)
-	at apptest.WP_TermosDeUso.testetermosdeuso(WP_TermosDeUso.java:48)
+	at apptest.WP_ZeDeliverySemDistribuidor.testesemdistribuidor(WP_ZeDeliverySemDistribuidor.java:64)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -98,19 +98,19 @@ Session ID: CLOUD-SID:2018-10-09_16-02-49-160a98f9-517b-4dfa-9cab-e85e091973bb
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testetermosdeuso -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_TermosDeUso@5ec0a365]" name="tearDown" is-config="true" duration-ms="20616" started-at="2018-10-09T10:04:53Z" finished-at="2018-10-09T10:05:14Z">
+        </test-method> <!-- testesemdistribuidor -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7]" name="tearDown" is-config="true" duration-ms="16259" started-at="2018-10-09T11:40:21Z" finished-at="2018-10-09T11:40:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testetermosdeuso status=FAILURE method=WP_TermosDeUso.testetermosdeuso()[pri:0, instance:apptest.WP_TermosDeUso@5ec0a365] output={null}]]]>
+                <![CDATA[[TestResult name=testesemdistribuidor status=FAILURE method=WP_ZeDeliverySemDistribuidor.testesemdistribuidor()[pri:0, instance:apptest.WP_ZeDeliverySemDistribuidor@66480dd7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_TermosDeUso -->
+      </class> <!-- apptest.WP_ZeDeliverySemDistribuidor -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
