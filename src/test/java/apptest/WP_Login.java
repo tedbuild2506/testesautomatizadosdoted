@@ -2,6 +2,7 @@ package apptest;
 
 
 import java.net.URL;
+import java.util.Properties;
 
 import org.openqa.selenium.By;
 
@@ -23,6 +24,7 @@ import io.appium.java_client.android.AndroidElement;
 public class WP_Login extends BaseTest implements GlobalConstants { 
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
+	protected String ReportUrl = System.getenv("ReportURL");
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
@@ -79,6 +81,8 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
+			System.setProperty(ReportUrl, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}
