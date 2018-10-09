@@ -24,7 +24,7 @@ import io.appium.java_client.android.AndroidElement;
 public class WP_Login extends BaseTest implements GlobalConstants { 
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
-	protected String ReportUrl = System.getenv("ReportURL");
+	protected String ReportURL = System.getenv("ReportURL");
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
@@ -82,7 +82,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
-			System.setProperty(ReportUrl, driver.getCapabilities().getCapability("reportUrl").toString());
+			System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}
