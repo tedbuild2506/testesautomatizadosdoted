@@ -83,7 +83,7 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='totalPriceTextView']")).click();
 		driver.findElement(By.xpath("//*[@text='CONFIRMAR']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@text='Pagina Inicial']")).click();
+		
 		
 	}
 	@AfterMethod
