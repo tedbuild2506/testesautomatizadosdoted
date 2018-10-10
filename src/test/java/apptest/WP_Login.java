@@ -15,15 +15,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import java.util.Properties;
 
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
 import com.experitest.appium.SeeTestClient;
 
 
@@ -65,7 +57,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 	}
 	
-	@Test
+	/*@Test
 	 public void testeLoginQA() {
 	  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
@@ -76,7 +68,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
    	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
    	  driver.findElement(By.xpath("//*[@id='imgCart']")).click();
-	}
+	}*/
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
