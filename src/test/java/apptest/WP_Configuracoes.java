@@ -49,7 +49,7 @@ public class WP_Configuracoes extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
+    	  try{Thread.sleep(esperandogifinicial+2600);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgUser']")).click();
           driver.findElement(By.xpath("//*[@text='Configurações da smartbeer_']")).click();
     	  Boolean Drive = driver.findElements(By.xpath("//*[@text='Conectado']")).size()>0;

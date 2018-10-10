@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import com.experitest.appium.SeeTestClient;
 
-
+import com.experitest.client.*;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 
@@ -29,6 +29,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	protected SeeTestClient client;
 	protected String ReportURL = System.getenv("ReportURL");
 	protected String TestName = System.getenv("testName");
+	Client cliente = null;
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
@@ -43,6 +44,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
+		
 		
 	}
 		
@@ -73,7 +75,8 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
-		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		ReportURL = cliente.generateReport(true);
+		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_Login";
 		if (driver!=null)
 		{
@@ -84,14 +87,15 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 			if (tr.isSuccess()) 
 			{
 				client.report("Test has passed", true);
-								
 			}
 			else {
 				client.report("Test has failed", false);
+				
+			
 			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			System.out.println("report URL : " +cliente.generateReport(true).toString());
 			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
-			System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
+			//System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}

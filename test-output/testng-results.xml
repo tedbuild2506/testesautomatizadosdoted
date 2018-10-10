@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="92489" started-at="2018-10-10T13:43:45Z" finished-at="2018-10-10T13:45:18Z">
+  <suite name="Default suite" duration-ms="79864" started-at="2018-10-10T14:48:45Z" finished-at="2018-10-10T14:50:05Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="92489" started-at="2018-10-10T13:43:45Z" finished-at="2018-10-10T13:45:18Z">
+    <test name="Default test" duration-ms="79864" started-at="2018-10-10T14:48:45Z" finished-at="2018-10-10T14:50:05Z">
       <class name="apptest.WP_Login">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@71423665]" name="setUp" is-config="true" duration-ms="27553" started-at="2018-10-10T10:43:46Z" finished-at="2018-10-10T10:44:13Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@71423665]" name="setUp" is-config="true" duration-ms="27802" started-at="2018-10-10T11:48:45Z" finished-at="2018-10-10T11:49:13Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@71423665]" name="testeLogin" duration-ms="48691" started-at="2018-10-10T10:44:13Z" finished-at="2018-10-10T10:45:02Z">
+        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@71423665]" name="testeLogin" duration-ms="35033" started-at="2018-10-10T11:49:13Z" finished-at="2018-10-10T11:49:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testeLogin -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@71423665]" name="tearDown" is-config="true" duration-ms="16229" started-at="2018-10-10T10:45:02Z" finished-at="2018-10-10T10:45:18Z">
+        <test-method status="FAIL" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@71423665]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-10-10T11:49:48Z" finished-at="2018-10-10T11:49:48Z">
           <params>
             <param index="0">
               <value>
@@ -30,6 +30,39 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at apptest.WP_Login.tearDown(WP_Login.java:78)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:510)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:211)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:703)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.run(TestNG.java:1048)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

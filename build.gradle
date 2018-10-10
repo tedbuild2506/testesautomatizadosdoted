@@ -36,6 +36,8 @@ dependencies {
     compile group: 'javax.mail', name: 'mail', version: '1.4.9'
     compile group: 'javax.mail', name: 'mail', version: '1.5.0-b01'
     compile group: 'javax.mail', name: 'javax.mail-api', version: '1.5.5'
+    // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
+	compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.14.0'
     
     compile group: 'com.sun.mail', name: 'smtp', version: '1.6.2'
     
