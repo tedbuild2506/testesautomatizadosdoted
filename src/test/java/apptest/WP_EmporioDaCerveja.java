@@ -7,6 +7,9 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -31,6 +34,8 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
+	protected String ReportURL = System.getenv("ReportURL");
+	protected String TestName = System.getenv("testName");
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
@@ -108,18 +113,27 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		
 	}
 	@AfterMethod
-	public void tearDown(ITestResult tr){
+	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
+		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		TestName = "wp_TED_EmpórioDaCerveja";
 		if (driver!=null)
 		{
+			Email e = new Email();
+			e.setMailServerProperties();
+			e.createEmailMessage(ReportURL, TestName);
+			e.sendEmail();
 			if (tr.isSuccess()) 
 			{
 				client.report("Test has passed", true);
+								
 			}
 			else {
 				client.report("Test has failed", false);
 			}
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
+			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
+			System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}

@@ -4,6 +4,9 @@ package apptest;
 import java.net.URL;
 import java.util.Properties;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 import org.openqa.selenium.By;
 
 import org.testng.ITestResult;
@@ -25,6 +28,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	protected String ReportURL = System.getenv("ReportURL");
+	protected String TestName = System.getenv("testName");
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
@@ -51,8 +55,6 @@ public class WP_Login extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
-    	  try{Thread.sleep(esperandogifinicial+2600);} catch(Exception ignore){}
-    	  driver.findElement(By.xpath("//*[@id='imgCart']")).click();
 	}
 	
 	@Test
@@ -69,14 +71,20 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	}
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr){
+	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
+		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		TestName = "wp_TED_Login";
 		if (driver!=null)
 		{
+			Email e = new Email();
+			e.setMailServerProperties();
+			e.createEmailMessage(ReportURL, TestName);
+			e.sendEmail();
 			if (tr.isSuccess()) 
 			{
 				client.report("Test has passed", true);
-				
+								
 			}
 			else {
 				client.report("Test has failed", false);

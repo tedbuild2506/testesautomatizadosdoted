@@ -14,25 +14,29 @@ import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import java.util.Date;
+
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 import java.text.DateFormat;
 
 public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
+	protected String ReportURL = System.getenv("ReportURL");
+	protected String TestName = System.getenv("testName");
 	
 	@BeforeMethod
 	@Parameters("deviceQuery")
 	public void setUp(@Optional("@os='android'") String deviceQuery) throws Exception{
 		init(deviceQuery);
 		// Init application / device capabilities
-		//dc.setCapability(MobileCapabilityType.APP, "cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
-		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
-		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_CadastroValido");
 		//dc.setCapability("deviceQuery",androidnuvem);
 		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
+		
 		
 	}
 	
@@ -70,6 +74,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
 		  driver.swipe(540, 771, 525, 1153, 208);
+		  //client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1994", 0, true);
 		  //client.swipeWhileNotFound("UP", 200, 1000, "NATIVE", "//*[@text='1994' and @onScreen='true']", 0, 500, 100, false);
 	      driver.findElement(By.xpath("//*[@text='1994']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
@@ -89,7 +94,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	}
 				
 	@Test 
-	public void cadastroQA() {
+	/*public void cadastroQA() {
 		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
@@ -129,16 +134,23 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='ok']")).click();	
 		  
-	}
+	}*/
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr){
+	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
+		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		TestName = "wp_TED_CadastroValido";
 		if (driver!=null)
 		{
+			Email e = new Email();
+			e.setMailServerProperties();
+			e.createEmailMessage(ReportURL, TestName);
+			e.sendEmail();
 			if (tr.isSuccess()) 
 			{
 				client.report("Test has passed", true);
+								
 			}
 			else {
 				client.report("Test has failed", false);
@@ -146,10 +158,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
 		}
-	
 	}
-//	client.setShowReport(false);
-//	  new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@text='Verificar validação']")));
-//	  client.setShowReport(true);
+
 }
 

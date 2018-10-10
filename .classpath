@@ -5,5 +5,7 @@
 	<classpathentry kind="con" path="com.experitest.SEETEST_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/AppiumStudio/clients/appium/java/appium-seetest-extension-11.4.jar"/>
 	<classpathentry kind="lib" path="C:/Users/santl60/Downloads/javax.mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/santl60/Downloads/javax.mail-api-1.5.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/santl60/Downloads/smtp-1.6.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
