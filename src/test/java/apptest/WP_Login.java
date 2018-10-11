@@ -40,7 +40,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 		dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");*/
 		dc.setCapability("testName", "wp_TED_Login");
-		dc.setCapability("deviceQuery",S8+"or"+S7+"or"+S6Edge+"or"+S7Edge);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
@@ -51,15 +51,16 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	@Test
 	 public void testeLogin() {
 		  driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
-		  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
+		  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", true, true);
 		  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Acesse sua conta']")).click();
+    	  try{Thread.sleep(esperarminigifs);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='edEmail']")).sendKeys("tedmonitoramento@gmail.com");
     	  driver.findElement(By.xpath("//*[@id='edPassword']")).sendKeys("Smart2000");
     	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
 	}
 	
-	/*@Test
+	@Test
 	 public void testeLoginQA() {
 	  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
@@ -70,7 +71,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
    	  driver.findElement(By.xpath("//*[@text='Entrar']")).click();
    	  try{Thread.sleep(esperandogifinicial+2500);} catch(Exception ignore){}
    	  driver.findElement(By.xpath("//*[@id='imgCart']")).click();
-	}*/
+	}
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{

@@ -39,7 +39,7 @@ public class Email {
 
 	public void createEmailMessage(String message, String test) throws AddressException,
 			MessagingException {
-		String[] toEmails = { "fernando_perasso@whirlpool.com ","bruno_m_ladeia@whirlpool.com","edson_b_bagio@whirlpool.com", "lucas_m_santos@whirlpool.com" };
+		String[] toEmails = { "fernando_perasso@whirlpool.com", "bruno_m_ladeia@whirlpool.com", "edson_b_bagio@whirlpool.com", "lucas_m_santos@whirlpool.com" };
 		String emailSubject = "O teste que rodou foi " +test;
 		String emailBody = "Este é o resultado do teste\n " + message;
 
