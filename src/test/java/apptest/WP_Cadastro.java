@@ -14,7 +14,6 @@ import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import java.util.Date;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
 
@@ -32,8 +31,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_CadastroValido");
-		//dc.setCapability("deviceQuery",androidnuvem);
-		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
+		dc.setCapability("deviceQuery",androidnuvem);
+		//dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -64,19 +63,12 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(168, 946, 334, 615, 2240);
 		  driver.findElement(By.xpath("//*[@id='dobView']")).click();
 		  driver.findElement(By.xpath("//*[@text='2018']")).click();
-		  driver.swipe(537, 984, 528, 1237, 200);
-		  driver.swipe(543, 903, 546, 1106, 233);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
-		  driver.swipe(540, 771, 525, 1153, 208);
+		  client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2013", 0, false);
+	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2008", 0, false);
+	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2001", 0, false);
+	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1994", 0, true);
 		  //client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1994", 0, true);
 		  //client.swipeWhileNotFound("UP", 200, 1000, "NATIVE", "//*[@text='1994' and @onScreen='true']", 0, 500, 100, false);
-	      driver.findElement(By.xpath("//*[@text='1994']")).click();
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
@@ -139,23 +131,30 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
-		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
-		TestName = "wp_TED_CadastroValido";
+		System.out.println(""+ ReportURL);
+		TestName = "wp_TED_Cadastro";
 		if (driver!=null)
 		{
-			Email e = new Email();
-			e.setMailServerProperties();
-			e.createEmailMessage(ReportURL, TestName);
-			e.sendEmail();
+			
 			if (tr.isSuccess()) 
 			{
+				String result = "passsou";
 				client.report("Test has passed", true);
-								
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);
+				String result = "falhou";
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
+				
+			
 			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
 			driver.quit();
 		}
 	}

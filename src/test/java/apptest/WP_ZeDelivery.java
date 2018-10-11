@@ -43,8 +43,8 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ZeDelivery");
-		dc.setCapability("deviceQuery",Xiaomi);
-		//dc.setCapability("deviceQuery",LGE5X);
+		//dc.setCapability("deviceQuery",Xiaomi);
+		dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -95,25 +95,30 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
-		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_ZeDelivery";
 		if (driver!=null)
 		{
-			Email e = new Email();
-			e.setMailServerProperties();
-			e.createEmailMessage(ReportURL, TestName);
-			e.sendEmail();
+			
 			if (tr.isSuccess()) 
 			{
+				String result = "passsou";
 				client.report("Test has passed", true);
-								
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);
+				String result = "falhou";
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
+				
+			
 			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
-			System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}

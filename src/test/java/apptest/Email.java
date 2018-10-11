@@ -22,7 +22,7 @@ public class Email {
 		Email javaEmail = new Email();
 
 		javaEmail.setMailServerProperties();
-		javaEmail.createEmailMessage("test", "name");
+		javaEmail.createEmailMessage("test", "name", "result");
 		javaEmail.sendEmail();
 	}
 
@@ -37,10 +37,10 @@ public class Email {
 
 	}
 
-	public void createEmailMessage(String message, String test) throws AddressException,
+	public void createEmailMessage(String message, String test, String result) throws AddressException,
 			MessagingException {
 		String[] toEmails = { "fernando_perasso@whirlpool.com", "bruno_m_ladeia@whirlpool.com", "edson_b_bagio@whirlpool.com", "lucas_m_santos@whirlpool.com" };
-		String emailSubject = "O teste que rodou foi " +test;
+		String emailSubject = "O teste que rodou foi " +test + "e ele\n " +result;
 		String emailBody = "Este é o resultado do teste\n " + message;
 
 		mailSession = Session.getDefaultInstance(emailProperties, null);

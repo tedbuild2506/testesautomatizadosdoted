@@ -34,15 +34,15 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_CadastroInvalido");
-		//dc.setCapability("deviceQuery",androidnuvem);
-		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
+		dc.setCapability("deviceQuery",androidnuvem);
+		//dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
 	}
 		
 	@Test
-	 public void testTeste_cadastro_campos_invalidos() {
+	 public void testecadastroinvalido() {
 	  driver.installApp("cloud:com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity");
 	  client.launch("com.consul.smartbeer/com.whirlpool.ted.View.SplashActivity", false, true);
 	  try{Thread.sleep(esperandogifinicial);} catch(Exception ignore){}
@@ -92,25 +92,30 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
-		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
+		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_CadastroInválido";
 		if (driver!=null)
 		{
-			Email e = new Email();
-			e.setMailServerProperties();
-			e.createEmailMessage(ReportURL, TestName);
-			e.sendEmail();
+			
 			if (tr.isSuccess()) 
 			{
+				String result = "passsou";
 				client.report("Test has passed", true);
-								
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);
+				String result = "falhou";
+				Email e = new Email();
+				e.setMailServerProperties();
+				e.createEmailMessage(ReportURL, TestName, result);
+				e.sendEmail();
+				
+			
 			}
-			System.out.println("report URL : " + driver.getCapabilities().getCapability("reportUrl"));
-			//System.getenv(driver.getCapabilities().getCapability("reportUrl"));
-			System.setProperty(ReportURL, driver.getCapabilities().getCapability("reportUrl").toString());
 			driver.quit();
 		}
 	}
