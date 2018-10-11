@@ -108,7 +108,7 @@ public class WP_TermosDeUso extends BaseTest implements GlobalConstants {
 			
 			if (tr.isSuccess()) 
 			{
-				String result = "passsou";
+				String result = "passou";
 				client.report("Test has passed", true);
 				Email e = new Email();
 				e.setMailServerProperties();
