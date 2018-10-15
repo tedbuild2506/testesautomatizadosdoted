@@ -80,6 +80,10 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
 		driver.findElement(By.xpath("//*[@text='Salvar']")).click();
 		try{Thread.sleep(esperandogifinicial+3000);} catch(Exception ignore){}
+		driver.swipe(168, 946, 334, 615, 2240);
+		driver.swipe(168, 946, 334, 615, 2240);
+		driver.swipe(168, 946, 334, 615, 2240);
+		try {Thread.sleep(threadSleep+0500);}catch (Exception ignore) {}
 		driver.findElement(By.xpath("//*[@id='addQuantityView']")).click();
 		try {Thread.sleep(threadSleep+0500);}catch (Exception ignore) {}
 		driver.findElement(By.xpath("//*[@id='addQuantityView']")).click();
