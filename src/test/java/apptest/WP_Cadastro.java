@@ -31,8 +31,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_CadastroValido");
-		dc.setCapability("deviceQuery",androidnuvem);
-		//dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
+		//dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -132,26 +132,21 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
-		TestName = "wp_TED_Cadastro";
+		TestName = "Este é um teste que faz um cadastro no app, ele testa todos os campos da tela de cadastro";
 		if (driver!=null)
 		{
 			
 			if (tr.isSuccess()) 
 			{
-				String result = "passou";
 				client.report("Test has passed", true);
-				Email e = new Email();
-				e.setMailServerProperties();
-				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);
-				String result = "falhou";
+				/*String result = "falhou";
 				Email e = new Email();
 				e.setMailServerProperties();
 				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				e.sendEmail();*/
 				
 			
 			}

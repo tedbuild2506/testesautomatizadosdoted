@@ -43,8 +43,8 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ZeDelivery");
-		//dc.setCapability("deviceQuery",Xiaomi);
-		dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",Xiaomi);
+		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -102,20 +102,16 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 			
 			if (tr.isSuccess()) 
 			{
-				String result = "passou";
 				client.report("Test has passed", true);
-				Email e = new Email();
-				e.setMailServerProperties();
-				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				
 			}
 			else {
 				client.report("Test has failed", false);
-				String result = "falhou";
+				/*String result = "falhou";
 				Email e = new Email();
 				e.setMailServerProperties();
 				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				e.sendEmail();*/
 				
 			
 			}

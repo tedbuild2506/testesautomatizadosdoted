@@ -34,8 +34,8 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 		//dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.consul.android.smartbeer.staging");
 		//dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.whirlpool.ted.View.SplashActivity");
 		dc.setCapability("testName", "wp_TED_CadastroInvalido");
-		dc.setCapability("deviceQuery",androidnuvem);
-		//dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
+		//dc.setCapability("deviceQuery",androidnuvem);
+		dc.setCapability("deviceQuery",S7Edge+"or"+S8+"or"+S7+"or"+S6Edge+"or"+Xiaomi);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
 		
@@ -65,7 +65,7 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
 	 }
 	
-	@Test
+	/*@Test
 	 public void testTeste_cadastro_campos_invalidosQA() {
 	  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 	  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
@@ -87,32 +87,33 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("99999999999");
 	  driver.swipe(450, 812, 500, 640, 1292);
 	  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-	 }
+	 }*/
 	
 	@AfterMethod
 	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
 		driver.removeApp("com.consul.android.smartbeer.staging");
+		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
 		System.out.println(""+ ReportURL);
-		TestName = "wp_TED_CadastroInválido";
+		TestName = "Teste de cadastro inválido.";
 		if (driver!=null)
 		{
 			
 			if (tr.isSuccess()) 
 			{
-				String result = "passou";
+				//String result = "\t\n\n Este é um teste que faz\t\n\n um cadastro no app usando dados inválidos (que não devem ser aceitos).\t\n O app não pode permitir o cadastro";
 				client.report("Test has passed", true);
-				Email e = new Email();
+				/*Email e = new Email();
 				e.setMailServerProperties();
 				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				e.sendEmail();*/
 			}
 			else {
 				client.report("Test has failed", false);
-				String result = "falhou";
+				/*String result = "falhou";
 				Email e = new Email();
 				e.setMailServerProperties();
 				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				e.sendEmail();*/
 				
 			
 			}

@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="85786" started-at="2018-10-11T12:58:14Z" finished-at="2018-10-11T12:59:40Z">
+  <suite name="Default suite" duration-ms="128572" started-at="2018-10-11T17:34:11Z" finished-at="2018-10-11T17:36:20Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="85786" started-at="2018-10-11T12:58:14Z" finished-at="2018-10-11T12:59:40Z">
-      <class name="apptest.WP_Login">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_Login@71423665]" name="setUp" is-config="true" duration-ms="24173" started-at="2018-10-11T09:58:14Z" finished-at="2018-10-11T09:58:38Z">
+    <test name="Default test" duration-ms="128572" started-at="2018-10-11T17:34:11Z" finished-at="2018-10-11T17:36:20Z">
+      <class name="apptest.WP_CadastroInvalido">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:apptest.WP_CadastroInvalido@71423665]" name="setUp" is-config="true" duration-ms="24011" started-at="2018-10-11T14:34:11Z" finished-at="2018-10-11T14:34:35Z">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="testeLogin()[pri:0, instance:apptest.WP_Login@71423665]" name="testeLogin" duration-ms="44509" started-at="2018-10-11T09:58:38Z" finished-at="2018-10-11T09:59:23Z">
+        <test-method status="PASS" signature="testecadastroinvalido()[pri:0, instance:apptest.WP_CadastroInvalido@71423665]" name="testecadastroinvalido" duration-ms="86620" started-at="2018-10-11T14:34:35Z" finished-at="2018-10-11T14:36:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testeLogin -->
-        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_Login@71423665]" name="tearDown" is-config="true" duration-ms="17042" started-at="2018-10-11T09:59:23Z" finished-at="2018-10-11T09:59:40Z">
+        </test-method> <!-- testecadastroinvalido -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:apptest.WP_CadastroInvalido@71423665]" name="tearDown" is-config="true" duration-ms="17904" started-at="2018-10-11T14:36:02Z" finished-at="2018-10-11T14:36:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=testeLogin status=SUCCESS method=WP_Login.testeLogin()[pri:0, instance:apptest.WP_Login@71423665] output={null}]]]>
+                <![CDATA[[TestResult name=testecadastroinvalido status=SUCCESS method=WP_CadastroInvalido.testecadastroinvalido()[pri:0, instance:apptest.WP_CadastroInvalido@71423665] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- apptest.WP_Login -->
+      </class> <!-- apptest.WP_CadastroInvalido -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
