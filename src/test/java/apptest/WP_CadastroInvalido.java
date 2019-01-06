@@ -56,7 +56,7 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("12345678901");
 	  driver.swipe(168, 946, 334, 615, 2240);
 	  driver.findElement(By.xpath("//*[@id='dobView']")).click();
-	  driver.findElement(By.xpath("//*[@text='2018']")).click();
+	  driver.findElement(By.xpath("//*[@text='2019']")).click();
 	  driver.findElement(By.xpath("//*[@text='2020']")).click();
 	  driver.findElement(By.xpath("//*[@text='OK']")).click();
 	  driver.swipe(84, 887, 259, 493, 1461);

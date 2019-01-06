@@ -62,7 +62,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@id='cpfView']")).sendKeys("41801452865");
 		  driver.swipe(168, 946, 334, 615, 2240);
 		  driver.findElement(By.xpath("//*[@id='dobView']")).click();
-		  driver.findElement(By.xpath("//*[@text='2018']")).click();
+		  driver.findElement(By.xpath("//*[@text='2019']")).click();
 		  client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2013", 0, false);
 	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2008", 0, false);
 	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2001", 0, false);
