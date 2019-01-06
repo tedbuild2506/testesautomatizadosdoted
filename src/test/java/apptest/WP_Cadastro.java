@@ -71,7 +71,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  //client.swipeWhileNotFound("UP", 200, 1000, "NATIVE", "//*[@text='1994' and @onScreen='true']", 0, 500, 100, false);
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
-		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("13982133161");
+		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("139997211127");
 		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
 		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);

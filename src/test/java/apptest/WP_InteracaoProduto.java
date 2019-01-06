@@ -67,7 +67,7 @@ public class WP_InteracaoProduto extends BaseTest implements GlobalConstants {
     	  driver.findElement(By.xpath("//*[@text='Travar painel']")).click();
     	  try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@text='Destravar painel']")).click();
-    	  try{Thread.sleep(threadSleep+1200);} catch(Exception ignore){}
+    	  try{Thread.sleep(threadSleep+1400);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
     	  try{Thread.sleep(threadSleep+1200);} catch(Exception ignore){}
     	  driver.findElement(By.xpath("//*[@id='imgTemp']")).click();
