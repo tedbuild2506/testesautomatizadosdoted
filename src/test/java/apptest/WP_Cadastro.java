@@ -63,20 +63,22 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(168, 946, 334, 615, 2240);
 		  driver.findElement(By.xpath("//*[@id='dobView']")).click();
 		  driver.findElement(By.xpath("//*[@text='2019']")).click();
-		  client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2013", 0, false);
-	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2008", 0, false);
+		  client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2014", 0, false);
+	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2009", 0, false);
 	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=2001", 0, false);
-	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1994", 0, true);
+	      client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1995", 0, true);
 		  //client.elementListSelect("xpath=//*[@id='date_picker_year_picker']", "text=1994", 0, true);
 		  //client.swipeWhileNotFound("UP", 200, 1000, "NATIVE", "//*[@text='1994' and @onScreen='true']", 0, 500, 100, false);
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
+		  try {Thread.sleep(threadSleep);}catch (Exception ignore){}
 		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("139997211127");
 		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
 		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
-		  client.swipeWhileNotFound("DOWN", 200, 1000, "NATIVE", "//*[@id='termsCheckbox' and @onScreen='true']", 0, 500, 100, false);
+		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
+		  client.swipeWhileNotFound("DOWN", 200, 200, "NATIVE", "//*[@id='termsCheckbox' and @onScreen='true']", 0, 500, 100, false);
 		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='privacyCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='btAccept']")).click();
