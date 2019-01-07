@@ -80,7 +80,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.swipe(450, 812, 500, 640, 1292);
 		  driver.findElement(By.xpath("//*[@id='register_button']")).click();
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
-		  client.swipeWhileNotFound("DOWN", 200, 200, "NATIVE", "//*[@id='termsCheckbox' and @onScreen='true']", 0, 500, 100, false);
+		  client.swipeWhileNotFound("DOWN", 200, 1000, "NATIVE", "//*[@id='termsCheckbox' and @onScreen='true']", 0, 500, 100, false);
 		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='privacyCheckbox']")).click();
 		  driver.findElement(By.xpath("//*[@id='btAccept']")).click();

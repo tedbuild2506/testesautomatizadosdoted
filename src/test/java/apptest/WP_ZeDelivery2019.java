@@ -2,36 +2,24 @@ package apptest;
 
 
 import java.net.URL;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.util.Date;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
 import com.experitest.appium.SeeTestClient;
-
-import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import io.appium.java_client.android.AndroidKeyCode;
-import io.appium.java_client.remote.AndroidMobileCapabilityType;
-import io.appium.java_client.remote.MobileCapabilityType;
 
 
-public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
+
+public class WP_ZeDelivery2019 extends BaseTest implements GlobalConstants {
 	protected AndroidDriver<AndroidElement> driver = null;
 	protected SeeTestClient client;
 	protected String ReportURL = System.getenv("ReportURL");
@@ -66,11 +54,6 @@ public class WP_ZeDelivery extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='imgCart']")).click();
 		driver.findElement(By.xpath("//*[@text='Entrar na loja']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
-		Boolean Permitir = driver.findElements(By.xpath("//*[@text='ALLOW']")).size()>0;
-		if (Permitir) {
-		driver.findElement(By.xpath("//*[@text='ALLOW']")).click();}
-		try{Thread.sleep(esperandogifinicial+0500);} catch(Exception ignore){}
-		//driver.findElement(By.xpath("//*[@text='UTILIZAR']")).click();
 		driver.findElement(By.xpath("//*[@text='Cadastrar novo endereço']")).click();
 		driver.findElement(By.xpath("//*[@id='cepView']")).sendKeys("69908-600");
 		try{Thread.sleep(threadSleep+0500);} catch(Exception ignore){}
