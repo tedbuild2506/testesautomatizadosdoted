@@ -72,11 +72,13 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  driver.findElement(By.xpath("//*[@text='OK']")).click();
 		  driver.swipe(84, 887, 259, 493, 1461);
 		  try {Thread.sleep(threadSleep);}catch (Exception ignore){}
-		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("139997211127");
+		  driver.findElement(By.xpath("//*[@id='phoneView']")).sendKeys("(13) 999721-1127");
 		  driver.findElement(By.xpath("//*[@text='Gênero']")).click();
 		  driver.findElement(By.xpath("//*[@text='Masculino']")).click();
 		  driver.swipe(450, 812, 500, 640, 1292);
-		  driver.findElement(By.xpath("//*[@text='Cadastrar']")).click();
+		  driver.swipe(450, 812, 500, 640, 1292);
+		  driver.swipe(450, 812, 500, 640, 1292);
+		  driver.findElement(By.xpath("//*[@id='register_button']")).click();
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
 		  client.swipeWhileNotFound("DOWN", 200, 200, "NATIVE", "//*[@id='termsCheckbox' and @onScreen='true']", 0, 500, 100, false);
 		  driver.findElement(By.xpath("//*[@id='termsCheckbox']")).click();
@@ -87,8 +89,8 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 		  
 	}
 				
-	@Test 
-	/*public void cadastroQA() {
+	/*@Test 
+	public void cadastroQA() {
 		  driver.installApp("cloud:com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity");
 		  client.launch("com.consul.android.smartbeer.staging/com.whirlpool.ted.View.SplashActivity", false, true);
 		  try {Thread.sleep(esperandogifinicial);}catch (Exception ignore){}
