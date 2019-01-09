@@ -31,7 +31,7 @@ public class WP_ZeDelivery2019 extends BaseTest implements GlobalConstants {
 		init(deviceQuery);
 		// Init application / device capabilities
 		dc.setCapability("testName", "wp_TED_ZeDelivery");
-		dc.setCapability("deviceQuery",Xiaomi);
+		dc.setCapability("deviceQuery",Xiaomi+"or"+S7Edge+"or"+S8+"or"+S7+"or"+S6Edge);
 		//dc.setCapability("deviceQuery",androidnuvem);
 		driver = new AndroidDriver<>(new URL(getProperty("url",cloudProperties) +"/wd/hub"), dc);
 		client = new SeeTestClient(driver);
