@@ -60,7 +60,7 @@ public class WP_ZeDelivery2019 extends BaseTest implements GlobalConstants {
 		driver.findElement(By.xpath("//*[@id='streetText']")).sendKeys("Rua Pernambuco");
 		driver.findElement(By.xpath("//*[@id='numberText']")).sendKeys("33");
 		driver.findElement(By.xpath("//*[@id='neighborhoodText']")).sendKeys("Bosque");
-		driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
+		//driver.findElement(By.xpath("//*[@text='Salvar meu endereço para futuras compras']")).click();
 		driver.findElement(By.xpath("//*[@text='Salvar']")).click();
 		try{Thread.sleep(esperandogifinicial+3200);} catch(Exception ignore){}
 		driver.swipe(168, 946, 334, 615, 2240);
