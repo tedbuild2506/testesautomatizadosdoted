@@ -2,10 +2,6 @@ package apptest;
 
 
 import java.net.URL;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
 import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -90,7 +86,7 @@ public class WP_CadastroInvalido extends BaseTest implements GlobalConstants {
 	 }*/
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		ReportURL = driver.getCapabilities().getCapability("reportUrl").toString();
 		System.out.println(""+ ReportURL);

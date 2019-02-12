@@ -3,8 +3,6 @@ package apptest;
 
 import java.net.URL;
 import java.util.Properties;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 import org.openqa.selenium.By;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -68,7 +66,7 @@ public class WP_Login extends BaseTest implements GlobalConstants {
 	}*/
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_Login";

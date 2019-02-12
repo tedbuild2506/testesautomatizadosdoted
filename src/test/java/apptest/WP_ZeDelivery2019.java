@@ -2,8 +2,7 @@ package apptest;
 
 
 import java.net.URL;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -80,7 +79,7 @@ public class WP_ZeDelivery2019 extends BaseTest implements GlobalConstants {
 		
 	}
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_ZeDelivery";

@@ -6,10 +6,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
-
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -92,7 +88,7 @@ public class WP_RecuperarSenha extends BaseTest implements GlobalConstants {
 
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_RecuperarSenha";

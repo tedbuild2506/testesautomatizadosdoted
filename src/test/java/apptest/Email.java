@@ -1,4 +1,4 @@
-package apptest;
+/*package apptest;
 
 import java.util.Properties;
 
@@ -70,4 +70,4 @@ public class Email {
 		System.out.println("Email sent successfully.");
 	}
 
-}
+}*/

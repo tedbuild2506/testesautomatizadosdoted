@@ -14,9 +14,6 @@ import com.experitest.appium.SeeTestClient;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import java.util.Date;
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
 import java.text.DateFormat;
 
 public class WP_Cadastro extends BaseTest implements GlobalConstants {
@@ -133,7 +130,7 @@ public class WP_Cadastro extends BaseTest implements GlobalConstants {
 	}*/
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "Este é um teste que faz um cadastro no app, ele testa todos os campos da tela de cadastro";

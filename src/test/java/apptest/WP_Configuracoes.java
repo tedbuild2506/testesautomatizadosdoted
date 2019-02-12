@@ -3,8 +3,6 @@ package apptest;
 
 import java.net.URL;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 import org.openqa.selenium.By;
 import org.testng.ITestResult;
@@ -97,7 +95,7 @@ public class WP_Configuracoes extends BaseTest implements GlobalConstants {
      	 }
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_Configurações";
@@ -108,10 +106,10 @@ public class WP_Configuracoes extends BaseTest implements GlobalConstants {
 			{
 				String result = "passou";
 				client.report("Test has passed", true);
-				Email e = new Email();
-				e.setMailServerProperties();
-				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				//Email e = new Email();
+				//e.setMailServerProperties();
+				//e.createEmailMessage(ReportURL, TestName, result);
+				//e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);

@@ -3,8 +3,6 @@ package apptest;
 
 import java.net.URL;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
 
 import org.openqa.selenium.By;
 import org.testng.ITestResult;
@@ -84,7 +82,7 @@ public class WP_CadastroEmBranco extends BaseTest implements GlobalConstants {
 	 }
 	
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "Este é um teste que tenta fazer um cadastro no app deixando os campos em branco.\t\n Para falhar, o app deve deixar o teste passar.";

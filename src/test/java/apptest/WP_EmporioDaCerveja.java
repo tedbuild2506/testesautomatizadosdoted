@@ -7,9 +7,6 @@ import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.AddressException;
-
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -113,7 +110,7 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		
 	}
 	@AfterMethod
-	public void tearDown(ITestResult tr) throws AddressException, MessagingException{
+	public void tearDown(ITestResult tr) throws Exception{
 		driver.removeApp("com.consul.android.smartbeer.staging");
 		System.out.println(""+ ReportURL);
 		TestName = "wp_TED_EmpórioDaCerveja";
@@ -126,8 +123,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 				client.report("Test has passed", true);
 				Email e = new Email();
 				e.setMailServerProperties();
-				e.createEmailMessage(ReportURL, TestName, result);
-				e.sendEmail();
+				//e.createEmailMessage(ReportURL, TestName, result);
+				//e.sendEmail();
 			}
 			else {
 				client.report("Test has failed", false);
