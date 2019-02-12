@@ -82,11 +82,11 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
 		driver.findElement(By.xpath("//*[@id='tvRegNewCard']")).click();
 		try{Thread.sleep(threadSleep);} catch(Exception ignore){}
-		driver.findElement(By.xpath("//*[@id='creditCardNoView']")).sendKeys("4551-8310-2111-3207");
-		driver.findElement(By.xpath("//*[@id='creditCardName']")).sendKeys("LUCAS M DOS SANTOS");
-		driver.findElement(By.xpath("//*[@id='month']")).sendKeys("10");
-		driver.findElement(By.xpath("//*[@id='year']")).sendKeys("19");
-		driver.findElement(By.xpath("//*[@id='cvv']")).sendKeys("114");
+		driver.findElement(By.xpath("//*[@id='creditCardNoView']")).sendKeys("5254-1180-5452-6597");
+		driver.findElement(By.xpath("//*[@id='creditCardName']")).sendKeys("BRUNO M LADEIA");
+		driver.findElement(By.xpath("//*[@id='month']")).sendKeys("01");
+		driver.findElement(By.xpath("//*[@id='year']")).sendKeys("20");
+		driver.findElement(By.xpath("//*[@id='cvv']")).sendKeys("335");
 		driver.findElement(By.xpath("//*[@id='saveCardCheckBox']")).click();
 		driver.findElement(By.xpath("//*[@id='saveButton']")).click();
 		try{Thread.sleep(esperandogifintermediario);} catch(Exception ignore){}
