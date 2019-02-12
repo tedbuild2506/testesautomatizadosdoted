@@ -121,8 +121,8 @@ public class WP_EmporioDaCerveja extends BaseTest implements GlobalConstants {
 			{
 				String result = "passou";
 				client.report("Test has passed", true);
-				Email e = new Email();
-				e.setMailServerProperties();
+				//Email e = new Email();
+				//e.setMailServerProperties();
 				//e.createEmailMessage(ReportURL, TestName, result);
 				//e.sendEmail();
 			}
